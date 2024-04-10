@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xlp: "1350px",
+      },
+      colors: {
+        "dark-choco": "#4e3931",
+        "extra-dark-choco": "#322824",
+        "light-choco": "#f4d9c4",
+        cappuccino: "#7b5a4e",
+        accent: "#d97706",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-image": "url('/public/hero_image.jpg')",
       },
     },
   },
