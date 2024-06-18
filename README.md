@@ -3,7 +3,11 @@
 First, run the development server:
 
 ```bash
-npm run dev
+# make sure to run 'npm ci' before in the dev shell
+nix run
+
+# format code
+nix fmt
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
