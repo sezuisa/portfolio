@@ -22,6 +22,16 @@
         runtimeInputs = [ pkgs.nodejs_22 ];
         text = "${pkgs.nodejs_22}/bin/npm run dev";
       };
+
+      staticHtml = pkgs.buildNpmPackage {
+        name = "portfolio";
+        src = ./.;
+        npmDepsHash = "sha256-eiThjIWb/SaZK9vKtHPlE7AB0s4MKArUp5TFbI36Hqw=";
+        installPhase = ''
+          mkdir -p $out
+          mv build $out
+        '';
+      };
     in
     {
       formatter.${system} = treefmtEval.config.build.wrapper;
@@ -36,6 +46,7 @@
 
       packages.${system} = {
         default = dev-server;
+        html = staticHtml;
       };
     };
 }
