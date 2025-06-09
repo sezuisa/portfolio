@@ -5,7 +5,7 @@ import { AiOutlineCamera, AiOutlineCode, AiOutlineHome } from "react-icons/ai";
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Handles the opening and closing of our nav
+  // Handles the opening and closing of the nav
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
@@ -75,32 +75,36 @@ export const Nav = () => {
         <div className="z-30 flex flex-col items-center justify-between">
           {navList.map(({ icon, title }, index) => {
             return (
-              <button
+              <a
+                href={`${title === "home" ? "#top" : "#anchor_" + title}`}
                 key={index}
-                className="group/button flex items-center p-3 m-3 font-medium mr-2 text-center bg-transparent rounded-xl hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500"
               >
-                <span className="mr-2">{icon}</span>
-                <span className="text-light-choco group-focus/button:text-extra-dark-choco">
-                  {title}
-                </span>
-              </button>
+                <button className="group/button flex items-center p-3 m-3 font-medium mr-2 text-center bg-transparent rounded-full hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500">
+                  <span className="mr-2">{icon}</span>
+                  <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-lg">
+                    {title}
+                  </span>
+                </button>
+              </a>
             );
           })}
         </div>
       )}
 
-      <div className="hidden lg:flex flex-row justify-around items-center w-3/12 bg-cappuccino/40 backdrop-blur-xl border border-cappuccino/40 rounded-xl mt-10 shadow-2xl">
+      <div className="hidden lg:flex flex-row justify-around items-center bg-cappuccino/40 backdrop-blur-xl border border-cappuccino/40 rounded-full mt-10 shadow-2xl">
         {navList.map(({ icon, title }, index) => {
           return (
-            <button
+            <a
+              href={`${title === "home" ? "#top" : "#anchor_" + title}`}
               key={index}
-              className="group/button bg-transparent m-1 rounded-3xl w-3/12 flex flex-col items-center hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500"
             >
-              <span className="mt-1">{icon}</span>
-              <span className="text-light-choco group-hover/button:text-extra-dark-choco">
-                {title}
-              </span>
-            </button>
+              <button className="group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500">
+                <span className="mt-1">{icon}</span>
+                <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-lg">
+                  {title}
+                </span>
+              </button>
+            </a>
           );
         })}
       </div>

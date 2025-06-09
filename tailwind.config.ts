@@ -8,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      screens: {
-        xlp: "1350px",
-      },
       colors: {
         "dark-choco": "#4e3931",
         "extra-dark-choco": "#322824",

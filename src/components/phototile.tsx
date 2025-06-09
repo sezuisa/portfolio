@@ -8,8 +8,8 @@ type PhotoTileProps = {
 
 export const PhotoTile = ({ imageSrc, altText }: PhotoTileProps) => {
   return (
-    <div className="diamond xlp:diamond-lg shadow-2xl border-orange-300 border">
-      <div className="tile-container xlp:tile-container-lg">
+    <div className="diamond lg:diamond-md xl:diamond-lg shadow-2xl border-orange-300 border">
+      <div className="tile-container lg:tile-container-md xl:tile-container-lg">
         <Image src={imageSrc} alt={altText || ""} placeholder="blur" />
       </div>
     </div>

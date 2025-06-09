@@ -5,9 +5,16 @@ const jbMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-export const EditorBox = ({ children }: { children: ReactNode }) => {
+type EditorBoxProps = {
+  children: ReactNode;
+  extraStyles?: string;
+};
+
+export const EditorBox = ({ children, extraStyles }: EditorBoxProps) => {
   return (
-    <div className="bg-cappuccino/40 backdrop-blur-xl border border-cappuccino/40 rounded-xl flex flex-col justify-start shadow-2xl">
+    <div
+      className={`bg-cappuccino/40 backdrop-blur-xl border border-cappuccino/40 rounded-xl flex flex-col justify-start shadow-2xl ${extraStyles || ""}`}
+    >
       <div className="flex flex-row justify-start px-4 pt-4">
         <svg
           height="12"
@@ -34,7 +41,7 @@ export const EditorBox = ({ children }: { children: ReactNode }) => {
           <circle r="6" cx="6" cy="6" fill="green" />
         </svg>
       </div>
-      <span className={`p-4 text-light-choco text-xl ${jbMono.className}`}>
+      <span className={`p-4 text-light-choco text-lg ${jbMono.className}`}>
         {children}
       </span>
     </div>

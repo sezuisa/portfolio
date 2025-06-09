@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "./footer";
 import Header from "./header";
 import { Lexend } from "next/font/google";
+import polyGrid from "../../public/poly_grid.svg"
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -21,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`text-lg ${lexend.className}`}>
+      <body
+        className={`selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} bg-red-950`}
+      >
         <Header />
         {children}
         <Footer />
