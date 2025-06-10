@@ -11,7 +11,7 @@
 
   outputs = { self, nixpkgs, treefmt-nix }:
     let
-      system = "x86_64-linux";
+      system = "aarch64-darwin";
       pkgs = import nixpkgs {
         inherit system;
       };
@@ -19,8 +19,8 @@
 
       dev-server = pkgs.writeShellApplication {
         name = "dev-server";
-        runtimeInputs = [ pkgs.nodejs_22 ];
-        text = "${pkgs.nodejs_22}/bin/npm run dev";
+        runtimeInputs = [ pkgs.nodejs_24 ];
+        text = "${pkgs.nodejs_24}/bin/npm run dev";
       };
 
       staticHtml = pkgs.buildNpmPackage {
@@ -39,7 +39,7 @@
 
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          nodejs_22
+          nodejs_24
         ];
       };
 
