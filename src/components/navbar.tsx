@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { AiOutlineCamera, AiOutlineCode, AiOutlineHome } from "react-icons/ai";
+import { MdHomeFilled, MdDesignServices, MdWavingHand } from "react-icons/md";
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,21 +13,21 @@ export const Nav = () => {
   const navList = [
     {
       icon: (
-        <AiOutlineHome className="text-2xl fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
+        <MdHomeFilled className="text-2xl lg:text-lg fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
       ),
       title: "home",
     },
     {
       icon: (
-        <AiOutlineCamera className="text-2xl fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
+        <MdDesignServices className="text-2xl lg:text-lg fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
       ),
-      title: "photography",
+      title: "projects",
     },
     {
       icon: (
-        <AiOutlineCode className="text-2xl fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
+        <MdWavingHand className="text-2xl lg:text-lg fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
       ),
-      title: "code",
+      title: "about me",
     },
   ];
 
@@ -79,9 +79,9 @@ export const Nav = () => {
                 href={`${title === "home" ? "#top" : "#anchor_" + title}`}
                 key={index}
               >
-                <button className="group/button flex items-center p-3 m-3 font-medium mr-2 text-center bg-transparent rounded-full hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500">
+                <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500">
                   <span className="mr-2">{icon}</span>
-                  <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-lg">
+                  <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-2xl">
                     {title}
                   </span>
                 </button>
@@ -100,7 +100,7 @@ export const Nav = () => {
             >
               <button className="group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500">
                 <span className="mt-1">{icon}</span>
-                <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-lg">
+                <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-base">
                   {title}
                 </span>
               </button>

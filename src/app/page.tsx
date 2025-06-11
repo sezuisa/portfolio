@@ -3,6 +3,7 @@ import { Sarina } from "next/font/google";
 import EditorBox from "../components/editorbox";
 import ImageGallery from "../components/imagegallery";
 import codeWave from "../../public/wave_codesection_1.svg";
+import Image from "next/image";
 
 const sarina = Sarina({
   subsets: ["latin"],
@@ -10,50 +11,6 @@ const sarina = Sarina({
 });
 
 const galleryItems = [
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
-  {
-    imageSrc: image,
-    alt: "blabla",
-  },
   {
     imageSrc: image,
     alt: "blabla",
@@ -84,7 +41,7 @@ export default function Home() {
           id="anchor_photography"
           className="grow-0 bg-gradient-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl"
         >
-          photography
+          projects
         </h1>
         <hr className="grow border-amber-500/20"></hr>
       </div>
@@ -99,18 +56,29 @@ export default function Home() {
           id="anchor_code"
           className="grow-0 bg-gradient-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl"
         >
-          code
+          about me
         </h1>
         <hr className="grow border-amber-500/20"></hr>
       </div>
       </div>
-      
 
-      <img
+      <div className="w-full h-[122px] overflow-hidden">
+      <Image
+          src={codeWave}
+          alt="SVG waves separating the hero section from the page content"
+          className="code-wave"
+          priority
+          fill={false}
+        />
+      </div>
+
+{/*       <img
           src={codeWave.src}
           className="code-wave"
           alt="SVG waves separating the photography section from the code section"
-        ></img>
+        ></img> */}
+
+      
 
       <div className="w-full flex flex-row justify-center">
         <EditorBox extraStyles="w-11/12 lg:w-4/5 max-w-7xl">

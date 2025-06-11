@@ -14,6 +14,7 @@ const config: Config = {
         "light-choco": "#f4d9c4",
         cappuccino: "#7b5a4e",
         accent: "#d97706",
+        cream: "#fde3c6",
       },
       backgroundImage: {
         "hero-image": "url('/public/hero_image.jpg')",
