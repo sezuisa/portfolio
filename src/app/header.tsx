@@ -28,7 +28,7 @@ export default function Header() {
           alt="SVG waves separating the hero section from the page content"
           className="hero-waves"
           priority
-          fill={false} // if using fixed size; or layout="fill" for full responsiveness
+          fill={false}
         />
 
 
@@ -39,7 +39,7 @@ export default function Header() {
           <h1
             className={`text-6xl lg:text-8xl z-10 hidden xl:block ${sarina.className}`}
           >
-            <span className="bg-gradient-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 drop-shadow-2xl">
+            <span className="bg-linear-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 drop-shadow-2xl">
               welcome!
             </span>
           </h1>
@@ -51,7 +51,7 @@ export default function Header() {
             <h1
               className={`text-5xl md:text-6xl xl:text-8xl z-10 xl:hidden text-center ${sarina.className}`}
             >
-              <span className="bg-gradient-to-r from-red-500 from-20% via-amber-500 via-40% to-orange-500 bg-clip-text text-transparent p-2 drop-shadow-lg">
+              <span className="bg-linear-to-r from-red-500 from-20% via-amber-500 via-40% to-orange-500 bg-clip-text text-transparent p-2 drop-shadow-lg">
                 welcome!
               </span>
             </h1>

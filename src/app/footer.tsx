@@ -15,7 +15,7 @@ export default function Footer() {
         />
 
       <div className="flex flex-col lg:flex-row items-center lg:justify-evenly bg-dark-choco text-light-choco text-center">
-        <p className="m-4">Portfolio v.0.1.0</p>
+        <a className="m-4 hover:underline" href="https://github.com/sezuisa/portfolio">Portfolio v.0.1.0 [GitHub]</a>
         <p className="m-4">&copy; 2025 Sarah Hägele</p>
         <p className="m-4">Made with &#9829; with Next.js and TailwindCSS</p>
       </div>

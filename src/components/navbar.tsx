@@ -39,7 +39,7 @@ export const Nav = () => {
       >
         <span
           className={`bg-light-choco block transition-all duration-300 ease-out 
-                      h-1 w-6 rounded-sm ${
+                      h-1 w-6 rounded-xs ${
                         isOpen
                           ? "rotate-45 translate-y-1.5"
                           : "-translate-y-0.5"
@@ -47,13 +47,13 @@ export const Nav = () => {
         ></span>
         <span
           className={`bg-light-choco block transition-all duration-300 ease-out 
-                      h-1 w-6 rounded-sm my-0.5 ${
+                      h-1 w-6 rounded-xs my-0.5 ${
                         isOpen ? "opacity-0" : "opacity-100"
                       }`}
         ></span>
         <span
           className={`bg-light-choco block transition-all duration-300 ease-out 
-                      h-1 w-6 rounded-sm ${
+                      h-1 w-6 rounded-xs ${
                         isOpen
                           ? "-rotate-45 -translate-y-1.5"
                           : "translate-y-0.5"
@@ -79,7 +79,7 @@ export const Nav = () => {
                 href={`${title === "home" ? "#top" : "#anchor_" + title}`}
                 key={index}
               >
-                <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500">
+                <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
                   <span className="mr-2">{icon}</span>
                   <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-2xl">
                     {title}
@@ -98,7 +98,7 @@ export const Nav = () => {
               href={`${title === "home" ? "#top" : "#anchor_" + title}`}
               key={index}
             >
-              <button className="group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-gradient-to-r hover:from-red-400 hover:to-amber-400 active:bg-gradient-to-r active:from-red-500 active:to-amber-500 focus:bg-gradient-to-r focus:from-red-500 focus:to-amber-500">
+              <button className="group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
                 <span className="mt-1">{icon}</span>
                 <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-base">
                   {title}

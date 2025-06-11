@@ -39,7 +39,7 @@ export default function Home() {
         <hr className="grow lg:grow-0 lg:w-8 border-amber-500/20"></hr>
         <h1
           id="anchor_photography"
-          className="grow-0 bg-gradient-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl"
+          className="grow-0 bg-linear-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl"
         >
           projects
         </h1>
@@ -54,7 +54,7 @@ export default function Home() {
         <hr className="grow lg:grow-0 lg:w-8 border-amber-500/20"></hr>
         <h1
           id="anchor_code"
-          className="grow-0 bg-gradient-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl"
+          className="grow-0 bg-linear-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl"
         >
           about me
         </h1>
@@ -85,7 +85,7 @@ export default function Home() {
           <a
             href="https://github.com/sezuisa"
             target="_blank"
-            className="text-2xl lg:text-3xl hover:bg-gradient-to-r hover:from-red-500 hover:from-10% hover:via-amber-500 hover:via-30% hover:to-orange-500 hover:bg-clip-text hover:text-transparent"
+            className="text-2xl lg:text-3xl hover:bg-linear-to-r hover:from-red-500 hover:from-10% hover:via-amber-500 hover:via-30% hover:to-orange-500 hover:bg-clip-text hover:text-transparent"
           >
             github.com/sezuisa
           </a>

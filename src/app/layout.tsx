@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} bg-cream`}
+        className={`bg-cream selection:bg-accent selection:text-amber-950 text-lg ${lexend.className}`}
       >
         <Header />
         {children}
