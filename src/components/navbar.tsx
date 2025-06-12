@@ -76,7 +76,7 @@ export const Nav = () => {
           {navList.map(({ icon, title }, index) => {
             return (
               <a
-                href={`${title === "home" ? "#top" : "#anchor_" + title}`}
+                href={`${title === "home" ? "#top" : "#anchor_" + title.replaceAll(" ", "")}`}
                 key={index}
               >
                 <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
@@ -95,7 +95,7 @@ export const Nav = () => {
         {navList.map(({ icon, title }, index) => {
           return (
             <a
-              href={`${title === "home" ? "#top" : "#anchor_" + title}`}
+              href={`${title === "home" ? "#top" : "#anchor_" + title.replaceAll(" ", "")}`}
               key={index}
             >
               <button className="group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
