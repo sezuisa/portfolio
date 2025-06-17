@@ -15,11 +15,7 @@ export default function Expenses() {
       <ProjectsHeader heading="Expenses" />
       <main className="min-h-screen -mb-25 px-4 pt-4 pb-25 lg:px-16 bg-extra-dark-choco">
         <div className="w-full flex flex-row justify-center">
-          <BackButton
-            text="Back to projects"
-            href="/#anchor_projects"
-            className="mx-auto"
-          />
+          <BackButton text="Back to projects" href="/#anchor_projects" />
         </div>
 
         <div className="w-full py-8 flex flex-row justify-center flex-wrap">

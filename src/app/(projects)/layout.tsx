@@ -5,7 +5,7 @@ import { Lexend } from "next/font/google";
 
 const lexend = Lexend({
   subsets: ["latin"],
-  weight: "400",
+  weight: "300",
 });
 
 export default function ProjectsLayout({
@@ -16,7 +16,7 @@ export default function ProjectsLayout({
   return (
     <html
       lang="en"
-      className={`bg-[url('../../public/hero_image.png')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className}`}
+      className={`bg-[url('../../public/hero_image.png')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} scrollbar`}
     >
       <body>
         {children}

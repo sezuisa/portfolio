@@ -7,6 +7,12 @@
   --color-cappuccino: #7b5a4e;
   --color-accent: #d97706;
   --color-cream: #fde3c6;
+  --color-full-teal: #4b8482;
+  --color-mid-teal: #acdedc;
+  --color-light-teal: #ebfcfb;
+  --color-light-red: #e87f64;
+  --color-full-red: #ec6344;
+  --color-dark-red: #a1402a;
 
   --background-image-hero-image: url("/public/hero_image.png");
 }
@@ -69,6 +75,40 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #7b5a4e #201a17;
+  }
+
+  /* For Chrome, EDGE, Opera, Others */
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    background-color: #201a17;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #7b5a4e;
+  }
+
+  h3 {
+    font-size: 18pt;
+    color: var(--color-light-choco);
+  }
+
+  h4 {
+    font-size: 14pt;
+    color: var(--color-light-choco);
+  }
+
+  p {
+    font-size: 12pt;
+    color: var(--color-light-choco);
+  }
+
+  li {
+    font-size: 12pt;
   }
 
   @media (prefers-color-scheme: dark) {
