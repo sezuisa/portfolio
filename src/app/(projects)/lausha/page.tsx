@@ -408,7 +408,7 @@ export default function Lausha() {
               >
                 <div className="text-center max-w-70 bg-full-teal rounded-3xl p-2 -mt-40 md:-ml-40">
                   <p>
-                  &quot;I use pods. Don't know if that&apos;s good, with plastic and
+                  &quot;I use pods. Don&apos;t know if that&apos;s good, with plastic and
                     all, but it&apos;s just the most convenient.&quot; (Participant 1)
                   </p>
                 </div>
