@@ -37,17 +37,17 @@ export default function StaticBlob({
   const [hovered, setHovered] = useState(false);
   const currentIndex = useRef(blobType % blobPaths.length);
 
-  if (hoverEffect) {
-    const animateToNext = () => {
-      const nextIndex = (currentIndex.current + 1) % blobPaths.length;
-      controls.start({
-        d: blobPaths[nextIndex],
-        transition: { duration: 1, ease: "easeInOut" },
-      });
-      currentIndex.current = nextIndex;
-    };
+  const animateToNext = () => {
+    const nextIndex = (currentIndex.current + 1) % blobPaths.length;
+    controls.start({
+      d: blobPaths[nextIndex],
+      transition: { duration: 1, ease: "easeInOut" },
+    });
+    currentIndex.current = nextIndex;
+  };
 
-    useEffect(() => {
+  useEffect(() => {
+    if (hoverEffect) {
       if (hovered) {
         animateToNext(); // start immediately
         intervalRef.current = setInterval(() => {
@@ -64,8 +64,8 @@ export default function StaticBlob({
       return () => {
         clearInterval(intervalRef.current!);
       };
-    }, [hovered]);
-  }
+    }
+  }, [hovered]);
 
   return (
     <div
