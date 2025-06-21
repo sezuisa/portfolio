@@ -1,0 +1,17 @@
+[
+  {
+    "image": "/lausha/mid_fi/screen_3.png",
+    "alt": "Mockup of the Lausha App - Non-optimal fill level feedback screen",
+    "text": "Feedback for a non-optimal fill level utilises cold colours and negative messaging to evoke a willingness to improve within the user."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_4.png",
+    "alt": "Mockup of the Lausha App - Optimal fill level feedback screen",
+    "text": "Feedback for an optimal fill level utilises warm colours and very positive messaging to encourage the user to repeat this behaviour."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_5.png",
+    "alt": "Mockup of the Lausha App - Scoring explanation screen",
+    "text": "Further feedback can be viewed by the user for transparency and to avoid confusion and frustration about the scoring system."
+  }
+]

@@ -6,7 +6,7 @@ import { Lexend } from "next/font/google";
 
 const lexend = Lexend({
   subsets: ["latin"],
-  weight: "400",
+  weight: "300",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function HomeLayout({
   return (
     <html
       lang="en"
-      className={`bg-[url('../../public/hero_image.png')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className}`}
+      className={`bg-[url('../../public/background.svg')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} scrollbar`}
     >
       <body>
         <HomeHero />

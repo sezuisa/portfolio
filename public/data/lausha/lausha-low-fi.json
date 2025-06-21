@@ -1,0 +1,62 @@
+[
+  {
+    "image": "/lausha/low_fi/screen_1.png",
+    "alt": "Low-fi mockup of the Lausha App - Home screen",
+    "text": "The home screen of the app, using the visual metaphor of the washing machine drum."
+  },
+  {
+    "image": "/lausha/low_fi/screen_2.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Tapping on the camera button on the home screen opens the camera with a circular overlay to align the drum to be scanned correctly."
+  },
+  {
+    "image": "/lausha/low_fi/screen_3.png",
+    "alt": "Low-fi mockup of the Lausha App - Non-optimal fill level result screen",
+    "text": "If the detected fill level is below the optimum of 75%, feedback informs the user of this and awards a low score..."
+  },
+  {
+    "image": "/lausha/low_fi/screen_4.png",
+    "alt": "Low-fi mockup of the Lausha App - Optimal fill level result screen",
+    "text": "...and if the fill level at the optimum, the user is praised and a full score is awarded."
+  },
+  {
+    "image": "/lausha/low_fi/screen_5.png",
+    "alt": "Low-fi mockup of the Lausha App - Rewards screen",
+    "text": "If a milestone of points is reached, the user is presented with rewards to choose from (here: free coffee or free wash)."
+  },
+  {
+    "image": "/lausha/low_fi/screen_6.png",
+    "alt": "Low-fi mockup of the Lausha App - Community posts layout 1 screen",
+    "text": "Layout variant 1 of the community section where users can make posts about washes they want to do so other users can request to share with them. This layout was rejected in favour of..."
+  },
+  {
+    "image": "/lausha/low_fi/screen_7.png",
+    "alt": "Low-fi mockup of the Lausha App - Community posts layout 2 screen",
+    "text": "Layout variant 2 of the community section. This was preferred by the participant due to it feeling more intuitive and matching their mental model."
+  },
+  {
+    "image": "/lausha/low_fi/screen_8.png",
+    "alt": "Low-fi mockup of the Lausha App - Creating a community post screen",
+    "text": "Creating a new post in the community. This screen uses design constraints, not allowing for free text entry. This helps guide the user to make an optimal community post containing all the information and mitigates the potential use of problematic language."
+  },
+  {
+    "image": "/lausha/low_fi/screen_9.png",
+    "alt": "Low-fi mockup of the Lausha App - My shares screen",
+    "text": "This screen contains any ongoing or future laundry shares with other users (confirmed or with pending requests)."
+  },
+  {
+    "image": "/lausha/low_fi/screen_10.png",
+    "alt": "Low-fi mockup of the Lausha App - Chats screen",
+    "text": "Laundry share details are finalised in private chats, using a screen layout familiar to the user through other established chat apps."
+  },
+  {
+    "image": "/lausha/low_fi/screen_11.png",
+    "alt": "Low-fi mockup of the Lausha App - Chat detail screen",
+    "text": "The chats themselves follow well-established design ideas from other messenger apps."
+  },
+  {
+    "image": "/lausha/low_fi/screen_12.png",
+    "alt": "Low-fi mockup of the Lausha App - Profile screen",
+    "text": "To establish user trust, every user can be rated and ratings seen in their profile at any time."
+  }
+]

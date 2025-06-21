@@ -1,6 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { MdHomeFilled, MdDesignServices, MdWavingHand } from "react-icons/md";
+import {
+  MdHomeFilled,
+  MdDesignServices,
+  MdWavingHand,
+  MdMail,
+} from "react-icons/md";
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,13 +26,19 @@ export const Nav = () => {
       icon: (
         <MdDesignServices className="text-2xl lg:text-lg fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
       ),
-      title: "projects",
+      title: "case studies",
     },
     {
       icon: (
         <MdWavingHand className="text-2xl lg:text-lg fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
       ),
       title: "about me",
+    },
+    {
+      icon: (
+        <MdMail className="text-2xl lg:text-lg fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
+      ),
+      title: "contact",
     },
   ];
 
@@ -78,6 +89,7 @@ export const Nav = () => {
               <a
                 href={`${title === "home" ? "#top" : "#anchor_" + title.replaceAll(" ", "")}`}
                 key={index}
+                className="cursor-pointer"
               >
                 <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
                   <span className="mr-2">{icon}</span>
@@ -97,8 +109,9 @@ export const Nav = () => {
             <a
               href={`${title === "home" ? "#top" : "#anchor_" + title.replaceAll(" ", "")}`}
               key={index}
+              className="cursor-pointer"
             >
-              <button className="group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
+              <button className="cursor-pointer group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
                 <span className="mt-1">{icon}</span>
                 <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-base">
                   {title}

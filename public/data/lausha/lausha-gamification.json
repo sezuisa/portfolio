@@ -1,0 +1,17 @@
+[
+  {
+    "image": "/lausha/mid_fi/screen_1.png",
+    "alt": "Mockup of the Lausha App - Home screen",
+    "text": "The home screen has the current point score as the most prominent feature, encouraging the collection of points to fill up the score."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_6.png",
+    "alt": "Mockup of the Lausha App - Rewards screen",
+    "text": "Rewards have been received very well by participants to act as motivation to engage with the app regularly."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_7.png",
+    "alt": "Mockup of the Lausha App - Rewards popup",
+    "text": "A popup lets the user know where to find their rewards for later use."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "image": "/lausha/mid_fi/screen_8.png",
+    "alt": "Mockup of the Lausha App - Nudge popup",
+    "text": "If Lausha detects many low fill levels, it uses popups to nudge the user to share their laundry to achieve higher fill levels."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_9.png",
+    "alt": "Mockup of the Lausha App - Community posts screen",
+    "text": "Community posts are laid out clearly and only allow an interaction by requesting to join the share, avoiding users potentially getting messaged inappropriately."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_10.png",
+    "alt": "Mockup of the Lausha App - Creating a post screen",
+    "text": "The user is guided through creating a post with design constraints, only including relevant information and making the process very straight-forward."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_11.png",
+    "alt": "Mockup of the Lausha App - My shares scren",
+    "text": "Guidance prompts within the app increase user confidence and trust."
+  },
+  {
+    "image": "/lausha/mid_fi/screen_14.png",
+    "alt": "Mockup of the Lausha App - User profile screen",
+    "text": "A user's profile only includes relevant information, focusing on the ratings they received to foster user trust and avoid bad laundry sharing experiences as much as possible."
+  }
+]

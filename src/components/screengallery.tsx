@@ -16,14 +16,16 @@ type ScreenGalleryProps = {
   galleryName: string; // e.g. "lausha-gallery"
   backgroundColour?: string;
   buttonColour?: string;
-  className?: string;
+  blobClassName?: string;
+  captionClassName?: string;
 };
 
 export default function ScreenGallery({
   galleryName,
   backgroundColour,
   buttonColour,
-  className,
+  blobClassName,
+  captionClassName,
 }: ScreenGalleryProps) {
   const [items, setItems] = useState<GalleryItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,8 +59,11 @@ export default function ScreenGallery({
   const { image, alt, text } = items[currentIndex];
 
   return (
-    <div className="flex flex-col items-center">
-      <StaticBlob fillColor={backgroundColour} className={`mt-15 ${className}`}>
+    <div className={`flex flex-col items-center`}>
+      <StaticBlob
+        fillColor={backgroundColour}
+        className={`mt-15 ${blobClassName}`}
+      >
         <div className="flex flex-nowrap justify-center items-center gap-5">
           <button
             onClick={handlePrevious}
@@ -72,7 +77,7 @@ export default function ScreenGallery({
             width={225}
             height={400}
             priority
-            className="z-1"
+            className={`z-1`}
           />
           <button
             onClick={handleNext}
@@ -82,7 +87,7 @@ export default function ScreenGallery({
           </button>
         </div>
       </StaticBlob>
-      <EditorBox extraStyles="max-w-full">
+      <EditorBox extraStyles={`w-full ${captionClassName}`}>
         <p>{text}</p>
       </EditorBox>
     </div>

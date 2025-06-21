@@ -9,9 +9,7 @@ import BroadImage from "@/components/broadimage";
 import ContentBlock from "@/components/contentblock";
 import TripleContentBlock from "@/components/triplecontentblock";
 import Image from "next/image";
-import VerticalBlob from "@/components/verticalblob";
 import ScreenGallery from "@/components/screengallery";
-import { IoIosArrowBack } from "react-icons/io";
 
 export const metadata: Metadata = {
   title: "Lausha - Sarah Hägele Portfolio",
@@ -31,29 +29,32 @@ export default function Lausha() {
             <h3 className="italic text-center">
               It&apos;s simple: Sharing laundry to save the planet.
             </h3>
-            <BackButton text="Back to projects" href="/#anchor_projects" />
+            <BackButton
+              text="Back to case studies"
+              href="/#anchor_casestudies"
+            />
           </div>
 
           {/*----------- OVERVIEW -----------*/}
 
           <GradientHeading text="overview" colourVariant="teal" />
 
-          <div className="flex flex-row flex-wrap justify-center items-center mb-2">
+          <div className="flex flex-row flex-wrap justify-center items-center mb-10">
             <Image
-              src="/mockup-placeholder-3.png"
+              src="/lausha/mockups/mockup_home_3.png"
               alt="Mockup of the Lausha App"
               width={350}
               height={400}
               priority
-              className="-mb-20 lg:mb-0 lg:-mr-20 z-0 max-w-full"
+              className="-mb-20 lg:-mb-10 lg:-mr-20 z-0 w-90"
             />
             <div className="max-w-full lg:max-w-150 lg:max-h-300 z-1">
               <EditorBox>
                 <h3 className="font-bold">In a nutshell</h3>
                 <p>
-                  Laundry isn&apos;t exactly something many people would consider as
-                  a particularly exciting topic. However, it is a very
-                  worthwhile one to look at when considering potential for
+                  Laundry isn&apos;t exactly something many people would
+                  consider as a particularly exciting topic. However, it is a
+                  very worthwhile one to look at when considering potential for
                   improvements in both the overall experience of this
                   &quot;unexciting&quot; chore - and also in resource use.
                 </p>
@@ -69,8 +70,8 @@ export default function Lausha() {
             </div>
           </div>
 
-          <div className="w-full py-8 flex flex-row justify-center flex-wrap">
-            <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
+          <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-5">
+            <div className="min-w-35 max-w-55 flex flex-col items-center gap-3">
               <div className="relative flex justify-center items-center">
                 <StaticBlob
                   blobType={0}
@@ -184,8 +185,9 @@ export default function Lausha() {
               </p>
               <p>
                 What this means? Sustainability is one of the last things on
-                students&apos; minds when doing their laundry, leading to wasteful,
-                resource-heavy laundry practices - this should be addressed.
+                students&apos; minds when doing their laundry, leading to
+                wasteful, resource-heavy laundry practices - this should be
+                addressed.
               </p>
             </div>
             <EditorBox extraStyles="max-w-full lg:max-w-110">
@@ -234,7 +236,7 @@ export default function Lausha() {
 
           <GradientHeading text="discover" colourVariant="teal" />
 
-          <ContentBlock reverse={false}>
+          <ContentBlock reverse={false} flipOnMobile={true}>
             <div className="max-w-prose space-y-3">
               <p>
                 To really understand how university students in shared
@@ -245,25 +247,25 @@ export default function Lausha() {
               </p>
               <p>
                 I started out with some semi-structured interviews in
-                participants&apos; laundry rooms to learn about my participants&apos;
-                unique experiences. Placing the interviews in-context in the
-                participants&apos; usual laundry environment allowed for them to
-                supplement their answers with gestures and demonstrations, which
-                I found helped them remember details and enhanced the overall
-                quality of my findings.
+                participants&apos; laundry rooms to learn about my
+                participants&apos; unique experiences. Placing the interviews
+                in-context in the participants&apos; usual laundry environment
+                allowed for them to supplement their answers with gestures and
+                demonstrations, which I found helped them remember details and
+                enhanced the overall quality of my findings.
               </p>
               <p>
                 To supplement this, I carried out video-recorded participant
                 observations during several full student laundry cycles,
                 allowing me to witness natural behaviors and workarounds that
-                might not surface in interviews - think &quot;what people say vs.
-                what people do&quot;. I lived in shared accommodation as a student
-                myself during this project, which meant I could consider myself
-                as part of my target user group. I recognised this as an unique
-                opportunity for an autoethnographic session - I could gather my
-                own experiences to enlarge my participant sample while also
-                considering and reflecting upon my own biases and habits within
-                the laundry process.
+                might not surface in interviews - think &quot;what people say
+                vs. what people do&quot;. I lived in shared accommodation as a
+                student myself during this project, which meant I could consider
+                myself as part of my target user group. I recognised this as an
+                unique opportunity for an autoethnographic session - I could
+                gather my own experiences to enlarge my participant sample while
+                also considering and reflecting upon my own biases and habits
+                within the laundry process.
               </p>
               <EditorBox extraStyles="max-w-full my-5">
                 <h3 className="font-bold leading-7">
@@ -292,7 +294,7 @@ export default function Lausha() {
                 space before moving on to synthesis in the Define stage.
               </p>
             </div>
-            <div>
+            <div className="max-w-full">
               <div className="flex flex-row flex-nowrap items-center justify-center -mb-10 gap-3">
                 <StaticBlob
                   blobType={4}
@@ -320,7 +322,7 @@ export default function Lausha() {
               </div>
               <div className="flex flex-row flex-nowrap items-center justify-center -mb-10 gap-3">
                 <StaticBlob
-                  blobType={6}
+                  blobType={0}
                   src="/lausha_autoethnography.png"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 />
@@ -329,7 +331,7 @@ export default function Lausha() {
               <div className="flex flex-row flex-nowrap items-center justify-center gap-3">
                 <h4>Graffiti Wall</h4>
                 <StaticBlob
-                  blobType={7}
+                  blobType={1}
                   src="/lausha_graffiti_wall.png"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 />
@@ -347,7 +349,7 @@ export default function Lausha() {
           />
 
           <TripleContentBlock>
-            <StaticBlob blobType={6} fillColor="#ACDEDC" className="w-90 h-90">
+            <StaticBlob blobType={5} fillColor="#ACDEDC" className="w-90 h-90">
               <Image
                 src="/aeiou_1.png"
                 alt="Image of an AEIOU worksheet"
@@ -379,12 +381,12 @@ export default function Lausha() {
                 clusters and finally created an expansive affinity diagram (see
                 the image at the top). As I synthesised the individual quotes
                 and observations into findings for each theme and finally into
-                insights (taking a finding and asking myself &quot;What does it mean
-                and why does it matter?&quot;), my understanding of the laundry
-                process and its underlying challenges and perceptions from
-                students deepened steadily, and after ranking all my insights in
-                a prioritisation matrix, there were two things that particularly
-                stood out to me:
+                insights (taking a finding and asking myself &quot;What does it
+                mean and why does it matter?&quot;), my understanding of the
+                laundry process and its underlying challenges and perceptions
+                from students deepened steadily, and after ranking all my
+                insights in a prioritisation matrix, there were two things that
+                particularly stood out to me:
               </p>
             </div>
             <StaticBlob blobType={1} fillColor="#E87F64" className="w-90 h-90">
@@ -408,16 +410,17 @@ export default function Lausha() {
               >
                 <div className="text-center max-w-70 bg-full-teal rounded-3xl p-2 -mt-40 md:-ml-40">
                   <p>
-                  &quot;I use pods. Don&apos;t know if that&apos;s good, with plastic and
-                    all, but it&apos;s just the most convenient.&quot; (Participant 1)
+                    &quot;I use pods. Don&apos;t know if that&apos;s good, with
+                    plastic and all, but it&apos;s just the most
+                    convenient.&quot; (Participant 1)
                   </p>
                 </div>
               </StaticBlob>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-full">
                   <p className="font-bold">
-                    Students don&apos;t really care about sustainability when doing
-                    their laundry.
+                    Students don&apos;t really care about sustainability when
+                    doing their laundry.
                   </p>
                   <p>
                     They want to get laundry over with as quickly and
@@ -437,8 +440,8 @@ export default function Lausha() {
               >
                 <div className="text-center max-w-70 bg-dark-red rounded-3xl p-2 mt-50 md:ml-40">
                   <p>
-                  &quot;Yeah, two weeks worth of laundry right there, just about
-                    reaches the minimum line.&quot; (Participant 3)
+                    &quot;Yeah, two weeks worth of laundry right there, just
+                    about reaches the minimum line.&quot; (Participant 3)
                   </p>
                 </div>
               </StaticBlob>
@@ -448,12 +451,12 @@ export default function Lausha() {
                     Students routinely underfill the washing machines.
                   </p>
                   <p>
-                    They either haven&apos;t collected enough laundry by the time
-                    they decide to or need to do a wash, or they do have enough
-                    - but the load they choose to wash is small because they
-                    believe larger loads won&apos;t get washed as thoroughly. Running
-                    an underfilled washing machine is a lot less
-                    energy-efficient than running it with a full load.
+                    They either haven&apos;t collected enough laundry by the
+                    time they decide to or need to do a wash, or they do have
+                    enough - but the load they choose to wash is small because
+                    they believe larger loads won&apos;t get washed as
+                    thoroughly. Running an underfilled washing machine is a lot
+                    less energy-efficient than running it with a full load.
                   </p>
                 </EditorBox>
               </div>
@@ -469,8 +472,8 @@ export default function Lausha() {
                 recurring theme within almost all of my participants.
                 Personally, I had experienced not having enough laundry for a
                 full load by the time I really needed to run a wash multiple
-                times, but I hadn&apos;t expected this to also be an issue for many
-                other students. And especially the discovery I made that
+                times, but I hadn&apos;t expected this to also be an issue for
+                many other students. And especially the discovery I made that
                 students still underfilled the washing machine even when they
                 could gather enough laundry for a full load was surprising and
                 showed that running underfilled washing machines was a
@@ -489,9 +492,10 @@ export default function Lausha() {
             >
               <h3 className="font-bold text-center">
                 How might we create a design intervention for university
-                students with shared laundry access who don&apos;t concern themselves
-                much with sustainability issues and often underfill the washing
-                machine in order for them to wash full loads most of the time?
+                students with shared laundry access who don&apos;t concern
+                themselves much with sustainability issues and often underfill
+                the washing machine in order for them to wash full loads most of
+                the time?
               </h3>
             </StaticBlob>
           </ContentBlock>
@@ -507,11 +511,11 @@ export default function Lausha() {
                 With a clearly defined problem and opportunity space and
                 well-grounded user insights, I moved into the ideation phase. To
                 encourage creative thinking and move beyond obvious solutions, I
-                began with a &quot;What if?&quot; activity, using imaginative prompts to
-                challenge assumptions and explore alternative perspectives. This
-                was followed by a Crazy 8s sketching session, which enabled me
-                to quickly generate a wide variety of concepts through rapid
-                visual thinking.
+                began with a &quot;What if?&quot; activity, using imaginative
+                prompts to challenge assumptions and explore alternative
+                perspectives. This was followed by a Crazy 8s sketching session,
+                which enabled me to quickly generate a wide variety of concepts
+                through rapid visual thinking.
               </p>
               <p>
                 From this pool of ideas, I identified several promising
@@ -618,13 +622,14 @@ export default function Lausha() {
               <p className="text-center">
                 Notifications & in-app messaging remind and encourage users to
                 use the app and to make use of the community laundry sharing
-                feature; Constraints & affordances in the app&apos;s design prevent
-                misuse of features and make the experience simple and intuitive
+                feature; Constraints & affordances in the app&apos;s design
+                prevent misuse of features and make the experience simple and
+                intuitive
               </p>
             </div>
           </div>
 
-          <ContentBlock>
+          <ContentBlock alignCenter={false}>
             <div className="maw-w-prose space-y-3">
               <h4 className="font-bold">Low-Fi Wireframing</h4>
               <p>
@@ -651,14 +656,14 @@ export default function Lausha() {
                 This sketching phase allowed me to experiment with different
                 layouts and functionalities quickly, without getting distracted
                 by too much visual polish. One design element I was very sure of
-                at this point and wanted to see a participant&apos;s response to was
-                displaying the current point score on the home screen through an
-                indicator that looks like a washing machine drum. This would
-                fill up as points are added, culminating in a reward once the
-                drum was filled completely. I was hoping that his metaphor-based
-                approach in the design would make it stand out, keep it a bit
-                more playful and make the point system very visual and easy to
-                understand.
+                at this point and wanted to see a participant&apos;s response to
+                was displaying the current point score on the home screen
+                through an indicator that looks like a washing machine drum.
+                This would fill up as points are added, culminating in a reward
+                once the drum was filled completely. I was hoping that his
+                metaphor-based approach in the design would make it stand out,
+                keep it a bit more playful and make the point system very visual
+                and easy to understand.
               </p>
               <p>
                 Once the core structure was in place, I scanned the paper
@@ -670,23 +675,23 @@ export default function Lausha() {
               </p>
             </div>
             <ScreenGallery
-              galleryName="lausha-low-fi"
+              galleryName="lausha/lausha-low-fi"
               backgroundColour="#4B8482"
               buttonColour="full-red"
-              className="w-80 h-80"
+              blobClassName="w-80 h-80"
             />
           </ContentBlock>
 
-          <ContentBlock reverse={true}>
+          <ContentBlock reverse={true} flipOnMobile={true}>
             <div className="maw-w-prose space-y-3">
               <p>
                 I then conducted a user testing session with a participant from
-                my target user group to evaluate the prototype&apos;s usability and
-                the overall concept. Using the Marvel prototype, I let the
+                my target user group to evaluate the prototype&apos;s usability
+                and the overall concept. Using the Marvel prototype, I let the
                 participant act through the three key user flows in a laundry
-                room using the &apos;think aloud&apos; method and presented alternative
-                layout versions for screens to gather feedback on structure and
-                clarity.
+                room using the &apos;think aloud&apos; method and presented
+                alternative layout versions for screens to gather feedback on
+                structure and clarity.
               </p>
               <p>
                 Throughout the session, I observed their interactions, took note
@@ -706,7 +711,7 @@ export default function Lausha() {
               </p>
             </div>
             <StaticBlob
-              blobType={7}
+              blobType={0}
               src="/lausha-lowfi-testing.png"
               className="w-100 h-100"
             />
@@ -716,7 +721,7 @@ export default function Lausha() {
 
           <GradientHeading text="deliver" colourVariant="teal" />
 
-          <ContentBlock>
+          <ContentBlock flipOnMobile={true}>
             <div className="maw-w-prose space-y-3">
               <p>
                 Before implementing concrete concept or layout refinements, I
@@ -727,7 +732,8 @@ export default function Lausha() {
                 tones that not only provided visual contrast but also served a
                 functional purpose within the app: warm hues were used to convey
                 positive feedback, while cooler tones indicated less optimal
-                outcomes, reinforcing the scoring system&apos;s behavioural cues.
+                outcomes, reinforcing the scoring system&apos;s behavioural
+                cues.
               </p>
               <p>
                 To soften the overall look and make the interface feel more
@@ -796,20 +802,20 @@ export default function Lausha() {
             <div className="maw-w-prose space-y-3">
               <p>
                 I conducted further user testing with the mid-fidelity prototype
-                to evaluate how well the updated design communicated the app&apos;s
-                purpose and supported user needs. The overall feedback from
-                participants was highly positive - they found the concept
-                engaging, the interface intuitive, and all stated they would be
-                likely to use the app in real life.
+                to evaluate how well the updated design communicated the
+                app&apos;s purpose and supported user needs. The overall
+                feedback from participants was highly positive - they found the
+                concept engaging, the interface intuitive, and all stated they
+                would be likely to use the app in real life.
               </p>
               <p>
                 Notably, the prototype performed better at communicating the
                 link between fill level optimisation and environmental
-                sustainability, as evidenced by participants&apos; comments during
-                the sessions and in the follow-up interviews. They also showed a
-                general willingness to share loads with others, suggesting that
-                the design changes to build trust—such as added guidance and
-                user rating information—had been effective.
+                sustainability, as evidenced by participants&apos; comments
+                during the sessions and in the follow-up interviews. They also
+                showed a general willingness to share loads with others,
+                suggesting that the design changes to build trust—such as added
+                guidance and user rating information—had been effective.
               </p>
               <p>
                 While no major usability issues were raised, participants did
@@ -872,15 +878,15 @@ export default function Lausha() {
             </div>
           </ContentBlock>
 
-          <div className="flex flex-row flex-wrap-reverse justify-center items-center mb-10">
+          <div className="flex flex-row flex-wrap-reverse justify-center items-center my-10">
             <div className="max-w-full lg:max-w-150 lg:max-h-300 z-0">
               <EditorBox extraStyles="lg:pr-10">
                 <p>
                   Lausha is a simple 3-step process: find a laundry share
                   partner, wash your clothes together, and earn rewards for
                   achieving an optimal fill level. By encouraging collaboration
-                  and providing instant feedback on each load&apos;s efficiency, the
-                  app makes sustainable laundry habits easy, social, and
+                  and providing instant feedback on each load&apos;s efficiency,
+                  the app makes sustainable laundry habits easy, social, and
                   rewarding.
                 </p>
                 <Button
@@ -893,41 +899,44 @@ export default function Lausha() {
               </EditorBox>
             </div>
             <Image
-              src="/mockup-placeholder-1.png"
+              src="/lausha/mockups/mockup_home_1.png"
               alt="Mockup of the Lausha App"
               width={350}
               height={400}
               priority
-              className="-mb-13 lg:mb-0 lg:-ml-20 z-1 max-w-full"
+              className="-mb-10 lg:mb-0 lg:-ml-20 z-1 w-70"
             />
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-15">
+          <div className="flex flex-wrap justify-center items-start gap-15 mb-10">
             <div className="flex flex-col items-center lg:max-w-80">
               <h4>Gamification</h4>
               <ScreenGallery
-                galleryName="lausha-gamification"
+                galleryName="lausha/lausha-gamification"
                 backgroundColour="#4B8482"
                 buttonColour="full-red"
-                className="w-80 h-80"
+                blobClassName="w-80 h-80"
+                captionClassName="mt-5"
               />
             </div>
             <div className="flex flex-col items-center lg:max-w-80">
               <h4>Feedback</h4>
               <ScreenGallery
-                galleryName="lausha-feedback"
+                galleryName="lausha/lausha-feedback"
                 backgroundColour="#4B8482"
                 buttonColour="full-red"
-                className="w-80 h-80"
+                blobClassName="w-80 h-80"
+                captionClassName="mt-5"
               />
             </div>
             <div className="flex flex-col items-center lg:max-w-80">
               <h4>Behaviour Steering</h4>
               <ScreenGallery
-                galleryName="lausha-behaviour-steering"
+                galleryName="lausha/lausha-behaviour-steering"
                 backgroundColour="#4B8482"
                 buttonColour="full-red"
-                className="w-80 h-80"
+                blobClassName="w-80 h-80"
+                captionClassName="mt-5"
               />
             </div>
           </div>
@@ -944,10 +953,10 @@ export default function Lausha() {
                 how each phase contributes to creating a user-centred solution.
                 As it was my first full UX project, I followed the four phases
                 in a relatively linear fashion, which helped me grasp the
-                structure without feeling overwhelmed. However, I&apos;ve since come
-                to appreciate the value of being more flexible and iterative,
-                and in future projects, I would allow myself to move more
-                fluidly between stages as new insights emerge.
+                structure without feeling overwhelmed. However, I&apos;ve since
+                come to appreciate the value of being more flexible and
+                iterative, and in future projects, I would allow myself to move
+                more fluidly between stages as new insights emerge.
               </p>
               <p>
                 Working with a small participant sample due to time constraints
@@ -999,18 +1008,18 @@ export default function Lausha() {
                 </li>
               </ul>
               <p>
-                I can confidently answer all these questions with &apos;Yes&apos;. I
-                didn&apos;t use any coercive behaviour change strategies, leaving the
-                control with the user at all times and relying more on
-                informing, making the experience fun, and gently nudging - only
-                employing design constraints to make the experience easier and
-                prevent misuse, also addressing potential unintended outcomes. I
-                also believe that my intent and motivation, saving energy in the
-                laundry process and educating about the impact of laundry load
-                size on the environment, are ethical, and are acceptably
-                weighted against the level of control the user has. And I to
-                this day firmly stand behind the concept, taking moral
-                responsibility for it.
+                I can confidently answer all these questions with
+                &apos;Yes&apos;. I didn&apos;t use any coercive behaviour change
+                strategies, leaving the control with the user at all times and
+                relying more on informing, making the experience fun, and gently
+                nudging - only employing design constraints to make the
+                experience easier and prevent misuse, also addressing potential
+                unintended outcomes. I also believe that my intent and
+                motivation, saving energy in the laundry process and educating
+                about the impact of laundry load size on the environment, are
+                ethical, and are acceptably weighted against the level of
+                control the user has. And I to this day firmly stand behind the
+                concept, taking moral responsibility for it.
               </p>
               <p>
                 In line with an ethical design practice, I of course also made
@@ -1038,8 +1047,8 @@ export default function Lausha() {
                 overview to help users track their fill levels over time. This
                 data could also enable personalised behavioural nudges,
                 encouraging more consistent sustainable habits. These additions
-                would further enhance the app&apos;s functionality and deepen its
-                impact on user behaviour.
+                would further enhance the app&apos;s functionality and deepen
+                its impact on user behaviour.
               </p>
             </div>
           </div>

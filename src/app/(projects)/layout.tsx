@@ -16,7 +16,7 @@ export default function ProjectsLayout({
   return (
     <html
       lang="en"
-      className={`bg-[url('../../public/hero_image.png')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} scrollbar`}
+      className={`bg-[url('../../public/background.svg')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} scrollbar`}
     >
       <body>
         {children}

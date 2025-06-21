@@ -13,8 +13,6 @@
   --color-light-red: #e87f64;
   --color-full-red: #ec6344;
   --color-dark-red: #a1402a;
-
-  --background-image-hero-image: url("/public/hero_image.png");
 }
 
 /*
@@ -40,10 +38,7 @@
 }
 
 @utility hero-waves {
-  --overlap: 5px;
-  bottom: calc(var(--overlap) * -1);
   height: var(--waves-height);
-  position: absolute;
   right: 0px;
   width: 100%;
   max-width: none;

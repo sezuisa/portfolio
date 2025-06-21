@@ -43,7 +43,7 @@ export default function Button({
   return (
     <Link href={href || "/"} target="_blank">
       <button
-        className={`group/button ${backgroundVariant} px-2 py-1 rounded-full flex flex-col items-center ${gradientVariant} ${className}`}
+        className={`cursor-pointer group/button ${backgroundVariant} px-2 py-1 rounded-full flex flex-col items-center ${gradientVariant} ${className}`}
       >
         <div className="flex flex-row items-center">
           <p className={`${normalTextColour} ${hoverTextColour}`}>{children}</p>
