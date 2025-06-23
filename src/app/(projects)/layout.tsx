@@ -16,9 +16,15 @@ export default function ProjectsLayout({
   return (
     <html
       lang="en"
-      className={`bg-[url('../../public/background.svg')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} scrollbar`}
+      className={`${lexend.className} selection:bg-accent selection:text-amber-950 text-lg scrollbar`}
     >
-      <body>
+      <body className="relative overflow-x-hidden min-h-screen bg-extra-dark-choco">
+        {/* iOS-compatible fixed background layer */}
+        <div
+          className="fixed inset-0 -z-10 bg-[url('/background.svg')] bg-cover bg-center"
+          aria-hidden="true"
+        />
+
         {children}
         <Footer />
       </body>

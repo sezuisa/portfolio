@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import StaticBlob from "@/components/staticblob";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
@@ -9,13 +9,17 @@ export const metadata: Metadata = {
     "Detail page about the UX design project 'Smarti' by Sarah Hägele",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#322824",
+};
+
 export default function Smarti() {
   return (
     <div>
       <ProjectsHeader heading="Smarti" />
       <main className="min-h-screen -mb-25 px-4 pt-4 pb-25 lg:px-16 bg-extra-dark-choco">
         <div className="w-full flex flex-row justify-center">
-          <BackButton text="Back to projects" href="/#anchor_projects" />
+          <BackButton text="Back to case studies" href="/#anchor_casestudies" />
         </div>
 
         <div className="w-full py-8 flex flex-row justify-center flex-wrap">

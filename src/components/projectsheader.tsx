@@ -13,16 +13,15 @@ type ProjectHeaderProps = {
 
 export default function ProjectsHeader({ heading }: ProjectHeaderProps) {
   return (
-    <div
-      id="page-header"
-      className="relative pt-4 lg:pt-8 xl:pt-16 overflow-hidden"
-    >
+    <div id="page-header" className="relative overflow-hidden">
       <div
         id="heading"
-        className="flex flex-col w-full max-w-7xl mx-auto items-center px-4 mb-20"
+        className="flex flex-col w-full max-w-7xl mx-auto items-center justify-center px-4 my-15"
       >
-        <h1 className={`text-6xl lg:text-8xl xl:block ${sarina.className}`}>
-          <span className="bg-linear-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent p-2 drop-shadow-2xl">
+        <h1
+          className={`text-5xl lg:text-6xl xl:block ${sarina.className} text-center`}
+        >
+          <span className="bg-linear-to-r from-red-500 from-10% via-amber-500 via-30% to-orange-500 bg-clip-text text-transparent drop-shadow-2xl">
             {heading}
           </span>
         </h1>

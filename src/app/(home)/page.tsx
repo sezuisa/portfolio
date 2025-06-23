@@ -11,7 +11,7 @@ import AnimatedBlob from "@/components/animatedblob";
 export default function Home() {
   return (
     <main>
-      <div className="">
+      <div>
         <section className="bg-extra-dark-choco p-4 lg:px-16">
           <GradientHeading text="case studies" anchor="anchor_casestudies" />
           <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-15">
@@ -59,7 +59,7 @@ export default function Home() {
                   <h3>Work in progress!</h3>
                 </StaticBlob>
               </Link>
-              <h3>Carers</h3>
+              <h3>Caring for the Carer</h3>
               <p>Academic Major Project (2025)</p>
             </div>
             <div className="flex flex-col justify-center items-center">

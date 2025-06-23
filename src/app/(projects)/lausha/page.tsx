@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import StaticBlob from "@/components/staticblob";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   title: "Lausha - Sarah Hägele Portfolio",
   description:
     "Detail page about the UX design project 'Lausha' by Sarah Hägele",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#322824",
 };
 
 export default function Lausha() {
@@ -51,21 +55,23 @@ export default function Lausha() {
             <div className="max-w-full lg:max-w-150 lg:max-h-300 z-1">
               <EditorBox>
                 <h3 className="font-bold">In a nutshell</h3>
-                <p>
-                  Laundry isn&apos;t exactly something many people would
-                  consider as a particularly exciting topic. However, it is a
-                  very worthwhile one to look at when considering potential for
-                  improvements in both the overall experience of this
-                  &quot;unexciting&quot; chore - and also in resource use.
-                </p>
-                <p>
-                  Through primary research, I discovered that university
-                  students in shared housing often underfill laundry machines,
-                  leading to unnecessary water and energy waste. Lausha is a
-                  mobile app designed to encourage more sustainable laundry
-                  practices by helping students share loads, track impact, and
-                  stay motivated through behavioural nudges and gamification.
-                </p>
+                <div className="max-w-prose space-y-3">
+                  <p>
+                    Laundry isn&apos;t exactly something many people would
+                    consider as a particularly exciting topic. However, it is a
+                    very worthwhile one to look at when considering potential
+                    for improvements in both the overall experience of this
+                    &quot;unexciting&quot; chore - and also in resource use.
+                  </p>
+                  <p>
+                    Through primary research, I discovered that university
+                    students in shared housing often underfill laundry machines,
+                    leading to unnecessary water and energy waste. Lausha is a
+                    mobile app designed to encourage more sustainable laundry
+                    practices by helping students share loads, track impact, and
+                    stay motivated through behavioural nudges and gamification.
+                  </p>
+                </div>
               </EditorBox>
             </div>
           </div>
@@ -218,7 +224,7 @@ export default function Lausha() {
                 consolidated my learnings into a validated and higher fidelity
                 concept that not only addressed the sustainability issue but
                 also responded to real user needs - culminating in Lausha, a
-                behavioral intervention designed to make sustainable laundry
+                behavioural intervention designed to make sustainable laundry
                 easy, social, and rewarding.
               </p>
             </div>

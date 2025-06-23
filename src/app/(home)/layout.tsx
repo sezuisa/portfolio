@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import Footer from "@/components/footer";
 import HomeHero from "./homehero";
@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "Portfolio showing the work done by Sarah Hägele as a UX Designer.",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#322824",
+};
+
 export default function HomeLayout({
   children,
 }: Readonly<{
@@ -23,9 +27,15 @@ export default function HomeLayout({
   return (
     <html
       lang="en"
-      className={`bg-[url('../../public/background.svg')] bg-cover bg-center bg-fixed selection:bg-accent selection:text-amber-950 text-lg ${lexend.className} scrollbar`}
+      className={`${lexend.className} selection:bg-accent selection:text-amber-950 text-lg scrollbar`}
     >
-      <body>
+      <body className="relative overflow-x-hidden min-h-screen bg-extra-dark-choco">
+        {/* Background image layer */}
+        <div
+          className="fixed inset-0 -z-10 bg-[url('/background.svg')] bg-cover bg-center"
+          aria-hidden="true"
+        />
+
         <HomeHero />
         {children}
         <Footer />

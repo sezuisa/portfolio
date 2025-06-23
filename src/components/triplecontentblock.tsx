@@ -6,11 +6,13 @@ import { ReactNode, Children } from "react";
 interface TripleContentBlockProps {
   children: ReactNode;
   reverse?: boolean;
+  alignCenter?: boolean;
 }
 
 export default function TripleContentBlock({
   children,
   reverse = false,
+  alignCenter = true,
 }: TripleContentBlockProps) {
   const [left, right, center] = Children.toArray(children);
 
@@ -18,7 +20,8 @@ export default function TripleContentBlock({
     <motion.div
       className={`flex flex-col w-full lg:flex-row ${
         reverse ? "flex-col-reverse" : ""
-      } ${reverse ? "lg:flex-row-reverse" : ""} items-center gap-8 my-5`}
+      } ${reverse ? "lg:flex-row-reverse" : ""} gap-8 my-5
+       ${alignCenter ? "items-center" : "items-start"}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
