@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#322824",
+  themeColor: "#4e3931",
 };
 
 export default function HomeLayout({
@@ -29,10 +29,10 @@ export default function HomeLayout({
       lang="en"
       className={`${lexend.className} selection:bg-accent selection:text-amber-950 text-lg scrollbar`}
     >
-      <body className="relative overflow-x-hidden min-h-screen bg-extra-dark-choco">
+      <body className="relative overflow-x-hidden min-h-screen bg-dark-choco">
         {/* Background image layer */}
         <div
-          className="fixed inset-0 -z-10 bg-[url('/background.svg')] bg-cover bg-center"
+          className="fixed inset-0 -z-10 bg-[url('/background.svg')] bg-cover bg-center h-screen"
           aria-hidden="true"
         />
 

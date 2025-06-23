@@ -39,7 +39,7 @@ export default function Carers() {
 
           {/*----------- OVERVIEW -----------*/}
 
-          <GradientHeading text="overview" colourVariant="teal" />
+          <GradientHeading text="overview" colourVariant="lilac" />
 
           <div className="flex flex-row flex-wrap justify-center items-center mb-10">
             <Image
@@ -85,7 +85,7 @@ export default function Carers() {
               <div className="relative flex justify-center items-center">
                 <StaticBlob
                   blobType={0}
-                  fillColor="#4B8482"
+                  fillColor="#DCCCFF"
                   className="w-25 h-25"
                 >
                   <Image
@@ -104,7 +104,7 @@ export default function Carers() {
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
               <StaticBlob
                 blobType={1}
-                fillColor="#ACDEDC"
+                fillColor="#FFE0C2"
                 className="w-25 h-25"
               >
                 <Image
@@ -121,7 +121,7 @@ export default function Carers() {
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
               <StaticBlob
                 blobType={2}
-                fillColor="#EBFCFB"
+                fillColor="#C2E5FF"
                 className="w-25 h-25"
               >
                 <Image
@@ -142,7 +142,7 @@ export default function Carers() {
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
               <StaticBlob
                 blobType={3}
-                fillColor="#E87F64"
+                fillColor="#FFC2EC"
                 className="w-25 h-25"
               >
                 <Image
@@ -162,7 +162,7 @@ export default function Carers() {
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
               <StaticBlob
                 blobType={4}
-                fillColor="#EC6344"
+                fillColor="#FFECBD"
                 className="w-25 h-25"
               >
                 <Image
@@ -182,7 +182,7 @@ export default function Carers() {
 
           {/*----------- INTRODUCTION -----------*/}
 
-          <GradientHeading text="introduction" colourVariant="teal" />
+          <GradientHeading text="introduction" colourVariant="lilac" />
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
@@ -232,7 +232,7 @@ export default function Carers() {
               </p>
             </div>
             <Image
-              src="/double_diamond_teal.png"
+              src="/carers/double_diamond_lilac.png"
               alt="Illustration of the Double Diamond"
               width={0}
               height={0}
@@ -243,7 +243,7 @@ export default function Carers() {
 
           {/*----------- DISCOVER -----------*/}
 
-          <GradientHeading text="discover" colourVariant="teal" />
+          <GradientHeading text="discover" colourVariant="lilac" />
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
@@ -342,11 +342,11 @@ export default function Carers() {
                 archetype.
               </p>
             </div>
-            <div className="max-w-full">
-              <div className="flex flex-row flex-nowrap items-center justify-center -mb-10 gap-3">
+            <div className="max-w-full flex flex-col gap-10 mt-10">
+              <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center md:-mb-10 gap-10 md:gap-3">
                 <StaticBlob
                   blobType={4}
-                  fillColor="#4B8482"
+                  fillColor="#DCCCFF"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -358,13 +358,17 @@ export default function Carers() {
                     className="rounded-xl"
                   />
                 </StaticBlob>
-                <h4>Interviews with Ecosystem Mapping</h4>
+                <h4 className="md:max-w-50">
+                  Interviews with Ecosystem Mapping
+                </h4>
               </div>
-              <div className="flex flex-row flex-nowrap items-center justify-center mb-3 gap-3">
-                <h4>Interviews with Archetype Building</h4>
+              <div className="flex flex-row flex-wrap-reverse md:flew-nowrap items-center justify-center mb-3 gap-3">
+                <h4 className="md:max-w-50 md:text-end">
+                  Interviews with Archetype Building
+                </h4>
                 <StaticBlob
                   blobType={5}
-                  fillColor="#4B8482"
+                  fillColor="#FFE0C2"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -416,10 +420,10 @@ export default function Carers() {
             </div>
             <div className="max-w-full">
               <div className="flex flex-row flex-nowrap items-center justify-center mb-3 gap-3">
-                <h4>Directed Storytelling</h4>
+                <h4 className="text-end">Directed Storytelling</h4>
                 <StaticBlob
                   blobType={5}
-                  fillColor="#4B8482"
+                  fillColor="#FFC2EC"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -435,7 +439,7 @@ export default function Carers() {
               <div className="flex flex-row flex-nowrap items-center justify-center -mb-10 gap-3">
                 <StaticBlob
                   blobType={0}
-                  fillColor="#4B8482"
+                  fillColor="#C2E5FF"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -450,7 +454,7 @@ export default function Carers() {
                 <h4>WhatsApp Diary Study</h4>
               </div>
               <div className="flex flex-row flex-nowrap items-center justify-center gap-3">
-                <h4>PERMA Group Card Sorting</h4>
+                <h4 className="text-end">PERMA Group Card Sorting</h4>
                 <StaticBlob
                   blobType={1}
                   src="/carers/card_sorting.jpg"
@@ -462,7 +466,7 @@ export default function Carers() {
 
           {/*----------- DEFINE -----------*/}
 
-          <GradientHeading text="define" colourVariant="teal" />
+          <GradientHeading text="define" colourVariant="lilac" />
 
           <div className="max-w-prose space-y-3">
             <h3>Making Sense of my Data</h3>
@@ -516,7 +520,7 @@ export default function Carers() {
             <div className="flex flex-col items-center gap-5">
               <StaticBlob
                 blobType={2}
-                fillColor="#4B8482"
+                fillColor="#FFECBD"
                 className="w-70 h-70 lg:w-100 lg:h-100 lg:mr-25"
               >
                 <Image
@@ -530,7 +534,7 @@ export default function Carers() {
               </StaticBlob>
               <StaticBlob
                 blobType={3}
-                fillColor="#4B8482"
+                fillColor="#FFC2EC"
                 className="w-70 h-70 lg:w-100 lg:h-100 lg:ml-25"
               >
                 <Image
@@ -575,7 +579,7 @@ export default function Carers() {
             </div>
             <StaticBlob
               blobType={1}
-              fillColor="#4B8482"
+              fillColor="#689ABE"
               className="w-70 h-70 lg:w-100 lg:h-100"
             >
               <Image
@@ -612,7 +616,7 @@ export default function Carers() {
             </div>
             <StaticBlob
               blobType={2}
-              fillColor="#4B8482"
+              fillColor="#8D72C8"
               className="w-70 h-70 lg:w-100 lg:h-100"
             >
               <Image
@@ -630,11 +634,11 @@ export default function Carers() {
             <div className="flex flex-col items-center gap-5">
               <StaticBlob
                 blobType={3}
-                fillColor="#4B8482"
+                fillColor="#FFC2EC"
                 className="w-70 h-70"
               >
                 <div className="flex flex-col items-center">
-                  <div className="z-1 text-center max-w-70 bg-dark-red rounded-3xl p-2 mb-3">
+                  <div className="z-1 text-center max-w-70 bg-full-pink rounded-3xl p-2 mb-3">
                     <p>
                       &quot;There was four of us. But I got no help from
                       them.&quot; (Carer 5)
@@ -648,7 +652,7 @@ export default function Carers() {
                     priority
                     className="z-0 w-30 h-auto md:w-40 lg:w-50 -mt-10"
                   />
-                  <div className="z-1 text-center max-w-70 bg-dark-red rounded-3xl p-2 -mt-5">
+                  <div className="z-1 text-center max-w-70 bg-full-pink rounded-3xl p-2 -mt-5">
                     <p>
                       &quot;Today&apos;s neighbourliness has more or less
                       disappeared because of COVID.&quot; (Carer 1)
@@ -676,11 +680,11 @@ export default function Carers() {
             <div className="flex flex-col items-center gap-5">
               <StaticBlob
                 blobType={3}
-                fillColor="#4B8482"
+                fillColor="#DCCCFF"
                 className="w-70 h-70"
               >
                 <div className="flex flex-col items-center">
-                  <div className="z-1 text-center max-w-70 bg-dark-red rounded-3xl p-2">
+                  <div className="z-1 text-center max-w-70 bg-full-lilac rounded-3xl p-2">
                     <p>
                       &quot;Yes, it never ends, so someone always has to be
                       there somehow.&quot; (Carer 2)
@@ -694,7 +698,7 @@ export default function Carers() {
                     priority
                     className="z-0 w-30 h-auto md:w-40 lg:w-50 -mt-5"
                   />
-                  <div className="z-1 text-center max-w-70 bg-dark-red rounded-3xl p-2 -mt-18">
+                  <div className="z-1 text-center max-w-70 bg-full-lilac rounded-3xl p-2 -mt-18">
                     <p>
                       &quot;But even when she sat there quietly for a few hours,
                       someone just had to be around, and you also had to give
@@ -723,7 +727,7 @@ export default function Carers() {
             <div className="flex flex-col items-center gap-5">
               <StaticBlob
                 blobType={3}
-                fillColor="#4B8482"
+                fillColor="#C2E5FF"
                 className="w-70 h-70"
               >
                 <div className="flex flex-col items-center">
@@ -735,12 +739,12 @@ export default function Carers() {
                     priority
                     className="z-0 w-30 h-auto md:w-40 lg:w-50 -mt-5"
                   />
-                  <div className="z-1 text-center max-w-70 bg-dark-red rounded-3xl p-2 -mt-8">
+                  <div className="z-1 text-center max-w-70 bg-full-blue rounded-3xl p-2 -mt-8">
                     <p>
                       &quot;When they start looking after somebody, they start
-                      actually grieving, the grieving process. [...] It&apos;s like
-                      they are starting a grieving process and the acceptance
-                      eventually comes in.&quot; (Support Worker 3)
+                      actually grieving, the grieving process. [...] It&apos;s
+                      like they are starting a grieving process and the
+                      acceptance eventually comes in.&quot; (Support Worker 3)
                     </p>
                   </div>
                 </div>
@@ -769,28 +773,28 @@ export default function Carers() {
               set of user needs:
             </p>
             <ul className="list-disc pl-5">
-              <li className="text-[#EBFCFB]">
+              <li className="text-[#DCCCFF]">
                 Ensuring their loved one is safe, healthy, and well cared for
               </li>
-              <li className="text-[#EBFCFB]">
+              <li className="text-[#DCCCFF]">
                 Being able to step away occasionally without guilt or anxiety
               </li>
-              <li className="text-[#EBFCFB]">
+              <li className="text-[#DCCCFF]">
                 Feeling emotionally and practically supported — not just
                 responsible
               </li>
-              <li className="text-[#EBFCFB]">
+              <li className="text-[#DCCCFF]">
                 Having time for themselves to rest, recover, or pursue other
                 interests
               </li>
-              <li className="text-[#EBFCFB]">
+              <li className="text-[#DCCCFF]">
                 Preserving a sense of identity and independence outside the
                 carer role
               </li>
-              <li className="text-[#EBFCFB]">
+              <li className="text-[#DCCCFF]">
                 Staying connected to social circles
               </li>
-              <li className="text-[#EBFCFB]">
+              <li className="text-[#DCCCFF]">
                 Finding meaning and positive emotion in their relationship with
                 their loved one
               </li>
@@ -826,7 +830,7 @@ export default function Carers() {
           </ContentBlock>
 
           <TripleContentBlock alignCenter={false}>
-            <StaticBlob blobType={0} fillColor="#4B8482" className="w-70 h-70">
+            <StaticBlob blobType={0} fillColor="#8D72C8" className="w-70 h-70">
               <div className="flex flex-col items-center max-w-prose space-y-3 text-center">
                 <h3 className="font-bold">Trustworthy</h3>
                 <h4>
@@ -836,7 +840,7 @@ export default function Carers() {
               </div>
             </StaticBlob>
 
-            <StaticBlob blobType={2} fillColor="#4B8482" className="w-70 h-70">
+            <StaticBlob blobType={2} fillColor="#B97129" className="w-70 h-70">
               <div className="flex flex-col items-center max-w-prose space-y-3 text-center">
                 <h3 className="font-bold">Supportive</h3>
                 <h4>
@@ -846,7 +850,7 @@ export default function Carers() {
               </div>
             </StaticBlob>
 
-            <StaticBlob blobType={4} fillColor="#4B8482" className="w-70 h-70">
+            <StaticBlob blobType={4} fillColor="#689ABE" className="w-70 h-70">
               <div className="flex flex-col items-center max-w-prose space-y-3 text-center">
                 <h3 className="font-bold">Flexible</h3>
                 <h4>
@@ -859,7 +863,7 @@ export default function Carers() {
 
           {/*----------- REFLECTIONS -----------*/}
 
-          <GradientHeading text="reflections" colourVariant="teal" />
+          <GradientHeading text="reflections" colourVariant="lilac" />
 
           <div className="max-w-prose space-y-3">
             <p>
@@ -895,7 +899,7 @@ export default function Carers() {
 
           {/*----------- WHAT'S NEXT -----------*/}
 
-          <GradientHeading text="what's next?" colourVariant="teal" />
+          <GradientHeading text="what's next?" colourVariant="lilac" />
 
           <div className="max-w-prose space-y-3">
             <p>

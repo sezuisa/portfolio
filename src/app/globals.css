@@ -7,12 +7,24 @@
   --color-cappuccino: #7b5a4e;
   --color-accent: #d97706;
   --color-cream: #fde3c6;
+
   --color-full-teal: #4b8482;
   --color-mid-teal: #acdedc;
   --color-light-teal: #ebfcfb;
   --color-light-red: #e87f64;
   --color-full-red: #ec6344;
   --color-dark-red: #a1402a;
+
+  --color-full-lilac: #8d72c8;
+  --color-light-lilac: #dcccff;
+  --color-full-orange: #b97129;
+  --color-light-orange: #ffe0c2;
+  --color-full-yellow: #c5a554;
+  --color-light-yellow: #ffecbd;
+  --color-full-blue: #689abe;
+  --color-light-blue: #c2e5ff;
+  --color-full-pink: #cf6db0;
+  --color-light-pink: #ffc2ec;
 }
 
 /*

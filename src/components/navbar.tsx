@@ -91,7 +91,7 @@ export const Nav = () => {
                 key={index}
                 className="cursor-pointer"
               >
-                <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
+                <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500 transition duration-600 ease-in-out">
                   <span className="mr-2">{icon}</span>
                   <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-2xl">
                     {title}
@@ -111,7 +111,7 @@ export const Nav = () => {
               key={index}
               className="cursor-pointer"
             >
-              <button className="cursor-pointer group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500">
+              <button className="cursor-pointer group/button bg-transparent mx-3 m-1 p-1 rounded-full w-40 flex flex-col items-center hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500 transition duration-600 ease-in-out">
                 <span className="mt-1">{icon}</span>
                 <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-base">
                   {title}

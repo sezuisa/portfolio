@@ -22,6 +22,10 @@ const gradientColours: { [key: string]: string[] } = {
     "from-full-teal from-10% via-light-teal via-30% to-full-red",
     "border-light-teal/20",
   ],
+  lilac: [
+    "from-full-lilac from-10% via-light-lilac via-30% to-full-orange",
+    "border-light-lilac",
+  ],
 };
 
 export default function GradientHeading({

@@ -40,6 +40,7 @@ export default function Home() {
               <Link href="/smarti" className="cursor-pointer">
                 <StaticBlob
                   blobType={1}
+                  fillColor="#646756"
                   hoverEffect={true}
                   className="w-70 h-70 lg:w-120 lg:w-110 lg:h-110"
                 >
@@ -53,10 +54,18 @@ export default function Home() {
               <Link href="/carers" className="cursor-pointer">
                 <StaticBlob
                   blobType={2}
+                  fillColor="#8D72C8"
                   hoverEffect={true}
                   className="w-70 h-70 lg:w-120 lg:w-110 lg:h-110"
                 >
-                  <h3>Work in progress!</h3>
+                  <Image
+                    src="/carers/dementia_carer_illustration.png"
+                    alt="Illustration of a dementia carer"
+                    width={350}
+                    height={400}
+                    priority
+                    className="w-90"
+                  />
                 </StaticBlob>
               </Link>
               <h3>Caring for the Carer</h3>
@@ -66,6 +75,7 @@ export default function Home() {
               <Link href="/expenses" className="cursor-pointer">
                 <StaticBlob
                   blobType={3}
+                  fillColor="#455DFF"
                   hoverEffect={true}
                   className="w-70 h-70 lg:w-110 lg:h-110"
                 >
