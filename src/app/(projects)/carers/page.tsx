@@ -738,7 +738,7 @@ export default function Carers() {
                   <div className="z-1 text-center max-w-70 bg-dark-red rounded-3xl p-2 -mt-8">
                     <p>
                       &quot;When they start looking after somebody, they start
-                      actually grieving, the grieving process. [...] It's like
+                      actually grieving, the grieving process. [...] It&apos;s like
                       they are starting a grieving process and the acceptance
                       eventually comes in.&quot; (Support Worker 3)
                     </p>
