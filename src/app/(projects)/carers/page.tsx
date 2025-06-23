@@ -266,24 +266,24 @@ export default function Carers() {
                 research included:
               </p>
               <ul className="list-disc pl-5">
-                <li className="text-[#EBFCFB]">
+                <li className="text-[#DCCCFF]">
                   General challenges and lived experiences of informal carers
                 </li>
-                <li className="text-[#EBFCFB]">
+                <li className="text-[#DCCCFF]">
                   Different types of informal carers to start building
                   archetypes
                 </li>
-                <li className="text-[#EBFCFB]">
+                <li className="text-[#DCCCFF]">
                   The PERMA model of wellbeing by Martin Seligman, to frame the
                   impact of caring on wellbeing
                 </li>
-                <li className="text-[#EBFCFB]">
+                <li className="text-[#DCCCFF]">
                   The concept of anticipatory grief, through the lens of the
                   Kübler-Ross model, the &apos;5 stages of grief&apos;
                 </li>
               </ul>
               <p>
-                What stood out most was the emotional landscape of caring —
+                What stood out most was the emotional landscape of caring -
                 carers don&apos;t just face logistical challenges; they&apos;re
                 often mourning the gradual loss of the person they once knew,
                 while still caring for them every day. This anticipatory grief
@@ -293,9 +293,9 @@ export default function Carers() {
               <p>
                 Throughout the secondary research process, I tracked findings
                 and surfaced assumptions using a risk-uncertainty matrix.
-                High-risk, high-uncertainty assumptions — such as how supported
+                High-risk, high-uncertainty assumptions - such as how supported
                 carers feel by their environment, or the emotional toll of
-                constant presence — became focal points for validation within my
+                constant presence - became focal points for validation within my
                 primary research.
               </p>
             </div>
@@ -315,7 +315,7 @@ export default function Carers() {
                 With a foundation of assumptions in place, I set out to explore
                 the lived experiences of informal carers through qualitative
                 user research. However, from the beginning, I was mindful that
-                this wouldn&apos;t be straightforward — carers are often
+                this wouldn&apos;t be straightforward - carers are often
                 time-poor, emotionally burdened, and, in some cases, vulnerable.
                 Engaging with them ethically and respectfully was essential.
               </p>
@@ -403,7 +403,7 @@ export default function Carers() {
                 these moments. At the same time, I ran a week-long diary study
                 via WhatsApp with an active dementia carer, which offered a
                 lightweight, real-time way for them to share thoughts, moments,
-                and struggles — and allowed me to ask sensitive follow-up
+                and struggles - and allowed me to ask sensitive follow-up
                 questions in a non-intrusive way. Finally, I complemented this
                 with a group card sorting session, using the five PERMA
                 wellbeing categories to explore how different aspects of
@@ -780,7 +780,7 @@ export default function Carers() {
                 Being able to step away occasionally without guilt or anxiety
               </li>
               <li className="text-[#DCCCFF]">
-                Feeling emotionally and practically supported — not just
+                Feeling emotionally and practically supported - not just
                 responsible
               </li>
               <li className="text-[#DCCCFF]">
