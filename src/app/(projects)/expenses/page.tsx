@@ -948,10 +948,10 @@ export default function Expenses() {
                   in the background for you.
                 </p>
                 <p>
-                  In line with MHR's brief, Centsible's design is purposefully
+                  In line with MHR&apos;s brief, Centsible&apos;s design is purposefully
                   simple and the colour palette neutral, focusing more on
                   seamless flows and meaningful ideas and allowing our client to
-                  easily adopt the underlying concept and turn it into MHR's
+                  easily adopt the underlying concept and turn it into MHR&apos;s
                   next game-changing product.
                 </p>
                 <Button
