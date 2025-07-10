@@ -33,22 +33,29 @@ export default function Home() {
                   />
                 </StaticBlob>
               </Link>
-              <h3>Lausha</h3>
+              <h3 className="mt-5">Lausha</h3>
               <p>Solo Academic Project (2024)</p>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <Link href="/smarti" className="cursor-pointer">
+              <Link href="/expenses" className="cursor-pointer">
                 <StaticBlob
-                  blobType={1}
-                  fillColor="#646756"
+                  blobType={3}
+                  fillColor="#455DFF"
                   hoverEffect={true}
-                  className="w-70 h-70 lg:w-120 lg:w-110 lg:h-110"
+                  className="w-70 h-70 lg:w-110 lg:h-110"
                 >
-                  <h3>Work in progress!</h3>
+                  <Image
+                    src="/centsible/mockups/centsible_main_mockup_4.png"
+                    alt="Mockup of the Centsible App"
+                    width={350}
+                    height={400}
+                    priority
+                    className="w-45 lg:w-70"
+                  />
                 </StaticBlob>
               </Link>
-              <h3>SmartI</h3>
-              <p>Solo Academic Project (2024)</p>
+              <h3 className="mt-5">Centsible</h3>
+              <p>Group Client/Academic Project (2025)</p>
             </div>
             <div className="flex flex-col justify-center items-center">
               <Link href="/carers" className="cursor-pointer">
@@ -68,22 +75,22 @@ export default function Home() {
                   />
                 </StaticBlob>
               </Link>
-              <h3>Caring for the Carer</h3>
+              <h3 className="mt-5">Caring for the Carer</h3>
               <p>Academic Major Project (2025)</p>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <Link href="/expenses" className="cursor-pointer">
+              <Link href="/smarti" className="cursor-pointer">
                 <StaticBlob
-                  blobType={3}
-                  fillColor="#455DFF"
+                  blobType={1}
+                  fillColor="#646756"
                   hoverEffect={true}
-                  className="w-70 h-70 lg:w-110 lg:h-110"
+                  className="w-70 h-70 lg:w-120 lg:w-110 lg:h-110"
                 >
                   <h3>Work in progress!</h3>
                 </StaticBlob>
               </Link>
-              <h3>Centsible</h3>
-              <p>Group Client/Academic Project (2025)</p>
+              <h3 className="mt-5">SmartI</h3>
+              <p>Solo Academic Project (2024)</p>
             </div>
           </div>
         </section>

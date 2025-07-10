@@ -40,8 +40,8 @@ export default function HomeHero() {
           />
 
           <EditorBox extraStyles="order-3 z-1 lg:-mt-20">
-            <div className="max-w-prose">
-              <p>[&#126;]&#36; Allow me to introduce myself.</p>
+            <div className="max-w-prose space-y-3">
+              <p>Allow me to introduce myself.</p>
               <p>
                 My name is Sarah and I am a Hobbyist Photographer, Ex-Software
                 Developer, and UX Designer.

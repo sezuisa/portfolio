@@ -1,0 +1,52 @@
+[
+  {
+    "image": "/centsible/mockups/mid-fi-emp-dash.png",
+    "alt": "Low-fi mockup of the Lausha App - Home screen",
+    "text": "Employee Dashboard"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-emp-wallet.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Employee Expenses Wallet"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-emp-ai-chat.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Employee private chat with AI"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-emp-group-chat.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Employee view: Group chat with AI and Manager"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-manager-dash.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Manager Dashboard"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-manager-review.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Manager Expense Claim Review Screen"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-manager-group-chat.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Manager view: Group chat with AI and Employee"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-finance-dash.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Finance Team Dashboard"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-finance-ai-chat.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Finance Team Chat with AI"
+  },
+  {
+    "image": "/centsible/mockups/mid-fi-finance-workflows.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Finance Team Workflow Management Screen"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "image": "/centsible/mockups/lo-fi-emp-dash-1.png",
+    "alt": "Low-fi mockup of the Lausha App - Home screen",
+    "text": "Employee Dashboard - Var 1"
+  },
+  {
+    "image": "/centsible/mockups/lo-fi-emp-wallet-1.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Employee Wallet - Var 1"
+  },
+  {
+    "image": "/centsible/mockups/lo-fi-emp-chat-1.png",
+    "alt": "Low-fi mockup of the Lausha App - Camera alignment screen",
+    "text": "Employee Chat with AI - Var 1"
+  },
+  {
+    "image": "/centsible/mockups/lo-fi-emp-dash-2.png",
+    "alt": "Low-fi mockup of the Lausha App - Non-optimal fill level result screen",
+    "text": "Employee Dashboard - Var 2"
+  },
+  {
+    "image": "/centsible/mockups/lo-fi-emp-wallet-2.png",
+    "alt": "Low-fi mockup of the Lausha App - Optimal fill level result screen",
+    "text": "Employee Wallet - Var 2"
+  },
+  {
+    "image": "/centsible/mockups/lo-fi-emp-chat-2.png",
+    "alt": "Low-fi mockup of the Lausha App - Optimal fill level result screen",
+    "text": "Employee Chat with AI - Var 2"
+  }
+]

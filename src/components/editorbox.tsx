@@ -7,15 +7,22 @@ const jbMono = JetBrains_Mono({
 
 type EditorBoxProps = {
   children: ReactNode;
+  showButtons?: boolean;
   extraStyles?: string;
 };
 
-export const EditorBox = ({ children, extraStyles }: EditorBoxProps) => {
+export const EditorBox = ({
+  children,
+  showButtons = false,
+  extraStyles,
+}: EditorBoxProps) => {
   return (
     <div
       className={`bg-cappuccino/40 backdrop-blur-xl border border-cappuccino/40 rounded-xl flex flex-col justify-start shadow-2xl ${extraStyles || ""}`}
     >
-      <div className="flex flex-row justify-start px-4 pt-4">
+      <div
+        className={`flex flex-row justify-start px-4 pt-4 ${showButtons ? "" : "hidden"}`}
+      >
         <svg
           height="12"
           width="12"

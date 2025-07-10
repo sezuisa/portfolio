@@ -87,7 +87,7 @@ export default function ScreenGallery({
           </button>
         </div>
       </StaticBlob>
-      <EditorBox extraStyles={`w-full ${captionClassName}`}>
+      <EditorBox extraStyles={`w-full mt-5 pt-5 ${captionClassName}`}>
         <p>{text}</p>
       </EditorBox>
     </div>

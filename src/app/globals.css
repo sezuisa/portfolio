@@ -25,6 +25,14 @@
   --color-light-blue: #c2e5ff;
   --color-full-pink: #cf6db0;
   --color-light-pink: #ffc2ec;
+
+  --color-cent-blue: #455dff;
+  --color-cent-blue-muted: #6270d1;
+  --color-cent-red: #ff343d;
+  --color-cent-red-muted: #db6368;
+  --color-cent-grey-1: #e5e8eb;
+  --color-cent-grey-2: #667885;
+  --color-cent-grey-3: #2e3c4b;
 }
 
 /*
