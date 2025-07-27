@@ -4,6 +4,7 @@ import { Sarina } from "next/font/google";
 import heroWave from "../../../public/waves_hero.svg";
 import Image from "next/image";
 import AnimatedBlob from "@/components/animatedblob";
+import StaticBlob from "@/components/staticblob";
 
 const sarina = Sarina({
   subsets: ["latin"],
@@ -43,15 +44,116 @@ export default function HomeHero() {
             <div className="max-w-prose space-y-3">
               <p>Allow me to introduce myself.</p>
               <p>
-                My name is Sarah and I am a Hobbyist Photographer, Ex-Software
-                Developer, and UX Designer.
+                My name is Sarah Hägele and I am a Hobbyist Photographer, former
+                Full-Stack Software Developer, and UX Designer.
               </p>
               <p>
-                Let this website give you a glimpse into who I am as a person
-                and what I stand for and do as a designer.
+                I coded this website from scratch with the goal to give you a
+                glimpse into who I am as a person and what I stand for and do as
+                a designer.
               </p>
             </div>
           </EditorBox>
+        </div>
+        <div className="flex flex-row flex-wrap gap-5 justify-center items-center mt-20 mb-10 space-y-10">
+          <StaticBlob
+            blobType={1}
+            fillColor="#7b5a4e"
+            className="w-15 h-15 md:w-20 md:h-20 md:-mb-10"
+          >
+            <Image
+              src="/icons/sql_logo.svg"
+              alt="Icon displaying the Oracle SQL language"
+              width={90}
+              height={90}
+              priority
+              className=""
+            />
+          </StaticBlob>
+          <StaticBlob
+            blobType={2}
+            fillColor="#7b5a4e"
+            className="w-15 h-15 md:w-20 md:h-20 md:-mt-10"
+          >
+            <Image
+              src="/icons/java_logo.png"
+              alt="Icon displaying the Java Logo"
+              width={50}
+              height={50}
+              priority
+              className=""
+            />
+          </StaticBlob>
+          <StaticBlob
+            blobType={3}
+            fillColor="#7b5a4e"
+            className="w-15 h-15 md:w-20 md:h-20 md:-mb-10"
+          >
+            <Image
+              src="/icons/python_logo.png"
+              alt="Icon displaying the Python Logo"
+              width={70}
+              height={70}
+              priority
+              className=""
+            />
+          </StaticBlob>
+          <StaticBlob
+            blobType={4}
+            fillColor="#7b5a4e"
+            className="w-15 h-15 md:w-20 md:h-20 md:-mt-10"
+          >
+            <Image
+              src="/icons/js_ts_logo.png"
+              alt="Icon displaying the JavaScript and TypeScript Logo"
+              width={70}
+              height={70}
+              priority
+              className=""
+            />
+          </StaticBlob>
+          <StaticBlob
+            blobType={5}
+            fillColor="#7b5a4e"
+            className="w-15 h-15 md:w-20 md:h-20 md:-mb-10"
+          >
+            <Image
+              src="/icons/html_css_logo.png"
+              alt="Icon displaying the HTML and CSS Logo"
+              width={70}
+              height={70}
+              priority
+              className=""
+            />
+          </StaticBlob>
+          <StaticBlob
+            blobType={2}
+            fillColor="#7b5a4e"
+            className="w-15 h-15 md:w-20 md:h-20 md:-mt-10"
+          >
+            <Image
+              src="/icons/figma_logo.png"
+              alt="Icon displaying the Figma Logo"
+              width={50}
+              height={50}
+              priority
+              className=""
+            />
+          </StaticBlob>
+          <StaticBlob
+            blobType={3}
+            fillColor="#7b5a4e"
+            className="w-15 h-15 md:w-20 md:h-20 md:-mb-10"
+          >
+            <Image
+              src="/icons/ai_ps_logo.png"
+              alt="Icon displaying the Adobe Illustrator and Photoshop Logo"
+              width={70}
+              height={70}
+              priority
+              className=""
+            />
+          </StaticBlob>
         </div>
       </div>
       <Image

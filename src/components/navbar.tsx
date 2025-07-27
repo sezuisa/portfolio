@@ -87,11 +87,14 @@ export const Nav = () => {
           {navList.map(({ icon, title }, index) => {
             return (
               <a
-                href={`${title === "home" ? "#top" : "#anchor_" + title.replaceAll(" ", "")}`}
+                href={`${title === "home" ? "#top" : "#" + title.replaceAll(" ", "")}`}
                 key={index}
                 className="cursor-pointer"
               >
-                <button className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500 transition duration-600 ease-in-out">
+                <button
+                  className="group/button flex items-center p-3 m-3 mr-2 text-center bg-transparent rounded-full hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500 transition duration-600 ease-in-out"
+                  onClick={() => setIsOpen(false)}
+                >
                   <span className="mr-2">{icon}</span>
                   <span className="text-light-choco group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco text-2xl">
                     {title}
@@ -107,7 +110,7 @@ export const Nav = () => {
         {navList.map(({ icon, title }, index) => {
           return (
             <a
-              href={`${title === "home" ? "#top" : "#anchor_" + title.replaceAll(" ", "")}`}
+              href={`${title === "home" ? "#top" : "#" + title.replaceAll(" ", "")}`}
               key={index}
               className="cursor-pointer"
             >

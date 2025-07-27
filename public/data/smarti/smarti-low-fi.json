@@ -1,0 +1,42 @@
+[
+  {
+    "image": "/smarti/wireframes/home.png",
+    "alt": "Low-fi mockup of the SmartI App - Home screen",
+    "text": "The home page (with tasks for visualisation purposes)"
+  },
+  {
+    "image": "/smarti/wireframes/new-task-dropdown.png",
+    "alt": "Low-fi mockup of the SmartI App - Creating a new task",
+    "text": "Dropdown to choose between creating a new task to be scheduled or a new fixed event"
+  },
+  {
+    "image": "/smarti/wireframes/new-task-description.png",
+    "alt": "Low-fi mockup of the SmartI App - New Task Screen",
+    "text": "New task #1: Entering a description"
+  },
+  {
+    "image": "/smarti/wireframes/new-task-steps-collapsed.png",
+    "alt": "Low-fi mockup of the SmartI App - New Task Steps Collapsed",
+    "text": "New task #2: Letting the app generate task steps based on task title and description"
+  },
+  {
+    "image": "/smarti/wireframes/new-task-steps-generated.png",
+    "alt": "Low-fi mockup of the SmartI App - New Task Steps Generated",
+    "text": "New task #3: Generated steps can be edited, reordered, amended, or removed"
+  },
+  {
+    "image": "/smarti/wireframes/task-pool.png",
+    "alt": "Low-fi mockup of the SmartI App - Task pool",
+    "text": "Task added to a pool of tasks to be scheduled with some more sample tasks; smart schedule is now available"
+  },
+  {
+    "image": "/smarti/wireframes/schedule-confirmation-var1.png",
+    "alt": "Low-fi mockup of the SmartI App - Schedule Confirmation",
+    "text": "Smart schedule was executed and user receives a confirmation screen"
+  },
+  {
+    "image": "/smarti/wireframes/scheduled-tasks.png",
+    "alt": "Low-fi mockup of the SmartI App - Scheduled Tasks",
+    "text": "Tasks are visible in the calendar now and can be manually reordered or a new schedule triggered"
+  }
+]

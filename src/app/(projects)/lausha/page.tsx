@@ -33,10 +33,7 @@ export default function Lausha() {
             <h3 className="italic text-center">
               It&apos;s simple: Sharing laundry to save the planet.
             </h3>
-            <BackButton
-              text="Back to case studies"
-              href="/#anchor_casestudies"
-            />
+            <BackButton text="Back to case studies" href="/#casestudies" />
           </div>
 
           {/*----------- OVERVIEW -----------*/}
@@ -180,6 +177,7 @@ export default function Lausha() {
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
+              <h3 id="challenge">The Challenge</h3>
               <p>
                 Doing laundry is often an individual, mindless task. It&apos;s a
                 chore - not really something most people think about too much or
@@ -207,6 +205,7 @@ export default function Lausha() {
 
           <ContentBlock reverse={true}>
             <div className="max-w-prose space-y-3">
+              <h3 id="approach">The Approach</h3>
               <p>
                 Lausha was my first ever end-to-end UX project, which meant I
                 used many of the methods and tools within the project for the
@@ -244,6 +243,7 @@ export default function Lausha() {
 
           <ContentBlock reverse={false} flipOnMobile={true}>
             <div className="max-w-prose space-y-3">
+              <h3 id="primary-research">Primary Research</h3>
               <p>
                 To really understand how university students in shared
                 accommodations approach laundry and where sustainability
@@ -366,6 +366,7 @@ export default function Lausha() {
               />
             </StaticBlob>
             <div className="max-w-prose space-y-3">
+              <h3 id="synthesis">Insight Synthesis</h3>
               <p>
                 I came out of my primary research with loads and loads of raw
                 data in different formats and it all had one thing in common -
@@ -471,6 +472,7 @@ export default function Lausha() {
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
+              <h3 id="hmw">Finding an Opportunity</h3>
               <p>
                 The first insight validated the realisation and major assumption
                 I had made already throughout the discovery phase. The second
@@ -512,7 +514,7 @@ export default function Lausha() {
 
           <ContentBlock reverse={true}>
             <div className="max-w-prose space-y-3">
-              <h4 className="font-bold">Ideation</h4>
+              <h3 id="ideation">Ideation</h3>
               <p>
                 With a clearly defined problem and opportunity space and
                 well-grounded user insights, I moved into the ideation phase. To
@@ -548,7 +550,7 @@ export default function Lausha() {
 
           <div className="grow-1 flex flex-row place-content-center mt-10">
             <EditorBox extraStyles="max-w-full lg:max-w-200">
-              <h4>The final idea:</h4>
+              <h3 id="final-idea">The idea:</h3>
               <p>
                 An app enables users to share laundry loads with other users to
                 achieve larger loads together. Before every wash, the user takes
@@ -637,7 +639,7 @@ export default function Lausha() {
 
           <ContentBlock alignCenter={false}>
             <div className="maw-w-prose space-y-3">
-              <h4 className="font-bold">Low-Fi Wireframing</h4>
+              <h3 id="wireframing">Low-Fi Wireframing</h3>
               <p>
                 To begin translating my concept into a tangible design, I
                 developed a low-fidelity wireframe prototype. I initially
@@ -729,6 +731,7 @@ export default function Lausha() {
 
           <ContentBlock flipOnMobile={true}>
             <div className="maw-w-prose space-y-3">
+              <h3 id="design-system">A simple Design System</h3>
               <p>
                 Before implementing concrete concept or layout refinements, I
                 focused on creating a visual language for the mid-fidelity
@@ -762,6 +765,7 @@ export default function Lausha() {
 
           <ContentBlock reverse={true}>
             <div className="maw-w-prose space-y-3">
+              <h3 id="feedback-1">Implementing User Feedback</h3>
               <p>
                 The next step was to respond to the feedback received from the
                 first user test. For that, I made several key adjustments to the
@@ -806,6 +810,7 @@ export default function Lausha() {
 
           <ContentBlock>
             <div className="maw-w-prose space-y-3">
+              <h3 id="prototyping">Mid-Fi Prototyping</h3>
               <p>
                 I conducted further user testing with the mid-fidelity prototype
                 to evaluate how well the updated design communicated the
@@ -887,6 +892,7 @@ export default function Lausha() {
           <div className="flex flex-row flex-wrap-reverse justify-center items-center my-10">
             <div className="max-w-full lg:max-w-150 lg:max-h-300 z-0">
               <EditorBox extraStyles="lg:pr-10">
+                <h3 id="final-design">The Final Design</h3>
                 <p>
                   Lausha is a simple 3-step process: find a laundry share
                   partner, wash your clothes together, and earn rewards for
@@ -953,7 +959,9 @@ export default function Lausha() {
 
           <ContentBlock alignCenter={false}>
             <div className="max-w-prose space-y-3">
-              <h4 className="font-bold">What I learned</h4>
+              <h4 className="font-bold" id="learnings">
+                What I learned
+              </h4>
               <p>
                 I gained a deep understanding of the Double Diamond process and
                 how each phase contributes to creating a user-centred solution.
@@ -981,7 +989,9 @@ export default function Lausha() {
               </p>
             </div>
             <div className="max-w-prose space-y-3">
-              <h4 className="font-bold">A word on ethics</h4>
+              <h4 className="font-bold" id="ethics">
+                A word on ethics
+              </h4>
               <p>
                 The field of designing for behaviour change is not an
                 uncontroversial one. Is it acceptable as a designer to have this

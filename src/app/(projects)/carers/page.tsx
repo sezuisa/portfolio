@@ -8,6 +8,7 @@ import EditorBox from "@/components/editorbox";
 import GradientHeading from "@/components/gradientheading";
 import TripleContentBlock from "@/components/triplecontentblock";
 import Image from "next/image";
+import ContactForm from "@/components/contactform";
 
 export const metadata: Metadata = {
   title: "Carers - Sarah Hägele Portfolio",
@@ -31,10 +32,7 @@ export default function Carers() {
             <h3 className="italic text-center">
               Discovering opportunities to support informal carers.
             </h3>
-            <BackButton
-              text="Back to case studies"
-              href="/#anchor_casestudies"
-            />
+            <BackButton text="Back to case studies" href="/#casestudies" />
           </div>
 
           {/*----------- OVERVIEW -----------*/}
@@ -186,6 +184,7 @@ export default function Carers() {
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
+              <h3 id="challenge">The Challenge</h3>
               <p>
                 Informal carers for people with dementia often carry an
                 overwhelming emotional and physical burden. Many feel isolated,
@@ -216,6 +215,7 @@ export default function Carers() {
 
           <ContentBlock reverse={true}>
             <div className="max-w-prose space-y-3">
+              <h3 id="approach">The Approach</h3>
               <p>
                 As the project is currently still ongoing, this case study is
                 focused on its first phase, which follows the first half of the
@@ -247,7 +247,7 @@ export default function Carers() {
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
-              <h3>Secondary Research</h3>
+              <h3 id="secondary-research">Secondary Research</h3>
               <p>
                 Before speaking to users, I immersed myself in secondary
                 research to better understand the context surrounding informal
@@ -310,7 +310,7 @@ export default function Carers() {
 
           <ContentBlock reverse={true} flipOnMobile={true}>
             <div className="max-w-prose space-y-3">
-              <h3>Primary (User) Research</h3>
+              <h3 id="primary-research">Primary (User) Research</h3>
               <p>
                 With a foundation of assumptions in place, I set out to explore
                 the lived experiences of informal carers through qualitative
@@ -469,7 +469,7 @@ export default function Carers() {
           <GradientHeading text="define" colourVariant="lilac" />
 
           <div className="max-w-prose space-y-3">
-            <h3>Making Sense of my Data</h3>
+            <h3 id="sensemaking">Making Sense of my Data</h3>
             <p>
               Synthesis in this project was an ongoing, iterative process that
               allowed me to adapt and deepen my focus as new information
@@ -490,7 +490,7 @@ export default function Carers() {
 
           <ContentBlock reverse={true}>
             <div className="max-w-prose space-y-3">
-              <h4>Round One: Framing the Landscape</h4>
+              <h4 id="landscape">Round One: Framing the Landscape</h4>
               <p>
                 After speaking with support workers and professional carers, I
                 carried out my first round of affinity mapping to start making
@@ -556,7 +556,7 @@ export default function Carers() {
 
           <ContentBlock>
             <div className="max-w-prose space-y-3">
-              <h4>Round Two: Deepening the Understanding</h4>
+              <h4 id="understanding">Round Two: Deepening the Understanding</h4>
               <p>
                 With this emerging direction in mind, I had conducted the
                 research activities with dementia carers with the intention to
@@ -604,7 +604,7 @@ export default function Carers() {
 
           <ContentBlock reverse={true} flipOnMobile={true}>
             <div className="max-w-prose space-y-3">
-              <h4>What I found</h4>
+              <h4 id="findings">What I found</h4>
               <p>
                 After two rounds of synthesis, I had extracted about 30
                 different insights, which I then ranked through a prioritisation
@@ -767,7 +767,7 @@ export default function Carers() {
           </TripleContentBlock>
 
           <div className="max-w-prose space-y-3 my-10">
-            <h4>User Needs emerge</h4>
+            <h4 id="user-needs">User Needs emerge</h4>
             <p>
               After deriving a wide array of insights, I was able to define a
               set of user needs:
@@ -803,7 +803,7 @@ export default function Carers() {
 
           <ContentBlock>
             <div className="max-w-prose space-y-3">
-              <h4>Defining the UX Vision</h4>
+              <h4 id="ux-vision">Defining the UX Vision</h4>
               <p>
                 To clearly articulate the direction of the design and create a
                 concise, strong base for a future ideation process, I created a
@@ -865,7 +865,7 @@ export default function Carers() {
 
           <GradientHeading text="reflections" colourVariant="lilac" />
 
-          <div className="max-w-prose space-y-3">
+          <div className="max-w-prose space-y-3 my-5">
             <p>
               This project has been a meaningful and very challenging journey in
               more ways than one. Gaining ethical approval delayed my access to
@@ -901,7 +901,7 @@ export default function Carers() {
 
           <GradientHeading text="what's next?" colourVariant="lilac" />
 
-          <div className="max-w-prose space-y-3">
+          <div className="max-w-prose space-y-3 my-5">
             <p>
               This case study represents the first half of my UX Master&apos;s
               Major Project, focusing on discovery and definition. The next
@@ -909,6 +909,22 @@ export default function Carers() {
               insights to develop a user-centred design solution for dementia
               carers. This will be added to the portfolio upon completion.
             </p>
+          </div>
+
+          <GradientHeading text="the end" colourVariant="lilac" />
+
+          <div className="flex justify-center items-center m-5">
+            <BackButton
+              text="Next Case Study"
+              href="/expenses"
+              forward={true}
+            />
+          </div>
+
+          <div className="px-4 lg:px-16 mt-5 mb-5 w-full">
+            <EditorBox extraStyles="w-full max-w-xl mx-auto">
+              <ContactForm />
+            </EditorBox>
           </div>
         </div>
       </div>

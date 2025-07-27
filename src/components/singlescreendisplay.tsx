@@ -13,6 +13,7 @@ type SingleScreenDisplayProps = {
   variant?: "right" | "left";
   editorBoxClassName?: string;
   imageClassName?: string;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -25,10 +26,13 @@ export default function SingleScreenDisplay({
   variant = "right",
   editorBoxClassName = "",
   imageClassName = "",
+  className = "",
   children,
 }: SingleScreenDisplayProps) {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center max-w-full group">
+    <div
+      className={`flex flex-col lg:flex-row justify-center items-center max-w-full group ${className}`}
+    >
       <StaticBlob fillColor={backgroundColour} className={`${blobClassName}`}>
         <Image
           src={image}

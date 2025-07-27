@@ -27,7 +27,7 @@ export default function HomeLayout({
   return (
     <html
       lang="en"
-      className={`${lexend.className} selection:bg-accent selection:text-amber-950 text-lg scrollbar`}
+      className={`${lexend.className} selection:bg-accent selection:text-amber-950 text-lg scrollbar scroll-smooth`}
     >
       <body className="relative overflow-x-hidden min-h-screen bg-dark-choco">
         {/* Background image layer */}

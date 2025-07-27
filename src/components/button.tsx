@@ -21,6 +21,7 @@ const backgroundColours: { [key: string]: string } = {
   teal: "bg-linear-to-r from-full-teal via-light-teal to-full-red",
   lilac: "",
   blue: "bg-linear-to-r from-cent-blue via cent-blue-muted to-cent-red",
+  green: "bg-linear-to-r from-pine via-mint to-smarti-orange",
 };
 
 const textColours: { [key: string]: string[] } = {
@@ -34,6 +35,7 @@ const textColours: { [key: string]: string[] } = {
   ],
   lilac: ["", ""],
   blue: ["text-cream", ""],
+  green: ["text-extra-dark-choco", "group-hover/button:text-extra-dark-choco"],
 };
 
 export default function Button({

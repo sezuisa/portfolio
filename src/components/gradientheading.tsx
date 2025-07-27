@@ -30,6 +30,10 @@ const gradientColours: { [key: string]: string[] } = {
     "from-cent-blue from-10% via-cent-blue-muted via-30% to-cent-red",
     "border-cent-blue-muted",
   ],
+  green: [
+    "from-pine from-10% via-mint via-30% to-smarti-orange",
+    "border-pine",
+  ],
 };
 
 export default function GradientHeading({
@@ -49,7 +53,7 @@ export default function GradientHeading({
       <hr className={`grow lg:grow-0 lg:w-8 ${borderColourValue}`}></hr>
       <h1
         id={anchorValue}
-        className={`grow-0 bg-linear-to-r ${gradientVariant} bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl`}
+        className={`grow-0 bg-linear-to-r ${gradientVariant} bg-clip-text text-transparent p-2 mx-4 drop-shadow-2xl ${className}`}
       >
         {text}
       </h1>

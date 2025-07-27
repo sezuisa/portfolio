@@ -13,30 +13,41 @@ export default function Home() {
     <main>
       <div>
         <section className="bg-extra-dark-choco p-4 lg:px-16">
-          <GradientHeading text="case studies" anchor="anchor_casestudies" />
+          <GradientHeading text="case studies" className="scroll-mt-25" />
           <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-15">
-            <div className="flex flex-col justify-center items-center">
-              <Link href="/lausha" className="cursor-pointer">
+            <div className="flex flex-col justify-center items-center max-w-70 lg:max-w-110">
+              <Link href="/carers" className="cursor-pointer">
                 <StaticBlob
-                  blobType={0}
-                  fillColor="#4b8482"
+                  blobType={2}
+                  fillColor="#8D72C8"
                   hoverEffect={true}
                   className="w-70 h-70 lg:w-110 lg:h-110"
                 >
                   <Image
-                    src="/lausha/mockups/mockup_home_3.png"
-                    alt="Mockup of the Lausha App"
+                    src="/carers/dementia_carer_illustration.png"
+                    alt="Illustration of a dementia carer"
                     width={350}
                     height={400}
                     priority
-                    className="w-55 lg:w-90"
+                    className="w-90"
                   />
                 </StaticBlob>
               </Link>
-              <h3 className="mt-5">Lausha</h3>
-              <p>Solo Academic Project (2024)</p>
+              <h3 className="mt-5">Caring for the Carer</h3>
+              <p>Major Project (2025)</p>
+              <div className="flex flex-row flex-wrap justify-center items-center gap-5 mt-5">
+                <div className="z-1 text-center max-w-70 border-full-lilac border-2 rounded-3xl px-2 py-1">
+                  <p>Sector: Adult Social Care</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-full-lilac border-2 rounded-3xl px-2 py-1">
+                  <p>User Research</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-full-lilac border-2 rounded-3xl px-2 py-1">
+                  <p>Sensemaking</p>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center max-w-70 lg:max-w-110">
               <Link href="/expenses" className="cursor-pointer">
                 <StaticBlob
                   blobType={3}
@@ -55,47 +66,99 @@ export default function Home() {
                 </StaticBlob>
               </Link>
               <h3 className="mt-5">Centsible</h3>
-              <p>Group Client/Academic Project (2025)</p>
+              <p>Group Client Project (2025)</p>
+              <div className="flex flex-row flex-wrap justify-center items-center gap-5 mt-5">
+                <div className="z-1 text-center max-w-70 border-cent-blue border-2 rounded-3xl px-2 py-1">
+                  <p>Sector: Expense Management</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-cent-blue border-2 rounded-3xl px-2 py-1">
+                  <p>Ideation</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-cent-blue border-2 rounded-3xl px-2 py-1">
+                  <p>UX Leadership</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-cent-blue border-2 rounded-3xl px-2 py-1">
+                  <p>Agile Design</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-cent-blue border-2 rounded-3xl px-2 py-1">
+                  <p>Mobile App</p>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col justify-center items-center">
-              <Link href="/carers" className="cursor-pointer">
-                <StaticBlob
-                  blobType={2}
-                  fillColor="#8D72C8"
-                  hoverEffect={true}
-                  className="w-70 h-70 lg:w-120 lg:w-110 lg:h-110"
-                >
-                  <Image
-                    src="/carers/dementia_carer_illustration.png"
-                    alt="Illustration of a dementia carer"
-                    width={350}
-                    height={400}
-                    priority
-                    className="w-90"
-                  />
-                </StaticBlob>
-              </Link>
-              <h3 className="mt-5">Caring for the Carer</h3>
-              <p>Academic Major Project (2025)</p>
-            </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center max-w-70 lg:max-w-110">
               <Link href="/smarti" className="cursor-pointer">
                 <StaticBlob
                   blobType={1}
                   fillColor="#646756"
                   hoverEffect={true}
-                  className="w-70 h-70 lg:w-120 lg:w-110 lg:h-110"
+                  className="w-70 h-70 lg:w-110 lg:h-110"
                 >
-                  <h3>Work in progress!</h3>
+                  <Image
+                    src="/smarti/mockups/home-mockup.png"
+                    alt="Mockup of the SmartI App"
+                    width={350}
+                    height={400}
+                    priority
+                    className="w-50 lg:w-80"
+                  />
                 </StaticBlob>
               </Link>
               <h3 className="mt-5">SmartI</h3>
-              <p>Solo Academic Project (2024)</p>
+              <p>Solo Project (2024)</p>
+              <div className="flex flex-row flex-wrap justify-center items-center gap-5 mt-5">
+                <div className="z-1 text-center max-w-70 border-pine border-2 rounded-3xl px-2 py-1">
+                  <p>Sector: Home Energy Usage</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-pine border-2 rounded-3xl px-2 py-1">
+                  <p>Visual Design</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-pine border-2 rounded-3xl px-2 py-1">
+                  <p>Wireframing</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-pine border-2 rounded-3xl px-2 py-1">
+                  <p>Mobile App</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center items-center max-w-70 lg:max-w-110">
+              <Link href="/lausha" className="cursor-pointer">
+                <StaticBlob
+                  blobType={0}
+                  fillColor="#4b8482"
+                  hoverEffect={true}
+                  className="w-70 h-70 lg:w-110 lg:h-110"
+                >
+                  <Image
+                    src="/lausha/mockups/mockup_home_3.png"
+                    alt="Mockup of the Lausha App"
+                    width={350}
+                    height={400}
+                    priority
+                    className="w-55 lg:w-90"
+                  />
+                </StaticBlob>
+              </Link>
+              <h3 className="mt-5">Lausha</h3>
+              <p>Solo Project (2024)</p>
+              <div className="flex flex-row flex-wrap justify-center items-center gap-5 mt-5">
+                <div className="z-1 text-center max-w-70 border-full-teal border-2 rounded-3xl px-2 py-1">
+                  <p>Sector: Sustainability</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-full-teal border-2 rounded-3xl px-2 py-1">
+                  <p>User Research</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-full-teal border-2 rounded-3xl px-2 py-1">
+                  <p>Prototyping</p>
+                </div>
+                <div className="z-1 text-center max-w-70 border-full-teal border-2 rounded-3xl px-2 py-1">
+                  <p>Mobile App</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
         <section className="bg-extra-dark-choco p-4 lg:px-16">
-          <GradientHeading text="about me" anchor="anchor_aboutme" />
+          <GradientHeading text="about me" className="scroll-mt-25" />
           <div className="w-full flex flex-row flex-wrap justify-center px-4 lg:px-16">
             <ContentBlock>
               <AnimatedBlob
@@ -141,7 +204,7 @@ export default function Home() {
 
       <section>
         <div className="bg-extra-dark-choco p-4 lg:px-16">
-          <GradientHeading text="contact" anchor="anchor_contact" />
+          <GradientHeading text="contact" className="scroll-mt-25" />
         </div>
 
         <div className="w-full h-[122px] overflow-hidden">

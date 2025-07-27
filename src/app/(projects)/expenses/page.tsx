@@ -12,6 +12,7 @@ import ScreenGallery from "@/components/screengallery";
 import Button from "@/components/button";
 import SingleScreenDisplay from "@/components/singlescreendisplay";
 import ImageCarousel from "@/components/imagecarousel";
+import ContactForm from "@/components/contactform";
 
 export const metadata: Metadata = {
   title: "Centsible - Sarah Hägele Portfolio",
@@ -43,10 +44,7 @@ export default function Expenses() {
               Improving the end-to-end expense management process by being bold
               and creative - leveraging the power of automation and AI.
             </h3>
-            <BackButton
-              text="Back to case studies"
-              href="/#anchor_casestudies"
-            />
+            <BackButton text="Back to case studies" href="/#casestudies" />
           </div>
 
           {/*----------- OVERVIEW -----------*/}
@@ -196,7 +194,7 @@ export default function Expenses() {
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
-              <h3>The Challenge</h3>
+              <h3 id="challenge">The Challenge</h3>
               <p>
                 MHR tasked us with reimagining the expense management process
                 from the ground up. Rather than improving existing software,
@@ -229,7 +227,7 @@ export default function Expenses() {
 
           <ContentBlock reverse={true}>
             <div className="max-w-prose space-y-3">
-              <h4>The Approach</h4>
+              <h3 id="approach">The Approach</h3>
               <p>
                 We adopted an agile approach throughout this six-week project to
                 ensure continuous progress and alignment with MHR&apos;s
@@ -275,7 +273,7 @@ export default function Expenses() {
 
           <ContentBlock reverse={false} alignCenter={false}>
             <div className="max-w-prose space-y-3">
-              <h3>Secondary Research</h3>
+              <h3 id="secondary-research">Secondary Research</h3>
               <p>
                 To ensure our design decisions were grounded in real user needs,
                 we began with secondary research, which allowed us to build
@@ -394,7 +392,7 @@ export default function Expenses() {
             </div>
             <div>
               <div className="max-w-prose space-y-3">
-                <h3>Primary Research</h3>
+                <h3 id="primary-research">Primary Research</h3>
                 <p>
                   The knowledge from our secondary research helped us plan what
                   we wanted to talk about with real target users. Considering
@@ -476,7 +474,7 @@ export default function Expenses() {
 
           <div className="flex items-center justify-center my-10">
             <div className="max-w-prose space-y-3">
-              <h3>Insight Synthesis</h3>
+              <h3 id="synthesis">Insight Synthesis</h3>
               <p>
                 To make sense of all our data from secondary and primary
                 research, we first utilised affinity diagramming to extract key
@@ -602,7 +600,7 @@ export default function Expenses() {
 
           <div className="flex items-center justify-center my-10">
             <div className="max-w-prose space-y-3">
-              <h4>Defining Our Target Users</h4>
+              <h3 id="target-users">Defining Our Target Users</h3>
               <p>
                 From our research, we developed personas representing each
                 target user group: employees, managers, and finance teams. To
@@ -730,7 +728,7 @@ export default function Expenses() {
 
           <ContentBlock reverse={false}>
             <div className="max-w-prose space-y-3">
-              <h3>Ideation</h3>
+              <h3 id="ideation">Ideation</h3>
               <p>
                 Building on our research insights, personas, and user journey
                 maps, we began ideating solutions with a strong user-centred
@@ -815,7 +813,7 @@ export default function Expenses() {
 
           <ContentBlock>
             <div className="max-w-prose space-y-3">
-              <h3>Prototyping</h3>
+              <h3 id="prototyping">Prototyping</h3>
               <p>
                 With our initial concept in place, we moved quickly into
                 prototyping to bring our ideas to life and gather user feedback
@@ -939,7 +937,9 @@ export default function Expenses() {
           <div className="flex flex-row flex-wrap-reverse justify-center items-center my-10">
             <div className="max-w-full lg:max-w-150 lg:max-h-300 z-0">
               <EditorBox extraStyles="pt-6 lg:pt-0 lg:pr-10">
-                <h3 className="font-bold">The Final Idea</h3>
+                <h3 className="font-bold" id="final-idea">
+                  The Final Idea
+                </h3>
                 <p>
                   Centsible reimagines expense management as a chat-first
                   intelligent, AI-powered experience. At its core is
@@ -948,11 +948,11 @@ export default function Expenses() {
                   in the background for you.
                 </p>
                 <p>
-                  In line with MHR&apos;s brief, Centsible&apos;s design is purposefully
-                  simple and the colour palette neutral, focusing more on
-                  seamless flows and meaningful ideas and allowing our client to
-                  easily adopt the underlying concept and turn it into MHR&apos;s
-                  next game-changing product.
+                  In line with MHR&apos;s brief, Centsible&apos;s design is
+                  purposefully simple and the colour palette neutral, focusing
+                  more on seamless flows and meaningful ideas and allowing our
+                  client to easily adopt the underlying concept and turn it into
+                  MHR&apos;s next game-changing product.
                 </p>
                 <Button
                   href="https://www.figma.com/proto/n8FiJncNHX5EOIiktbQtGT/-DSP811--Team1_Final-Prototype?page-id=0%3A1&node-id=1-2343&viewport=158%2C285%2C0.05&t=jfBbywEShNVfB45r-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2343&show-proto-sidebar=1"
@@ -1140,7 +1140,7 @@ export default function Expenses() {
               This project was a defining experience in my development as a UX
               designer and team leader.
             </p>
-            <h3>My Leadership & Teamwork</h3>
+            <h3 id="leadership">My Leadership & Teamwork</h3>
             <p>As team leader, I:</p>
             <ul className="list-disc pl-5">
               <li className="text-[#6270D1]">
@@ -1200,7 +1200,7 @@ export default function Expenses() {
           {/* PUT PEER EVAL IN HERE TOO?? */}
 
           <div className="max-w-prose space-y-3 my-10">
-            <h3>My UX Design Contributions</h3>
+            <h3 id="contributions">My UX Design Contributions</h3>
             <p>Beyond leadership, I contributed to:</p>
             <ul className="list-disc pl-5">
               <li className="text-[#6270D1]">
@@ -1218,7 +1218,7 @@ export default function Expenses() {
           </div>
 
           <div className="max-w-prose space-y-3 mb-10">
-            <h3>What I learned</h3>
+            <h3 id="learnings">What I learned</h3>
             <p>
               My biggest success was embracing and developing my professional
               identity and values: human-centredness, making a difference, and
@@ -1234,6 +1234,18 @@ export default function Expenses() {
               space for every team member&apos;s voice to strengthen
               collaboration and outcomes.
             </p>
+          </div>
+
+          <GradientHeading text="the end" colourVariant="lilac" />
+
+          <div className="flex justify-center items-center m-5">
+            <BackButton text="Next Case Study" href="/smarti" forward={true} />
+          </div>
+
+          <div className="px-4 lg:px-16 mt-5 mb-5 w-full">
+            <EditorBox extraStyles="w-full max-w-xl mx-auto">
+              <ContactForm />
+            </EditorBox>
           </div>
         </div>
       </div>

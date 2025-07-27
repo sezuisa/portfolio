@@ -8,6 +8,7 @@ interface ContentBlockProps {
   reverse?: boolean;
   flipOnMobile?: boolean;
   alignCenter?: boolean;
+  className?: string;
 }
 
 export default function ContentBlock({
@@ -15,6 +16,7 @@ export default function ContentBlock({
   reverse = false,
   flipOnMobile = false,
   alignCenter = true,
+  className = "",
 }: ContentBlockProps) {
   const [left, right] = Children.toArray(children);
   const directionLg = reverse ? "lg:flex-row-reverse" : "";
@@ -24,7 +26,7 @@ export default function ContentBlock({
     <motion.div
       className={`flex flex-col w-full lg:flex-row ${directionMobile} ${directionLg} ${
         alignCenter ? "items-center" : "items-start"
-      } gap-8 my-5`}
+      } gap-8 my-5 ${className}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

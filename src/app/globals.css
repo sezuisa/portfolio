@@ -33,6 +33,13 @@
   --color-cent-grey-1: #e5e8eb;
   --color-cent-grey-2: #667885;
   --color-cent-grey-3: #2e3c4b;
+
+  --color-pine: #646756;
+  --color-pistacchio: #99a369;
+  --color-mint: #bfc69e;
+  --color-smarti-orange: #c97d43;
+  --color-smarti-mocha: #a47864;
+  --color-smarti-cream: #efd0bc;
 }
 
 /*
@@ -90,6 +97,14 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
   }
 
   .scrollbar {
