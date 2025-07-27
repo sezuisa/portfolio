@@ -97,6 +97,7 @@ const navLists: Record<
     { title: "Develop", href: "#develop", hierarchy: 0 },
     { title: "Low-Fi Wireframing", href: "#wireframing", hierarchy: 1 },
     { title: "Deliver", href: "#deliver", hierarchy: 0 },
+    { title: "The Design System", href: "#design-system", hierarchy: 1 },
     { title: "The Final Design", href: "#final-design", hierarchy: 1 },
     { title: "Contact", href: "#theend", hierarchy: 0 },
   ],
