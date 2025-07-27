@@ -10,6 +10,7 @@ import ContentBlock from "@/components/contentblock";
 import TripleContentBlock from "@/components/triplecontentblock";
 import Image from "next/image";
 import ScreenGallery from "@/components/screengallery";
+import ContactForm from "@/components/contactform";
 
 export const metadata: Metadata = {
   title: "Lausha - Sarah Hägele Portfolio",
@@ -1051,7 +1052,7 @@ export default function Lausha() {
 
           <GradientHeading text="what's next?" colourVariant="teal" />
 
-          <div className="flex flex-row w-full justify-center mb-10">
+          <div className="flex flex-row w-full justify-center my-10">
             <div className="max-w-prose space-y-3">
               <p>
                 While the project has concluded and was not intended for
@@ -1067,6 +1068,18 @@ export default function Lausha() {
                 its impact on user behaviour.
               </p>
             </div>
+          </div>
+
+          <GradientHeading text="the end" colourVariant="teal" />
+
+          <div className="flex justify-center items-center m-5">
+            <BackButton text="Next Case Study" href="/carers" forward={true} />
+          </div>
+
+          <div className="px-4 lg:px-16 mt-5 mb-5 w-full">
+            <EditorBox extraStyles="w-full max-w-xl mx-auto">
+              <ContactForm />
+            </EditorBox>
           </div>
         </div>
       </div>
