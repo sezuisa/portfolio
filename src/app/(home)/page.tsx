@@ -397,7 +397,7 @@ export default function Home() {
           </ContentBlock>
           <ContentBlock flipOnMobile={true}>
             <ImageViewer
-              src="/aboutme/team-2.JPG"
+              src="/aboutme/team-2.jpg"
               blobType={2}
               alt="Photo showing Sarah Hägele and her teammates during a group working session"
               caption="Capturing a nice moment during a group working session for the 'Centsible' group project"
@@ -476,7 +476,7 @@ export default function Home() {
 
           <div className="flex flex-row flex-wrap justify-center gap-5">
             <ImageViewer
-              src="/aboutme/firefighting-2.JPG"
+              src="/aboutme/firefighting-2.jpg"
               blobType={5}
               alt="Photo showing Sarah Hägele in a firefighter uniform with a group of youth firefighters"
               caption="Capturing a youth firefighter session for the annual retrospective slideshow"
