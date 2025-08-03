@@ -4,6 +4,7 @@ import "./projects.css";
 import Footer from "@/components/footer";
 import { Lexend } from "next/font/google";
 import ContentNavWrapper from "@/components/contentnavwrapper";
+import ScrollWrapper from "@/components/scrollwrapper";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -21,14 +22,11 @@ export default function ProjectsLayout({
       className={`${lexend.className} selection:bg-accent selection:text-amber-950 text-lg scrollbar scroll-smooth`}
     >
       <body className="relative overflow-x-hidden min-h-screen bg-dark-choco">
-        {/* iOS-compatible fixed background layer */}
-        <div
-          className="fixed inset-0 -z-10 bg-[url('/background.svg')] bg-cover bg-center h-screen"
-          aria-hidden="true"
-        />
-
-        <ContentNavWrapper>{children}</ContentNavWrapper>
-        <Footer />
+        <ScrollWrapper>
+          <div className="fixed inset-0 -z-10 bg-[url('/background.svg')] bg-cover bg-center h-screen" />
+          <ContentNavWrapper>{children}</ContentNavWrapper>
+          <Footer />
+        </ScrollWrapper>
       </body>
     </html>
   );

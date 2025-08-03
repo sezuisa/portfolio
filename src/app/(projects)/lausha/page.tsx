@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import StaticBlob from "@/components/staticblob";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
 import Button from "@/components/button";
@@ -11,6 +10,8 @@ import TripleContentBlock from "@/components/triplecontentblock";
 import Image from "next/image";
 import ScreenGallery from "@/components/screengallery";
 import ContactForm from "@/components/contactform";
+import ImageViewer from "@/components/imageviewer";
+import ExpandableImage from "@/components/expandableimage";
 
 export const metadata: Metadata = {
   title: "Lausha - Sarah Hägele Portfolio",
@@ -77,9 +78,10 @@ export default function Lausha() {
           <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-5">
             <div className="min-w-35 max-w-55 flex flex-col items-center gap-3">
               <div className="relative flex justify-center items-center">
-                <StaticBlob
+                <ImageViewer
                   blobType={0}
                   fillColor="#4B8482"
+                  disableExpand={true}
                   className="w-25 h-25"
                 >
                   <Image
@@ -90,15 +92,16 @@ export default function Lausha() {
                     priority
                     className=""
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
 
               <p className="text-center font-bold">8 weeks</p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
                 fillColor="#ACDEDC"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -109,13 +112,14 @@ export default function Lausha() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">Solo UX Designer</p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#EBFCFB"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -126,16 +130,17 @@ export default function Lausha() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Interviews, Observations, Autoethnography, Affinity Mapping,
                 Ideation, Wireframing, User Testing
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#E87F64"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -146,15 +151,16 @@ export default function Lausha() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Miro, Figma, Marvel, Pen & Paper, AEIOU
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={4}
                 fillColor="#EC6344"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -165,7 +171,7 @@ export default function Lausha() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Individual Academic Project
               </p>
@@ -228,14 +234,21 @@ export default function Lausha() {
                 easy, social, and rewarding.
               </p>
             </div>
-            <Image
-              src="/double_diamond_teal.png"
-              alt="Illustration of the Double Diamond"
-              width={0}
-              height={0}
-              priority
-              className="w-full h-auto"
-            />
+            <ImageViewer
+              blobType={1}
+              fillColor="#4e3931"
+              className="w-50 h-50 lg:w-100 lg:h-100"
+              caption="The double diamond (illustration by me)"
+            >
+              <Image
+                src="/lausha/double_diamond_teal.png"
+                alt="Illustration of the Double Diamond"
+                width={300}
+                height={200}
+                priority
+                className="w-full h-auto"
+              />
+            </ImageViewer>
           </ContentBlock>
 
           {/*----------- DISCOVER -----------*/}
@@ -303,9 +316,10 @@ export default function Lausha() {
             </div>
             <div className="max-w-full">
               <div className="flex flex-row flex-nowrap items-center justify-center -mb-10 gap-3">
-                <StaticBlob
+                <ImageViewer
                   blobType={4}
                   fillColor="#4B8482"
+                  disableExpand={true}
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -316,30 +330,36 @@ export default function Lausha() {
                     priority
                     className="w-35 h-35 lg:w-50 lg:h-50"
                   />
-                </StaticBlob>
+                </ImageViewer>
                 <h4>Interviews</h4>
               </div>
               <div className="flex flex-row flex-nowrap items-center justify-center mb-3 gap-3">
                 <h4>Observations</h4>
-                <StaticBlob
+                <ImageViewer
                   blobType={5}
-                  src="/lausha_observation.png"
+                  src="/lausha/lausha_observation.png"
+                  alt="Photo showing a participant doing their laundry"
+                  caption="An observation participant completing their usual laundry routine"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 />
               </div>
               <div className="flex flex-row flex-nowrap items-center justify-center -mb-10 gap-3">
-                <StaticBlob
+                <ImageViewer
                   blobType={0}
-                  src="/lausha_autoethnography.png"
+                  src="/lausha/lausha_autoethnography.png"
+                  alt="Photo showing a moment during autoethnography from a first person camera perspective"
+                  caption="Doing my own laundry with a wearable camera for autoethnographic research"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 />
                 <h4>Autoethnography</h4>
               </div>
               <div className="flex flex-row flex-nowrap items-center justify-center gap-3">
                 <h4>Graffiti Wall</h4>
-                <StaticBlob
+                <ImageViewer
                   blobType={1}
-                  src="/lausha_graffiti_wall.png"
+                  src="/lausha/lausha_graffiti_wall.png"
+                  alt="Screenshot showing an excerpt from the laundry graffiti wall"
+                  caption="An excerpt of the digital laundry graffiti wall created with Padlet"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 />
               </div>
@@ -351,21 +371,26 @@ export default function Lausha() {
           <GradientHeading text="define" colourVariant="teal" />
 
           <BroadImage
-            src="/lausha-affinity-diagram.jpg"
+            src="/lausha/lausha-affinity-diagram.jpg"
             alt="Affinity Diagram for the Lausha project"
           />
 
           <TripleContentBlock>
-            <StaticBlob blobType={5} fillColor="#ACDEDC" className="w-90 h-90">
+            <ImageViewer
+              blobType={5}
+              fillColor="#ACDEDC"
+              caption="Example page of a completed AEIOU worksheet used to analyse observation footage"
+              className="w-90 h-90"
+            >
               <Image
-                src="/aeiou_1.png"
+                src="/lausha/aeiou_1.png"
                 alt="Image of an AEIOU worksheet"
                 width={300}
                 height={400}
                 priority
                 className="rounded-xl"
               />
-            </StaticBlob>
+            </ImageViewer>
             <div className="max-w-prose space-y-3">
               <h3 id="synthesis">Insight Synthesis</h3>
               <p>
@@ -397,23 +422,30 @@ export default function Lausha() {
                 particularly stood out to me:
               </p>
             </div>
-            <StaticBlob blobType={1} fillColor="#E87F64" className="w-90 h-90">
+            <ImageViewer
+              blobType={1}
+              fillColor="#E87F64"
+              caption="Example page of a completed AEIOU worksheet used to analyse observation footage"
+              className="w-90 h-90"
+            >
               <Image
-                src="/aeiou_2.png"
+                src="/lausha/aeiou_2.png"
                 alt="Image of an AEIOU worksheet"
                 width={300}
                 height={400}
                 priority
                 className="rounded-xl"
               />
-            </StaticBlob>
+            </ImageViewer>
           </TripleContentBlock>
 
           <ContentBlock>
             <div className="flex flex-col items-center gap-5">
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
-                src="/lausha-laundry-pods.png"
+                src="/lausha/lausha-laundry-pods.png"
+                alt="Photo showing a box of laundry detergent pods"
+                disableExpand={true}
                 className="w-70 h-70 lg:w-100 lg:h-100"
               >
                 <div className="text-center max-w-70 bg-full-teal rounded-3xl p-2 -mt-40 md:-ml-40">
@@ -423,7 +455,7 @@ export default function Lausha() {
                     convenient.&quot; (Participant 1)
                   </p>
                 </div>
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-full">
                   <p className="font-bold">
@@ -441,9 +473,11 @@ export default function Lausha() {
             </div>
 
             <div className="flex flex-col items-center gap-5">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
-                src="/lausha-insight-fill-level.png"
+                src="/lausha/lausha-insight-fill-level.png"
+                alt="Photo showing a barely half-filled washing machine"
+                disableExpand={true}
                 className="w-70 h-70 lg:w-100 lg:h-100"
               >
                 <div className="text-center max-w-70 bg-dark-red rounded-3xl p-2 mt-50 md:ml-40">
@@ -452,7 +486,7 @@ export default function Lausha() {
                     about reaches the minimum line.&quot; (Participant 3)
                   </p>
                 </div>
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-full">
                   <p className="font-bold">
@@ -494,9 +528,10 @@ export default function Lausha() {
                 is expressed within this &apos;How Might We?&apos; statement:
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={0}
               fillColor="#4B8482"
+              disableExpand={true}
               className="w-100 h-100"
             >
               <h3 className="font-bold text-center">
@@ -506,7 +541,7 @@ export default function Lausha() {
                 the washing machine in order for them to wash full loads most of
                 the time?
               </h3>
-            </StaticBlob>
+            </ImageViewer>
           </ContentBlock>
 
           {/*----------- DEVELOP -----------*/}
@@ -542,9 +577,11 @@ export default function Lausha() {
                 and informing them about the impact of their actions.
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={3}
-              src="/lausha-what-if.png"
+              src="/lausha/lausha-what-if.png"
+              alt="Photo showing multiple sticky notes with 'What if' scenarios written on them"
+              caption="Sticky notes showing different 'What if?' scenarios used for ideation inspiration"
               className="w-70 h-70 lg:w-100 lg:h-100"
             />
           </ContentBlock>
@@ -570,9 +607,10 @@ export default function Lausha() {
 
           <div className="w-full flex flex-row flex-wrap gap-5 justify-around mt-15">
             <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
                 fillColor="#4B8482"
+                disableExpand={true}
                 className="w-35 h-35"
               >
                 <Image
@@ -583,7 +621,7 @@ export default function Lausha() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <h4 className="font-bold">Gamification</h4>
               <p className="text-center">
                 Points, Milestones & Rewards encourage users to aim for optimal
@@ -592,9 +630,10 @@ export default function Lausha() {
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#EBFCFB"
+                disableExpand={true}
                 className="w-35 h-35"
               >
                 <Image
@@ -605,7 +644,7 @@ export default function Lausha() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <h4 className="font-bold">Feedback</h4>
               <p className="text-center">
                 Fill level scoring with higher scores for optimal fill levels
@@ -613,9 +652,10 @@ export default function Lausha() {
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
-              <StaticBlob
+              <ImageViewer
                 blobType={4}
                 fillColor="#EC6344"
+                disableExpand={true}
                 className="w-35 h-35"
               >
                 <Image
@@ -626,7 +666,7 @@ export default function Lausha() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <h4 className="font-bold">Behaviour Steering</h4>
               <p className="text-center">
                 Notifications & in-app messaging remind and encourage users to
@@ -719,9 +759,11 @@ export default function Lausha() {
                 explicit and intuitive for users.
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={0}
-              src="/lausha-lowfi-testing.png"
+              src="/lausha/lausha-lowfi-testing.png"
+              alt="Photo showing a moment from low-fi user testing where the participant scans their laundry load"
+              caption="The participant during low-fi user testing 'scanning' their laundry load with the prototype app"
               className="w-100 h-100"
             />
           </ContentBlock>
@@ -754,14 +796,21 @@ export default function Lausha() {
                 modernity without making the overall design too overwhelming.
               </p>
             </div>
-            <Image
-              src="/lausha_design_system.png"
-              alt="Lausha's design system"
-              width={400}
-              height={400}
-              priority
-              className="w-full md:w-100 h-auto"
-            />
+            <ImageViewer
+              blobType={0}
+              fillColor="#4e3931"
+              caption="The fundamental Lausha Design System defining colours, typography, and basic UI effects"
+              className="w-50 h-50 lg:w-100 lg:h-100"
+            >
+              <Image
+                src="/lausha/lausha_design_system.png"
+                alt="Lausha's design system"
+                width={400}
+                height={400}
+                priority
+                className="w-full md:w-100 h-auto"
+              />
+            </ImageViewer>
           </ContentBlock>
 
           <ContentBlock reverse={true}>
@@ -794,20 +843,29 @@ export default function Lausha() {
                 support more confident, sustainable user decisions.
               </p>
             </div>
-            <Image
-              src="/lausha_lowfi_actions.png"
-              alt="Concept and desing refinements made after the low-fidelity stage"
-              width={400}
-              height={400}
-              priority
-              className="w-full h-auto"
-            />
+            <ImageViewer
+              blobType={0}
+              fillColor="#4e3931"
+              caption="Improvements made based on user feedback going from the low-fi sketched prototype to the mid-fi digital prototype"
+              className="w-50 h-50 lg:w-100 lg:h-100"
+            >
+              <Image
+                src="/lausha/lausha_lowfi_actions.png"
+                alt="Concept and desing refinements made after the low-fidelity stage"
+                width={400}
+                height={400}
+                priority
+                className="w-full h-auto"
+              />
+            </ImageViewer>
           </ContentBlock>
 
-          <BroadImage
-            src="/lausha_mid_fi_testing.png"
-            alt="Mid-Fidelity User Testing"
-          />
+          <ExpandableImage caption="Participants during user testing interacting with the mid-fi prototype">
+            <BroadImage
+              src="/lausha/lausha_mid_fi_testing.png"
+              alt="Mid-Fidelity User Testing"
+            />
+          </ExpandableImage>
 
           <ContentBlock>
             <div className="maw-w-prose space-y-3">
@@ -852,40 +910,42 @@ export default function Lausha() {
                     with the washing machine drum through feedback.
                   </p>
                 </div>
-                <StaticBlob
+                <ImageViewer
                   blobType={3}
                   fillColor="#EBFCFB"
+                  caption="Direct feedback on correct camera alignment in the app"
                   className="w-40 h-40"
                 >
                   <Image
-                    src="/lausha_action_1.png"
+                    src="/lausha/lausha_action_1.png"
                     alt="Screenshot of the design refinement for feedback on camera alignment"
                     width={200}
                     height={200}
                     priority
                     className="rounded-xl"
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
               <div className="flex flex-col items-center gap-5 lg:max-w-100">
                 <div className="bg-dark-red rounded-3xl p-2">
                   <p className="font-bold">Action 2</p>
                   <p>Add a timer for ongoing washes.</p>
                 </div>
-                <StaticBlob
+                <ImageViewer
                   blobType={0}
                   fillColor="#E87F64"
+                  caption="Timer for ongoing washes in active laundry shares"
                   className="w-40 h-40"
                 >
                   <Image
-                    src="/lausha_action_2.png"
+                    src="/lausha/lausha_action_2.png"
                     alt="Screenshot of the design refinement for an ongoing wash timer"
                     width={200}
                     height={200}
                     priority
                     className="rounded-xl"
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
             </div>
           </ContentBlock>

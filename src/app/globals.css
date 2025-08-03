@@ -40,6 +40,8 @@
   --color-smarti-orange: #c97d43;
   --color-smarti-mocha: #a47864;
   --color-smarti-cream: #efd0bc;
+
+  --spacing-background: calc(100% + 15vh);
 }
 
 /*

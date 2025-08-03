@@ -142,6 +142,7 @@ export default function ContentNav({ navList }: ContentNavProps) {
       ref={navWrapperRef}
     >
       <motion.div
+        data-lenis-prevent
         variants={listVariants}
         initial="hidden"
         animate={isOpen ? "visible" : "hidden"}

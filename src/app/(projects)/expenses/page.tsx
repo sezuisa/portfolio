@@ -1,18 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import StaticBlob from "@/components/staticblob";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
 import ContentBlock from "@/components/contentblock";
 import BroadImage from "@/components/broadimage";
 import EditorBox from "@/components/editorbox";
 import GradientHeading from "@/components/gradientheading";
-import TripleContentBlock from "@/components/triplecontentblock";
 import Image from "next/image";
 import ScreenGallery from "@/components/screengallery";
 import Button from "@/components/button";
 import SingleScreenDisplay from "@/components/singlescreendisplay";
 import ImageCarousel from "@/components/imagecarousel";
 import ContactForm from "@/components/contactform";
+import ImageViewer from "@/components/imageviewer";
+import ExpandableImage from "@/components/expandableimage";
 
 export const metadata: Metadata = {
   title: "Centsible - Sarah Hägele Portfolio",
@@ -91,9 +91,10 @@ export default function Expenses() {
           <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-5">
             <div className="min-w-35 max-w-55 flex flex-col items-center gap-3">
               <div className="relative flex justify-center items-center">
-                <StaticBlob
+                <ImageViewer
                   blobType={0}
                   fillColor="#6270D1"
+                  disableExpand={true}
                   className="w-25 h-25"
                 >
                   <Image
@@ -104,15 +105,16 @@ export default function Expenses() {
                     priority
                     className=""
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
 
               <p className="text-center font-bold">6 weeks</p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
                 fillColor="#DB6368"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -123,15 +125,16 @@ export default function Expenses() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Lead of a 6-person UX Team
               </p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#6270D1"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -142,16 +145,17 @@ export default function Expenses() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Secondary Research, Interviews, Affinity Mapping, Personas, User
                 Journey Maps, Prototyping, User Testing
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#DB6368"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -162,15 +166,16 @@ export default function Expenses() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Pen & Paper, Figjam, Figma, Miro, Microsoft Teams
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={4}
                 fillColor="#6270D1"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -181,7 +186,7 @@ export default function Expenses() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Group Academic/Client Project
               </p>
@@ -260,9 +265,11 @@ export default function Expenses() {
                 motivated working environment.
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={2}
               src="/centsible/photo_team.png"
+              alt="Photo showing the OneDesign team"
+              caption="The OneDesign team and their roles (photo taken at a team social that I organised)"
               className="w-70 h-70 lg:w-90 lg:h-90"
             />
           </ContentBlock>
@@ -282,9 +289,10 @@ export default function Expenses() {
               </p>
               <div className="flex flex-wrap justify-center items-start gap-5 mt-10">
                 <div className="flex flex-col items-center gap-3 md:max-w-60">
-                  <StaticBlob
+                  <ImageViewer
                     blobType={1}
                     fillColor="#6270D1"
+                    disableExpand={true}
                     className="w-35 h-35"
                   >
                     <Image
@@ -295,7 +303,7 @@ export default function Expenses() {
                       priority
                       className="w-25 h-25"
                     />
-                  </StaticBlob>
+                  </ImageViewer>
                   <EditorBox>
                     <div className="space-y-3">
                       <h4 className="font-bold">Background Research</h4>
@@ -309,9 +317,10 @@ export default function Expenses() {
                 </div>
 
                 <div className="flex flex-col items-center gap-3 md:max-w-60">
-                  <StaticBlob
+                  <ImageViewer
                     blobType={2}
                     fillColor="#DB6368"
+                    disableExpand={true}
                     className="w-35 h-35"
                   >
                     <Image
@@ -322,7 +331,7 @@ export default function Expenses() {
                       priority
                       className="w-25 h-25"
                     />
-                  </StaticBlob>
+                  </ImageViewer>
                   <EditorBox>
                     <div className="space-y-3">
                       <h4 className="font-bold">Common Pain Points</h4>
@@ -335,9 +344,10 @@ export default function Expenses() {
                   </EditorBox>
                 </div>
                 <div className="flex flex-col items-center gap-3 md:max-w-60">
-                  <StaticBlob
+                  <ImageViewer
                     blobType={3}
                     fillColor="#6270D1"
+                    disableExpand={true}
                     className="w-35 h-35"
                   >
                     <Image
@@ -348,7 +358,7 @@ export default function Expenses() {
                       priority
                       className="w-25 h-25"
                     />
-                  </StaticBlob>
+                  </ImageViewer>
                   <EditorBox>
                     <div className="space-y-3">
                       <h4 className="font-bold">Competitor Analysis</h4>
@@ -362,9 +372,10 @@ export default function Expenses() {
                   </EditorBox>
                 </div>
                 <div className="flex flex-col items-center gap-3 md:max-w-60">
-                  <StaticBlob
+                  <ImageViewer
                     blobType={4}
                     fillColor="#DB6368"
+                    disableExpand={true}
                     className="w-35 h-35"
                   >
                     <Image
@@ -375,7 +386,7 @@ export default function Expenses() {
                       priority
                       className="w-25 h-25"
                     />
-                  </StaticBlob>
+                  </ImageViewer>
                   <EditorBox>
                     <div className="space-y-3">
                       <h4 className="font-bold">Technology and Trends</h4>
@@ -407,9 +418,10 @@ export default function Expenses() {
               </div>
               <div className="flex flex-wrap justify-center items-start gap-5 mt-10">
                 <div className="flex flex-col items-center gap-3 md:max-w-60">
-                  <StaticBlob
+                  <ImageViewer
                     blobType={5}
                     fillColor="#6270D1"
+                    disableExpand={true}
                     className="w-35 h-35"
                   >
                     <Image
@@ -420,7 +432,7 @@ export default function Expenses() {
                       priority
                       className="w-25 h-25"
                     />
-                  </StaticBlob>
+                  </ImageViewer>
                   <EditorBox>
                     <div className="space-y-3">
                       <h4 className="font-bold">Round 1</h4>
@@ -437,9 +449,10 @@ export default function Expenses() {
                   </EditorBox>
                 </div>
                 <div className="flex flex-col items-center gap-3 md:max-w-60">
-                  <StaticBlob
+                  <ImageViewer
                     blobType={1}
                     fillColor="#DB6368"
+                    disableExpand={true}
                     className="w-35 h-35"
                   >
                     <Image
@@ -450,7 +463,7 @@ export default function Expenses() {
                       priority
                       className="w-25 h-25"
                     />
-                  </StaticBlob>
+                  </ImageViewer>
                   <EditorBox>
                     <div className="space-y-3">
                       <h4 className="font-bold">Round 2</h4>
@@ -483,16 +496,19 @@ export default function Expenses() {
             </div>
           </div>
 
-          <BroadImage
-            src="/centsible/affinity_diagram.png"
-            alt="Excerpt of Affinity Diagram for the Centsible project"
-          />
+          <ExpandableImage caption="Excerpt of the Affinity Diagram for the Centsible project">
+            <BroadImage
+              src="/centsible/affinity_diagram.png"
+              alt="Excerpt of Affinity Diagram for the Centsible project"
+            />
+          </ExpandableImage>
 
           <div className="flex flex-row flex-wrap items-center justify-center">
             <div className="flex flex-col items-center gap-5 w-full md:w-1/2 py-10 md:px-10">
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
                 fillColor="#6270D1"
+                disableExpand={true}
                 className="w-50 h-50 lg:w-40 lg:h-40"
               >
                 <Image
@@ -503,7 +519,7 @@ export default function Expenses() {
                   priority
                   className="z-0 w-30 h-auto"
                 />
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-prose">
                   <p className="font-bold">Patchwork of tools</p>
@@ -517,9 +533,10 @@ export default function Expenses() {
             </div>
 
             <div className="flex flex-col items-center gap-5 w-full md:w-1/2 py-10 md:px-10">
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#DB6368"
+                disableExpand={true}
                 className="w-50 h-50 lg:w-40 lg:h-40"
               >
                 <Image
@@ -530,7 +547,7 @@ export default function Expenses() {
                   priority
                   className="z-0 w-30 h-auto"
                 />
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-prose">
                   <p className="font-bold">No automation</p>
@@ -543,9 +560,10 @@ export default function Expenses() {
             </div>
 
             <div className="flex flex-col items-center gap-5 w-full md:w-1/2 py-10 md:px-10">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#6270D1"
+                disableExpand={true}
                 className="w-50 h-50 lg:w-40 lg:h-40"
               >
                 <Image
@@ -556,7 +574,7 @@ export default function Expenses() {
                   priority
                   className="z-0 w-30 h-auto"
                 />
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-prose">
                   <p className="font-bold">Unclear process</p>
@@ -570,9 +588,10 @@ export default function Expenses() {
             </div>
 
             <div className="flex flex-col items-center gap-5 w-full md:w-1/2 py-10 md:px-10">
-              <StaticBlob
+              <ImageViewer
                 blobType={4}
                 fillColor="#DB6368"
+                disableExpand={true}
                 className="w-50 h-50 lg:w-40 lg:h-40"
               >
                 <Image
@@ -583,7 +602,7 @@ export default function Expenses() {
                   priority
                   className="z-0 w-30 h-auto"
                 />
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-prose">
                   <p className="font-bold">Nothing quite fits</p>
@@ -616,11 +635,11 @@ export default function Expenses() {
             <div className="flex flex-col w-full lg:w-1/3 lg:p-10 justify-center items-center">
               <div className="text-center max-w-70 bg-cent-blue rounded-3xl p-2 m-10">
                 <h4>The Employee</h4>
-                <p>(Click on images to expand)</p>
               </div>
-              <StaticBlob
+              <ImageViewer
                 blobType={5}
                 fillColor="#6270D1"
+                caption="Employee Persona"
                 className="w-60 h-60 xl:w-90 xl:h-90"
               >
                 <Image
@@ -631,11 +650,12 @@ export default function Expenses() {
                   priority
                   className="rounded-xl w-40 xl:w-60"
                 />
-              </StaticBlob>
+              </ImageViewer>
 
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
                 fillColor="#6270D1"
+                caption="Employee as-is User Journey"
                 className="w-60 h-60 xl:w-90 xl:h-90"
               >
                 <Image
@@ -646,17 +666,17 @@ export default function Expenses() {
                   priority
                   className="rounded-xl w-60 xl:w-90"
                 />
-              </StaticBlob>
+              </ImageViewer>
             </div>
 
             <div className="flex flex-col w-full lg:w-1/3 lg:p-10 justify-center items-center">
               <div className="text-center max-w-70 bg-black rounded-3xl p-2 m-10">
                 <h4>The Manager</h4>
-                <p>(Click on images to expand)</p>
               </div>
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#000000"
+                caption="Manager Persona"
                 className="w-60 h-60 xl:w-90 xl:h-90"
               >
                 <Image
@@ -667,11 +687,12 @@ export default function Expenses() {
                   priority
                   className="rounded-xl w-40 xl:w-60"
                 />
-              </StaticBlob>
+              </ImageViewer>
 
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#000000"
+                caption="Manager as-is User Journey"
                 className="w-60 h-60 xl:w-90 xl:h-90"
               >
                 <Image
@@ -682,17 +703,17 @@ export default function Expenses() {
                   priority
                   className="rounded-xl w-60 xl:w-90"
                 />
-              </StaticBlob>
+              </ImageViewer>
             </div>
 
             <div className="flex flex-col w-full lg:w-1/3 lg:p-10 justify-center items-center">
               <div className="text-center max-w-70 bg-cent-red rounded-3xl p-2 m-10">
                 <h4>The Finance Team</h4>
-                <p>(Click on images to expand)</p>
               </div>
-              <StaticBlob
+              <ImageViewer
                 blobType={4}
                 fillColor="#DB6368"
+                caption="Finance Team Persona"
                 className="w-60 h-60 xl:w-90 xl:h-90"
               >
                 <Image
@@ -703,11 +724,12 @@ export default function Expenses() {
                   priority
                   className="rounded-xl w-40 xl:w-60"
                 />
-              </StaticBlob>
+              </ImageViewer>
 
-              <StaticBlob
+              <ImageViewer
                 blobType={5}
                 fillColor="#DB6368"
+                caption="Finance Team as-is User Journey"
                 className="w-60 h-60 xl:w-90 xl:h-90"
               >
                 <Image
@@ -718,7 +740,7 @@ export default function Expenses() {
                   priority
                   className="rounded-xl w-60 xl:w-90"
                 />
-              </StaticBlob>
+              </ImageViewer>
             </div>
           </div>
 
@@ -754,9 +776,10 @@ export default function Expenses() {
                 </p>
               </EditorBox>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={1}
               fillColor="#000000"
+              caption="HMW Ranking Matrix and refined HMWs before combining them into the final HMW"
               className="w-70 h-70 lg:w-90 lg:h-90 xl:w-110 xl:h-110"
             >
               <Image
@@ -767,7 +790,7 @@ export default function Expenses() {
                 priority
                 className="rounded-xl w-70 lg:w-90 xl:w-110"
               />
-            </StaticBlob>
+            </ImageViewer>
           </ContentBlock>
 
           <ContentBlock reverse={true}>
@@ -804,9 +827,11 @@ export default function Expenses() {
                 prototyping and iterative development.
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={2}
               src="/centsible/crazy_8.png"
+              alt="Photo showing the OneDesign team working on ideation activities"
+              caption="Team Ideation Session - completed 'Crazy 8' sheets"
               className="w-70 h-70 lg:w-90 lg:h-90 xl:w-110 xl:h-110"
             />
           </ContentBlock>
@@ -834,9 +859,11 @@ export default function Expenses() {
                 both innovative and grounded in user needs.
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={2}
               src="/centsible/prototyping.png"
+              alt="Screenshot showing a moment from a remote prototyping session with a participant"
+              caption="Remote user testing with an employee participant and our low-fidelity digital prototype"
               className="w-70 h-70 lg:w-90 lg:h-90"
             />
           </ContentBlock>
@@ -915,9 +942,10 @@ export default function Expenses() {
             </p>
           </div>
 
-          <StaticBlob
+          <ImageViewer
             blobType={1}
             fillColor="#000000"
+            caption="The unified to-be User Journey combining all three personas"
             className="w-70 h-70 md:w-100 md:h-100 lg:w-150 lg:h-150 xl:w-200 xl:h-200 mb-10"
           >
             <Image
@@ -928,7 +956,7 @@ export default function Expenses() {
               priority
               className="rounded-xl w-70 md:w-100 lg:w-150 xl:w-200"
             />
-          </StaticBlob>
+          </ImageViewer>
 
           {/*----------- DELIVER -----------*/}
 
@@ -974,7 +1002,7 @@ export default function Expenses() {
           <ContentBlock alignCenter={false}>
             <SingleScreenDisplay
               image="/centsible/mockups/mockup_ai_chat.png"
-              alt="Home Screen"
+              alt="AI Chat Screen"
               blobClassName="w-80 h-80"
               imageClassName="h-100 w-auto"
               backgroundColour="#6270D1"
@@ -990,7 +1018,7 @@ export default function Expenses() {
 
             <SingleScreenDisplay
               image="/centsible/mockups/mockup_group_chat.png"
-              alt="Home Screen"
+              alt="Expense Chat Screen"
               blobClassName="w-80 h-80"
               imageClassName="h-100 w-auto"
               backgroundColour="#DB6368"
@@ -1009,7 +1037,7 @@ export default function Expenses() {
           <ContentBlock alignCenter={false}>
             <SingleScreenDisplay
               image="/centsible/mockups/mockup_expense_creation.png"
-              alt="Home Screen"
+              alt="Automatic Expense Creation Screen"
               blobClassName="w-80 h-80"
               imageClassName="h-90 w-auto"
               backgroundColour="#6270D1"
@@ -1025,7 +1053,7 @@ export default function Expenses() {
 
             <SingleScreenDisplay
               image="/centsible/mockups/mockup_wallet.png"
-              alt="Home Screen"
+              alt="Expenses Wallet Screen"
               blobClassName="w-80 h-80"
               imageClassName="h-90 w-auto"
               backgroundColour="#DB6368"
@@ -1042,7 +1070,7 @@ export default function Expenses() {
           <ContentBlock alignCenter={false}>
             <SingleScreenDisplay
               image="/centsible/mockups/mockup_workflows.png"
-              alt="Home Screen"
+              alt="Workflow Management Screen"
               blobClassName="w-80 h-80"
               imageClassName="h-100 w-auto"
               backgroundColour="#6270D1"
@@ -1058,7 +1086,7 @@ export default function Expenses() {
 
             <SingleScreenDisplay
               image="/centsible/mockups/mockup_integration.png"
-              alt="Home Screen"
+              alt="AI Output Screen"
               blobClassName="w-80 h-80"
               imageClassName="h-100 w-auto"
               backgroundColour="#DB6368"
@@ -1074,7 +1102,7 @@ export default function Expenses() {
 
           <SingleScreenDisplay
             image="/centsible/mockups/mockup_receipt.png"
-            alt="Home Screen"
+            alt="Paperless Receipts Screen"
             blobClassName="w-80 h-80"
             imageClassName="h-90 w-auto"
             backgroundColour="#6270D1"
@@ -1163,14 +1191,17 @@ export default function Expenses() {
           </div>
 
           <div className="flex flex-row flex-wrap items-center justify-center gap-5">
-            <StaticBlob
+            <ImageViewer
               blobType={2}
               src="/centsible/team_social.png"
+              alt="Photo showing the OneDesign team at a pizza social"
+              caption="Going out on a team pizza social that I suggested and organised"
               className="w-70 h-70 lg:w-90 lg:h-90"
             />
-            <StaticBlob
+            <ImageViewer
               blobType={1}
               fillColor="#000000"
+              caption="Example of a completed weekly team retrospective"
               className="w-70 h-70 lg:w-90 lg:h-90"
             >
               <Image
@@ -1181,10 +1212,11 @@ export default function Expenses() {
                 priority
                 className="rounded-xl w-70 lg:w-90"
               />
-            </StaticBlob>
-            <StaticBlob
+            </ImageViewer>
+            <ImageViewer
               blobType={3}
               fillColor="#000000"
+              caption="Example of a completed weekly team check-in"
               className="w-70 h-70 lg:w-90 lg:h-90"
             >
               <Image
@@ -1195,7 +1227,7 @@ export default function Expenses() {
                 priority
                 className="rounded-xl w-40 lg:w-60"
               />
-            </StaticBlob>
+            </ImageViewer>
           </div>
           {/* PUT PEER EVAL IN HERE TOO?? */}
 

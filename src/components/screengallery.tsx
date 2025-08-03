@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import EditorBox from "./editorbox";
-import StaticBlob from "./staticblob";
+import ImageViewer from "./imageviewer";
 import Image from "next/image";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -60,8 +60,9 @@ export default function ScreenGallery({
 
   return (
     <div className={`flex flex-col items-center`}>
-      <StaticBlob
+      <ImageViewer
         fillColor={backgroundColour}
+        disableExpand={true}
         className={`mt-15 ${blobClassName}`}
       >
         <div className="flex flex-nowrap justify-center items-center gap-5">
@@ -86,7 +87,7 @@ export default function ScreenGallery({
             <IoIosArrowForward className="text-2xl fill-light-choco group-hover/button:fill-extra-dark-choco group-focus/button:fill-extra-dark-choco" />
           </button>
         </div>
-      </StaticBlob>
+      </ImageViewer>
       <EditorBox extraStyles={`w-full mt-5 pt-5 ${captionClassName}`}>
         <p>{text}</p>
       </EditorBox>

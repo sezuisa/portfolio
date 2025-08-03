@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import StaticBlob from "@/components/staticblob";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
 import ContentBlock from "@/components/contentblock";
@@ -9,6 +8,8 @@ import GradientHeading from "@/components/gradientheading";
 import TripleContentBlock from "@/components/triplecontentblock";
 import Image from "next/image";
 import ContactForm from "@/components/contactform";
+import ImageViewer from "@/components/imageviewer";
+import ExpandableImage from "@/components/expandableimage";
 
 export const metadata: Metadata = {
   title: "Carers - Sarah Hägele Portfolio",
@@ -81,9 +82,10 @@ export default function Carers() {
           <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-5">
             <div className="min-w-35 max-w-55 flex flex-col items-center gap-3">
               <div className="relative flex justify-center items-center">
-                <StaticBlob
+                <ImageViewer
                   blobType={0}
                   fillColor="#DCCCFF"
+                  disableExpand={true}
                   className="w-25 h-25"
                 >
                   <Image
@@ -94,15 +96,16 @@ export default function Carers() {
                     priority
                     className=""
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
 
               <p className="text-center font-bold">10 weeks</p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
                 fillColor="#FFE0C2"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -113,13 +116,14 @@ export default function Carers() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">Solo UX Designer</p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#C2E5FF"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -130,7 +134,7 @@ export default function Carers() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Secondary Research, Interviews, Directed Storytelling, Diary
                 Study, Group Card Sorting, Affinity Mapping, Archetypes,
@@ -138,9 +142,10 @@ export default function Carers() {
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#FFC2EC"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -151,16 +156,17 @@ export default function Carers() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Figjam, Figma, Behaviour Theories: PERMA Wellbeing Model,
                 Kübler-Ross Stages of Grief
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={4}
                 fillColor="#FFECBD"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -171,7 +177,7 @@ export default function Carers() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Individual Academic Major Project
               </p>
@@ -231,14 +237,22 @@ export default function Carers() {
                 for future design directions.
               </p>
             </div>
-            <Image
-              src="/carers/double_diamond_lilac.png"
-              alt="Illustration of the Double Diamond"
-              width={0}
-              height={0}
-              priority
-              className="w-full h-auto"
-            />
+
+            <ImageViewer
+              blobType={1}
+              fillColor="#4e3931"
+              className="w-50 h-50 lg:w-100 lg:h-100"
+              caption="The double diamond (illustration by me)"
+            >
+              <Image
+                src="/carers/double_diamond_lilac.png"
+                alt="Illustration of the Double Diamond"
+                width={300}
+                height={200}
+                priority
+                className="w-full h-auto"
+              />
+            </ImageViewer>
           </ContentBlock>
 
           {/*----------- DISCOVER -----------*/}
@@ -300,9 +314,11 @@ export default function Carers() {
               </p>
             </div>
             <div>
-              <StaticBlob
+              <ImageViewer
                 blobType={5}
                 src="/carers/assumptions_map.png"
+                alt="Image showing a Risk-Uncertainty Assumptions map"
+                caption="Risk-Uncertainty Assumptions Matrix"
                 className="w-60 h-60 lg:w-110 lg:h-110"
               />
             </div>
@@ -344,9 +360,10 @@ export default function Carers() {
             </div>
             <div className="max-w-full flex flex-col gap-10 mt-10">
               <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center md:-mb-10 gap-10 md:gap-3">
-                <StaticBlob
+                <ImageViewer
                   blobType={4}
                   fillColor="#DCCCFF"
+                  caption="Example of a completed carer wellbeing ecosystem map by a participant"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -357,7 +374,7 @@ export default function Carers() {
                     priority
                     className="rounded-xl"
                   />
-                </StaticBlob>
+                </ImageViewer>
                 <h4 className="md:max-w-50">
                   Interviews with Ecosystem Mapping
                 </h4>
@@ -366,9 +383,10 @@ export default function Carers() {
                 <h4 className="md:max-w-50 md:text-end">
                   Interviews with Archetype Building
                 </h4>
-                <StaticBlob
+                <ImageViewer
                   blobType={5}
                   fillColor="#FFE0C2"
+                  caption="Example of a completed dementia carer archetype by a participant (template created by me)"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -379,7 +397,7 @@ export default function Carers() {
                     priority
                     className="rounded-xl"
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
             </div>
           </ContentBlock>
@@ -421,9 +439,10 @@ export default function Carers() {
             <div className="max-w-full">
               <div className="flex flex-row flex-nowrap items-center justify-center mb-3 gap-3">
                 <h4 className="text-end">Directed Storytelling</h4>
-                <StaticBlob
+                <ImageViewer
                   blobType={5}
                   fillColor="#FFC2EC"
+                  disableExpand={true}
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -434,12 +453,13 @@ export default function Carers() {
                     priority
                     className="w-35 h-35 lg:w-50 lg:h-50"
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
               <div className="flex flex-row flex-nowrap items-center justify-center -mb-10 gap-3">
-                <StaticBlob
+                <ImageViewer
                   blobType={0}
                   fillColor="#C2E5FF"
+                  caption="Screenshot of the WhatsApp diary study"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 >
                   <Image
@@ -450,14 +470,16 @@ export default function Carers() {
                     priority
                     className="rounded-xl w-25 h-auto md:w-30 lg:w-40"
                   />
-                </StaticBlob>
+                </ImageViewer>
                 <h4>WhatsApp Diary Study</h4>
               </div>
               <div className="flex flex-row flex-nowrap items-center justify-center gap-3">
                 <h4 className="text-end">PERMA Group Card Sorting</h4>
-                <StaticBlob
+                <ImageViewer
                   blobType={1}
                   src="/carers/card_sorting.jpg"
+                  alt="Photo of the card sorting activity"
+                  caption="Participants sorting cards into the five PERMA categories"
                   className="w-50 h-50 lg:w-70 lg:h-70"
                 />
               </div>
@@ -483,10 +505,12 @@ export default function Carers() {
             </p>
           </div>
 
-          <BroadImage
-            src="/carers/affinity_map.jpg"
-            alt="Excerpt of Affinity Diagram for the Carers project after talking to support workers and professional carers"
-          />
+          <ExpandableImage caption="Excerpt of the Affinity Diagram for the Carers project after talking to support workers and professional carers">
+            <BroadImage
+              src="/carers/affinity_map.webp"
+              alt="Excerpt of Affinity Diagram for the Carers project after talking to support workers and professional carers"
+            />
+          </ExpandableImage>
 
           <ContentBlock reverse={true}>
             <div className="max-w-prose space-y-3">
@@ -518,9 +542,10 @@ export default function Carers() {
               </p>
             </div>
             <div className="flex flex-col items-center gap-5">
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#FFECBD"
+                caption="Ecosystem Map for the dementia carer"
                 className="w-70 h-70 lg:w-100 lg:h-100 lg:mr-25"
               >
                 <Image
@@ -531,10 +556,11 @@ export default function Carers() {
                   priority
                   className="w-70 h-auto md:w-80 lg:w-100"
                 />
-              </StaticBlob>
-              <StaticBlob
+              </ImageViewer>
+              <ImageViewer
                 blobType={3}
                 fillColor="#FFC2EC"
+                caption="Archetype of the dementia carer"
                 className="w-70 h-70 lg:w-100 lg:h-100 lg:ml-25"
               >
                 <Image
@@ -545,14 +571,16 @@ export default function Carers() {
                   priority
                   className="w-70 h-auto md:w-80 lg:w-100"
                 />
-              </StaticBlob>
+              </ImageViewer>
             </div>
           </ContentBlock>
 
-          <BroadImage
-            src="/carers/affinity_map_2.jpg"
-            alt="Excerpt of Affinity Diagram for the Carers project after talking to dementia carers"
-          />
+          <ExpandableImage caption="Excerpt of the Affinity Diagram for the Carers project after talking to dementia carers">
+            <BroadImage
+              src="/carers/affinity_map_2.webp"
+              alt="Excerpt of Affinity Diagram for the Carers project after talking to dementia carers"
+            />
+          </ExpandableImage>
 
           <ContentBlock>
             <div className="max-w-prose space-y-3">
@@ -577,9 +605,10 @@ export default function Carers() {
                 emotional journeys of the carer and the person with dementia.
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={1}
               fillColor="#689ABE"
+              caption="Empathy Map for the dementia carer"
               className="w-70 h-70 lg:w-100 lg:h-100"
             >
               <Image
@@ -590,17 +619,19 @@ export default function Carers() {
                 priority
                 className="w-70 h-auto md:w-80 lg:w-100"
               />
-            </StaticBlob>
+            </ImageViewer>
           </ContentBlock>
 
-          <Image
-            src="/carers/joint_experience_map.jpg"
-            alt="Joint Experience Map for the dementia carer and the person who has dementia"
-            width={400}
-            height={100}
-            priority
-            className="rounded-xl w-full h-auto my-10"
-          />
+          <ExpandableImage caption="Joint Experience Map for the dementia carer and the person who has dementia">
+            <Image
+              src="/carers/joint_experience_map.jpg"
+              alt="Joint Experience Map for the dementia carer and the person who has dementia"
+              width={400}
+              height={100}
+              priority
+              className="rounded-xl w-full h-auto my-10"
+            />
+          </ExpandableImage>
 
           <ContentBlock reverse={true} flipOnMobile={true}>
             <div className="max-w-prose space-y-3">
@@ -614,9 +645,10 @@ export default function Carers() {
                 and actionable.
               </p>
             </div>
-            <StaticBlob
+            <ImageViewer
               blobType={2}
               fillColor="#8D72C8"
+              caption="Insight Prioritisation Matrix (every number corresponds to an insight)"
               className="w-70 h-70 lg:w-100 lg:h-100"
             >
               <Image
@@ -627,14 +659,15 @@ export default function Carers() {
                 priority
                 className="w-70 h-auto md:w-80 lg:w-100"
               />
-            </StaticBlob>
+            </ImageViewer>
           </ContentBlock>
 
           <TripleContentBlock alignCenter={false}>
             <div className="flex flex-col items-center gap-5">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#FFC2EC"
+                disableExpand={true}
                 className="w-70 h-70"
               >
                 <div className="flex flex-col items-center">
@@ -659,7 +692,7 @@ export default function Carers() {
                     </p>
                   </div>
                 </div>
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-prose">
                   <p className="font-bold">
@@ -678,9 +711,10 @@ export default function Carers() {
             </div>
 
             <div className="flex flex-col items-center gap-5">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#DCCCFF"
+                disableExpand={true}
                 className="w-70 h-70"
               >
                 <div className="flex flex-col items-center">
@@ -706,7 +740,7 @@ export default function Carers() {
                     </p>
                   </div>
                 </div>
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-prose">
                   <p className="font-bold">
@@ -725,9 +759,10 @@ export default function Carers() {
             </div>
 
             <div className="flex flex-col items-center gap-5">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#C2E5FF"
+                disableExpand={true}
                 className="w-70 h-70"
               >
                 <div className="flex flex-col items-center">
@@ -748,7 +783,7 @@ export default function Carers() {
                     </p>
                   </div>
                 </div>
-              </StaticBlob>
+              </ImageViewer>
               <div className="w-full px-4 lg:px-0">
                 <EditorBox extraStyles="max-w-prose">
                   <p className="font-bold">
@@ -830,7 +865,12 @@ export default function Carers() {
           </ContentBlock>
 
           <TripleContentBlock alignCenter={false}>
-            <StaticBlob blobType={0} fillColor="#8D72C8" className="w-70 h-70">
+            <ImageViewer
+              blobType={0}
+              fillColor="#8D72C8"
+              className="w-70 h-70"
+              disableExpand={true}
+            >
               <div className="flex flex-col items-center max-w-prose space-y-3 text-center">
                 <h3 className="font-bold">Trustworthy</h3>
                 <h4>
@@ -838,9 +878,14 @@ export default function Carers() {
                   well cared for.
                 </h4>
               </div>
-            </StaticBlob>
+            </ImageViewer>
 
-            <StaticBlob blobType={2} fillColor="#B97129" className="w-70 h-70">
+            <ImageViewer
+              blobType={2}
+              fillColor="#B97129"
+              className="w-70 h-70"
+              disableExpand={true}
+            >
               <div className="flex flex-col items-center max-w-prose space-y-3 text-center">
                 <h3 className="font-bold">Supportive</h3>
                 <h4>
@@ -848,9 +893,14 @@ export default function Carers() {
                   genuine, understanding network.
                 </h4>
               </div>
-            </StaticBlob>
+            </ImageViewer>
 
-            <StaticBlob blobType={4} fillColor="#689ABE" className="w-70 h-70">
+            <ImageViewer
+              blobType={4}
+              fillColor="#689ABE"
+              className="w-70 h-70"
+              disableExpand={true}
+            >
               <div className="flex flex-col items-center max-w-prose space-y-3 text-center">
                 <h3 className="font-bold">Flexible</h3>
                 <h4>
@@ -858,7 +908,7 @@ export default function Carers() {
                   their unique situation.
                 </h4>
               </div>
-            </StaticBlob>
+            </ImageViewer>
           </TripleContentBlock>
 
           {/*----------- REFLECTIONS -----------*/}

@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import StaticBlob from "@/components/staticblob";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
 import GradientHeading from "@/components/gradientheading";
@@ -10,6 +9,7 @@ import Image from "next/image";
 import ContentBlock from "@/components/contentblock";
 import SingleScreenDisplay from "@/components/singlescreendisplay";
 import ScreenGallery from "@/components/screengallery";
+import ImageViewer from "@/components/imageviewer";
 
 export const metadata: Metadata = {
   title: "Smarti - Sarah Hägele Portfolio",
@@ -91,9 +91,10 @@ export default function Smarti() {
           <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-5">
             <div className="min-w-35 max-w-55 flex flex-col items-center gap-3">
               <div className="relative flex justify-center items-center">
-                <StaticBlob
+                <ImageViewer
                   blobType={0}
                   fillColor="#646756"
+                  disableExpand={true}
                   className="w-25 h-25"
                 >
                   <Image
@@ -104,15 +105,16 @@ export default function Smarti() {
                     priority
                     className=""
                   />
-                </StaticBlob>
+                </ImageViewer>
               </div>
 
               <p className="text-center font-bold">8 weeks</p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={1}
                 fillColor="#EFD0BC"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -123,13 +125,14 @@ export default function Smarti() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">Solo UX Designer</p>
             </div>
             <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={2}
                 fillColor="#C97D43"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -140,16 +143,17 @@ export default function Smarti() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Secondary Research, Personas, Storyboarding, COM-B Behaviour
                 Modelling, Ideation, Wireframing, User Testing
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={3}
                 fillColor="#99A369"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -160,15 +164,16 @@ export default function Smarti() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Miro, Figma, Marvel, Pen & Paper
               </p>
             </div>
             <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <StaticBlob
+              <ImageViewer
                 blobType={4}
                 fillColor="#A47864"
+                disableExpand={true}
                 className="w-25 h-25"
               >
                 <Image
@@ -179,7 +184,7 @@ export default function Smarti() {
                   priority
                   className=""
                 />
-              </StaticBlob>
+              </ImageViewer>
               <p className="text-center font-bold">
                 Individual Academic Project
               </p>
@@ -219,9 +224,10 @@ export default function Smarti() {
           <h3 id="design-system">The Design System</h3>
 
           <ContentBlock>
-            <StaticBlob
+            <ImageViewer
               blobType={4}
               fillColor="#646756"
+              caption="The SmartI Design System - Core Colour and Typography definitions"
               className="w-110 h-110"
             >
               <Image
@@ -232,10 +238,11 @@ export default function Smarti() {
                 priority
                 className="w-110 h-auto rounded-xl"
               />
-            </StaticBlob>
-            <StaticBlob
+            </ImageViewer>
+            <ImageViewer
               blobType={4}
               fillColor="#C97D43"
+              caption="The SmartI Design System - Core Components"
               className="w-110 h-110"
             >
               <Image
@@ -246,7 +253,7 @@ export default function Smarti() {
                 priority
                 className="w-110 h-auto rounded-xl"
               />
-            </StaticBlob>
+            </ImageViewer>
           </ContentBlock>
 
           <div className="flex flex-row flex-wrap-reverse justify-center items-center my-10">

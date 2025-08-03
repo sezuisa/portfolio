@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import Footer from "@/components/footer";
-import HomeHero from "./homehero";
+import ScrollWrapper from "@/components/scrollwrapper";
 import { Lexend } from "next/font/google";
 
 const lexend = Lexend({
@@ -29,15 +29,8 @@ export default function HomeLayout({
       lang="en"
       className={`${lexend.className} selection:bg-accent selection:text-amber-950 text-lg scrollbar scroll-smooth`}
     >
-      <body className="relative overflow-x-hidden min-h-screen bg-dark-choco">
-        {/* Background image layer */}
-        <div
-          className="fixed inset-0 -z-10 bg-[url('/background.svg')] bg-cover bg-center h-screen"
-          aria-hidden="true"
-        />
-
-        <HomeHero />
-        {children}
+      <body className="relative overflow-x-hidden min-h-dvh bg-dark-choco">
+        <ScrollWrapper>{children}</ScrollWrapper>
         <Footer />
       </body>
     </html>
