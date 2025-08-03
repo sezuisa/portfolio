@@ -368,10 +368,10 @@ export default function Home() {
               <h4>Diving into Software</h4>
               <p>
                 My computer-affinity initially lead me to complete a
-                three-year-long Bachelor's degree in Computer Science and work
-                as a software developer at FNT Software for an additional year,
-                which gave me a deep understanding and appreciation of software
-                and how it is created from a technical point of view.
+                three-year-long Bachelor&apos;s degree in Computer Science and
+                work as a software developer at FNT Software for an additional
+                year, which gave me a deep understanding and appreciation of
+                software and how it is created from a technical point of view.
               </p>
               <p>
                 I worked on a wide array of projects at all levels of the
@@ -410,7 +410,7 @@ export default function Home() {
                 missing something fundamental, which wasn&apos;t logic or
                 structure - it was people. I found this missing piece within UX
                 Design. After successfully applying for a scholarship for a
-                Master's degree in UX and Service Design at Loughborogh
+                Master&apos;s degree in UX and Service Design at Loughborogh
                 University, I left my home country of Germany to live and study
                 in the UK for a year.
               </p>
@@ -462,10 +462,10 @@ export default function Home() {
             <div className="max-w-prose space-y-3">
               <h4>Me, the Human</h4>
               <p>
-                Outside of work, I'm a hobbyist photographer, an avid pianist, a
-                volunteer firefighter (including training the youth), and an
-                enthusiastic rock climber. Ironically, there&apos;s nothing
-                quite as grounding as being off-the ground halfway up a
+                Outside of work, I&apos;m a hobbyist photographer, an avid
+                pianist, a volunteer firefighter (including training the youth),
+                and an enthusiastic rock climber. Ironically, there&apos;s
+                nothing quite as grounding as being off-the ground halfway up a
                 rockface. A big part of what makes firefighting and climbing so
                 meaningful to me is the team- and community-spirit in both of
                 them. You wouldn&apos;t get up a mountain without a partner to

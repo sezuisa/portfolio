@@ -5,6 +5,7 @@ import { ReactNode, useEffect, useState, isValidElement } from "react";
 import { createPortal } from "react-dom";
 import { IoClose } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 type ExpandableImageProps = {
   children: ReactNode;
@@ -17,7 +18,7 @@ type ExpandableImageProps = {
 
 export default function ExpandableImage({
   children,
-  src,
+  src = "",
   alt = "Expanded image",
   caption = "",
   disableExpand = false,
@@ -98,9 +99,11 @@ export default function ExpandableImage({
                     >
                       <IoClose />
                     </button>
-                    <img
+                    <Image
                       src={imageSrc}
                       alt={imageAlt}
+                      width={0}
+                      height={0}
                       className="max-h-[80vh] w-auto object-contain drop-shadow-lg rounded-xl"
                     />
                   </div>
