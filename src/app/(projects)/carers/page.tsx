@@ -10,6 +10,7 @@ import Image from "next/image";
 import ContactForm from "@/components/contactform";
 import ImageViewer from "@/components/imageviewer";
 import ExpandableImage from "@/components/expandableimage";
+import AnimationWrapper from "@/components/animationwrapper";
 
 export const metadata: Metadata = {
   title: "Carers - Sarah Hägele Portfolio",
@@ -40,149 +41,157 @@ export default function Carers() {
 
           <GradientHeading text="overview" colourVariant="lilac" />
 
-          <div className="flex flex-row flex-wrap justify-center items-center mb-10">
-            <Image
-              src="/carers/dementia_carer_illustration.png"
-              alt="Illustration of a dementia carer"
-              width={350}
-              height={400}
-              priority
-              className="-mb-20 lg:-mb-10 lg:-mr-20 z-0 w-90 -rotate-15"
-            />
-            <div className="max-w-full lg:max-w-150 lg:max-h-300 z-1">
-              <EditorBox>
-                <h3 className="font-bold">In a nutshell</h3>
-                <div className="max-w-prose space-y-3">
-                  <p>
-                    Informal carers are the backbone of many health care systems
-                    in the world, yet they are routinely undervalued,
-                    overworked, and they feel unsupported and isolated.
-                  </p>
-                  <p>
-                    Through an in-depth and thorough exploratory research
-                    process, I collected rich stories and experiences from not
-                    only informal carers themselves, but also professional
-                    carers and support workers for informal carers. I discovered
-                    that especially carers for people who have dementia struggle
-                    with an &quot;always on&quot; mentality, making it hard for
-                    them to take time for themselves.
-                  </p>
-                  <p>
-                    I steadily gained a deeper and deeper understanding of
-                    informal carers for people with dementia throughout my
-                    research until I arrived at a concise UX Vision Statement
-                    that I believe presents a real opportunity to make a
-                    difference for carers.
-                  </p>
-                </div>
-              </EditorBox>
+          <AnimationWrapper>
+            <div className="flex flex-row flex-wrap justify-center items-center mb-10">
+              <Image
+                src="/carers/dementia_carer_illustration.png"
+                alt="Illustration of a dementia carer"
+                width={350}
+                height={400}
+                priority
+                className="-mb-20 lg:-mb-10 lg:-mr-20 z-0 w-90 -rotate-15"
+              />
+              <div className="max-w-full lg:max-w-150 lg:max-h-300 z-1">
+                <EditorBox>
+                  <h3 className="font-bold">In a nutshell</h3>
+                  <div className="max-w-prose space-y-3">
+                    <p>
+                      Informal carers are the backbone of many health care
+                      systems in the world, yet they are routinely undervalued,
+                      overworked, and they feel unsupported and isolated.
+                    </p>
+                    <p>
+                      Through an in-depth and thorough exploratory research
+                      process, I collected rich stories and experiences from not
+                      only informal carers themselves, but also professional
+                      carers and support workers for informal carers. I
+                      discovered that especially carers for people who have
+                      dementia struggle with an &quot;always on&quot; mentality,
+                      making it hard for them to take time for themselves.
+                    </p>
+                    <p>
+                      I steadily gained a deeper and deeper understanding of
+                      informal carers for people with dementia throughout my
+                      research until I arrived at a concise UX Vision Statement
+                      that I believe presents a real opportunity to make a
+                      difference for carers.
+                    </p>
+                  </div>
+                </EditorBox>
+              </div>
             </div>
-          </div>
+          </AnimationWrapper>
 
-          <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-5">
-            <div className="min-w-35 max-w-55 flex flex-col items-center gap-3">
-              <div className="relative flex justify-center items-center">
+          <AnimationWrapper>
+            <div className="flex flex-col lg:flex-row flex-wrap justify-center items-start py-8">
+              <div className="w-full lg:w-106 flex flex-row justify-center flex-wrap gap-3">
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <div className="relative flex justify-center items-center">
+                    <ImageViewer
+                      blobType={0}
+                      fillColor="#DCCCFF"
+                      disableExpand={true}
+                      className="w-25 h-25"
+                    >
+                      <Image
+                        src="/icons/schedule.png"
+                        alt="Icon displaying a calendar"
+                        width={90}
+                        height={90}
+                        priority
+                        className=""
+                      />
+                    </ImageViewer>
+                  </div>
+
+                  <p className="text-center font-bold">10 weeks</p>
+                </div>
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <ImageViewer
+                    blobType={1}
+                    fillColor="#FFE0C2"
+                    disableExpand={true}
+                    className="w-25 h-25"
+                  >
+                    <Image
+                      src="/icons/businesswoman.png"
+                      alt="Icon displaying a woman"
+                      width={90}
+                      height={90}
+                      priority
+                      className=""
+                    />
+                  </ImageViewer>
+                  <p className="text-center font-bold">Solo UX Designer</p>
+                </div>
+              </div>
+              <div className="max-w-80 lg:w-50 flex flex-col items-center gap-3 my-5 lg:my-0">
                 <ImageViewer
-                  blobType={0}
-                  fillColor="#DCCCFF"
+                  blobType={2}
+                  fillColor="#C2E5FF"
                   disableExpand={true}
                   className="w-25 h-25"
                 >
                   <Image
-                    src="/icons/schedule.png"
-                    alt="Icon displaying a calendar"
+                    src="/icons/methods.png"
+                    alt="Icon displaying half a lightbulb, where the other half is small gears and boxes"
                     width={90}
                     height={90}
                     priority
                     className=""
                   />
                 </ImageViewer>
+                <p className="text-center font-bold">
+                  Secondary Research, Interviews, Directed Storytelling, Diary
+                  Study, Group Card Sorting, Affinity Mapping, Archetypes,
+                  Ecosystem Mapping, Empathy Mapping, Experience Mapping
+                </p>
               </div>
-
-              <p className="text-center font-bold">10 weeks</p>
+              <div className="w-full lg:w-106 flex flex-row justify-center flex-wrap gap-3">
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <ImageViewer
+                    blobType={3}
+                    fillColor="#FFC2EC"
+                    disableExpand={true}
+                    className="w-25 h-25"
+                  >
+                    <Image
+                      src="/icons/toolkit.png"
+                      alt="Icon displaying a toolkit"
+                      width={90}
+                      height={90}
+                      priority
+                      className=""
+                    />
+                  </ImageViewer>
+                  <p className="text-center font-bold">
+                    Figjam, Figma, Behaviour Theories: PERMA Wellbeing Model,
+                    Kübler-Ross Stages of Grief
+                  </p>
+                </div>
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <ImageViewer
+                    blobType={4}
+                    fillColor="#FFECBD"
+                    disableExpand={true}
+                    className="w-25 h-25"
+                  >
+                    <Image
+                      src="/icons/brief.png"
+                      alt="Icon displaying a clipboard with 'Brief' written on it"
+                      width={90}
+                      height={90}
+                      priority
+                      className=""
+                    />
+                  </ImageViewer>
+                  <p className="text-center font-bold">
+                    Individual Academic Major Project
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={1}
-                fillColor="#FFE0C2"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/businesswoman.png"
-                  alt="Icon displaying a woman"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">Solo UX Designer</p>
-            </div>
-            <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={2}
-                fillColor="#C2E5FF"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/methods.png"
-                  alt="Icon displaying half a lightbulb, where the other half is small gears and boxes"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">
-                Secondary Research, Interviews, Directed Storytelling, Diary
-                Study, Group Card Sorting, Affinity Mapping, Archetypes,
-                Ecosystem Mapping, Empathy Mapping, Experience Mapping
-              </p>
-            </div>
-            <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={3}
-                fillColor="#FFC2EC"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/toolkit.png"
-                  alt="Icon displaying a toolkit"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">
-                Figjam, Figma, Behaviour Theories: PERMA Wellbeing Model,
-                Kübler-Ross Stages of Grief
-              </p>
-            </div>
-            <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={4}
-                fillColor="#FFECBD"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/brief.png"
-                  alt="Icon displaying a clipboard with 'Brief' written on it"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">
-                Individual Academic Major Project
-              </p>
-            </div>
-          </div>
+          </AnimationWrapper>
 
           {/*----------- INTRODUCTION -----------*/}
 
@@ -490,27 +499,31 @@ export default function Carers() {
 
           <GradientHeading text="define" colourVariant="lilac" />
 
-          <div className="max-w-prose space-y-3">
-            <h3 id="sensemaking">Making Sense of my Data</h3>
-            <p>
-              Synthesis in this project was an ongoing, iterative process that
-              allowed me to adapt and deepen my focus as new information
-              emerged. I went through two key rounds of synthesis: the first
-              after conducting interviews with support workers and professional
-              carers, and the second following my research activities with
-              dementia carers themselves. This approach allowed me to learn in
-              stages, validating early assumptions and findings while uncovering
-              richer, more nuanced insights from rich, lived experiences as I
-              went.
-            </p>
-          </div>
+          <AnimationWrapper>
+            <div className="max-w-prose space-y-3 my-5">
+              <h3 id="sensemaking">Making Sense of my Data</h3>
+              <p>
+                Synthesis in this project was an ongoing, iterative process that
+                allowed me to adapt and deepen my focus as new information
+                emerged. I went through two key rounds of synthesis: the first
+                after conducting interviews with support workers and
+                professional carers, and the second following my research
+                activities with dementia carers themselves. This approach
+                allowed me to learn in stages, validating early assumptions and
+                findings while uncovering richer, more nuanced insights from
+                rich, lived experiences as I went.
+              </p>
+            </div>
+          </AnimationWrapper>
 
-          <ExpandableImage caption="Excerpt of the Affinity Diagram for the Carers project after talking to support workers and professional carers">
-            <BroadImage
-              src="/carers/affinity_map.webp"
-              alt="Excerpt of Affinity Diagram for the Carers project after talking to support workers and professional carers"
-            />
-          </ExpandableImage>
+          <AnimationWrapper>
+            <ExpandableImage caption="Excerpt of the Affinity Diagram for the Carers project after talking to support workers and professional carers">
+              <BroadImage
+                src="/carers/affinity_map.webp"
+                alt="Excerpt of Affinity Diagram for the Carers project after talking to support workers and professional carers"
+              />
+            </ExpandableImage>
+          </AnimationWrapper>
 
           <ContentBlock reverse={true}>
             <div className="max-w-prose space-y-3">
@@ -575,12 +588,14 @@ export default function Carers() {
             </div>
           </ContentBlock>
 
-          <ExpandableImage caption="Excerpt of the Affinity Diagram for the Carers project after talking to dementia carers">
-            <BroadImage
-              src="/carers/affinity_map_2.webp"
-              alt="Excerpt of Affinity Diagram for the Carers project after talking to dementia carers"
-            />
-          </ExpandableImage>
+          <AnimationWrapper>
+            <ExpandableImage caption="Excerpt of the Affinity Diagram for the Carers project after talking to dementia carers">
+              <BroadImage
+                src="/carers/affinity_map_2.webp"
+                alt="Excerpt of Affinity Diagram for the Carers project after talking to dementia carers"
+              />
+            </ExpandableImage>
+          </AnimationWrapper>
 
           <ContentBlock>
             <div className="max-w-prose space-y-3">
@@ -622,16 +637,18 @@ export default function Carers() {
             </ImageViewer>
           </ContentBlock>
 
-          <ExpandableImage caption="Joint Experience Map for the dementia carer and the person who has dementia">
-            <Image
-              src="/carers/joint_experience_map.jpg"
-              alt="Joint Experience Map for the dementia carer and the person who has dementia"
-              width={400}
-              height={100}
-              priority
-              className="rounded-xl w-full h-auto my-10"
-            />
-          </ExpandableImage>
+          <AnimationWrapper>
+            <ExpandableImage caption="Joint Experience Map for the dementia carer and the person who has dementia">
+              <Image
+                src="/carers/joint_experience_map.jpg"
+                alt="Joint Experience Map for the dementia carer and the person who has dementia"
+                width={400}
+                height={100}
+                priority
+                className="rounded-xl w-full h-auto my-10"
+              />
+            </ExpandableImage>
+          </AnimationWrapper>
 
           <ContentBlock reverse={true} flipOnMobile={true}>
             <div className="max-w-prose space-y-3">
@@ -730,9 +747,9 @@ export default function Carers() {
                     width={100}
                     height={100}
                     priority
-                    className="z-0 w-30 h-auto md:w-40 lg:w-50 -mt-5"
+                    className="z-0 w-30 h-auto md:w-40 lg:w-50 lg:-mt-5"
                   />
-                  <div className="z-1 text-center max-w-70 bg-full-lilac rounded-3xl p-2 -mt-18">
+                  <div className="z-1 text-center max-w-70 bg-full-lilac rounded-3xl p-2 -mt-9 lg:-mt-18">
                     <p>
                       &quot;But even when she sat there quietly for a few hours,
                       someone just had to be around, and you also had to give
@@ -801,40 +818,42 @@ export default function Carers() {
             </div>
           </TripleContentBlock>
 
-          <div className="max-w-prose space-y-3 my-10">
-            <h4 id="user-needs">User Needs emerge</h4>
-            <p>
-              After deriving a wide array of insights, I was able to define a
-              set of user needs:
-            </p>
-            <ul className="list-disc pl-5">
-              <li className="text-[#DCCCFF]">
-                Ensuring their loved one is safe, healthy, and well cared for
-              </li>
-              <li className="text-[#DCCCFF]">
-                Being able to step away occasionally without guilt or anxiety
-              </li>
-              <li className="text-[#DCCCFF]">
-                Feeling emotionally and practically supported - not just
-                responsible
-              </li>
-              <li className="text-[#DCCCFF]">
-                Having time for themselves to rest, recover, or pursue other
-                interests
-              </li>
-              <li className="text-[#DCCCFF]">
-                Preserving a sense of identity and independence outside the
-                carer role
-              </li>
-              <li className="text-[#DCCCFF]">
-                Staying connected to social circles
-              </li>
-              <li className="text-[#DCCCFF]">
-                Finding meaning and positive emotion in their relationship with
-                their loved one
-              </li>
-            </ul>
-          </div>
+          <AnimationWrapper>
+            <div className="max-w-prose space-y-3 my-10">
+              <h4 id="user-needs">User Needs emerge</h4>
+              <p>
+                After deriving a wide array of insights, I was able to define a
+                set of user needs:
+              </p>
+              <ul className="list-disc pl-5">
+                <li className="text-[#DCCCFF]">
+                  Ensuring their loved one is safe, healthy, and well cared for
+                </li>
+                <li className="text-[#DCCCFF]">
+                  Being able to step away occasionally without guilt or anxiety
+                </li>
+                <li className="text-[#DCCCFF]">
+                  Feeling emotionally and practically supported - not just
+                  responsible
+                </li>
+                <li className="text-[#DCCCFF]">
+                  Having time for themselves to rest, recover, or pursue other
+                  interests
+                </li>
+                <li className="text-[#DCCCFF]">
+                  Preserving a sense of identity and independence outside the
+                  carer role
+                </li>
+                <li className="text-[#DCCCFF]">
+                  Staying connected to social circles
+                </li>
+                <li className="text-[#DCCCFF]">
+                  Finding meaning and positive emotion in their relationship
+                  with their loved one
+                </li>
+              </ul>
+            </div>
+          </AnimationWrapper>
 
           <ContentBlock>
             <div className="max-w-prose space-y-3">
@@ -915,66 +934,77 @@ export default function Carers() {
 
           <GradientHeading text="reflections" colourVariant="lilac" />
 
-          <div className="max-w-prose space-y-3 my-5">
-            <p>
-              This project has been a meaningful and very challenging journey in
-              more ways than one. Gaining ethical approval delayed my access to
-              participants, but I adapted by sourcing valuable insights from
-              support workers and professionals early on. I&apos;m especially
-              proud of how I was able to maintain a rigorous, ethically sound
-              process throughout all the challenges I faced while also managing
-              multiple university projects simultaneously.
-            </p>
-            <p>
-              Emotionally, this was one of the most human and impactful topics
-              I&apos;ve explored. I was especially struck by the concepts of
-              anticipatory grief and the that of lacking neighbourliness - as
-              someone raised in a small village where everyone knows everyone,
-              it was almost a given for me that people support and help each
-              other, so finding out my participants didn&apos;t experience this
-              came as a big surprise to me and challenged my basic societal
-              assumptions. Now, it deeply informs my mindset and design vision.
-            </p>
-            <p>
-              Coming from a computer science background, I&apos;m used to
-              structure and logic - and this project has challenged me to become
-              more comfortable with ambiguity and the messiness of the
-              exploratory research process. That said, I was able to use my
-              analytical mindset as a strength as well: I was able to manage
-              complexity, make confident methodological decisions, and identify
-              patterns within messy, human data while never losing focus of the
-              bigger picture.
-            </p>
-          </div>
+          <AnimationWrapper>
+            <div className="max-w-prose space-y-3 my-5">
+              <p>
+                This project has been a meaningful and very challenging journey
+                in more ways than one. Gaining ethical approval delayed my
+                access to participants, but I adapted by sourcing valuable
+                insights from support workers and professionals early on.
+                I&apos;m especially proud of how I was able to maintain a
+                rigorous, ethically sound process throughout all the challenges
+                I faced while also managing multiple university projects
+                simultaneously.
+              </p>
+              <p>
+                Emotionally, this was one of the most human and impactful topics
+                I&apos;ve explored. I was especially struck by the concepts of
+                anticipatory grief and the that of lacking neighbourliness - as
+                someone raised in a small village where everyone knows everyone,
+                it was almost a given for me that people support and help each
+                other, so finding out my participants didn&apos;t experience
+                this came as a big surprise to me and challenged my basic
+                societal assumptions. Now, it deeply informs my mindset and
+                design vision.
+              </p>
+              <p>
+                Coming from a computer science background, I&apos;m used to
+                structure and logic - and this project has challenged me to
+                become more comfortable with ambiguity and the messiness of the
+                exploratory research process. That said, I was able to use my
+                analytical mindset as a strength as well: I was able to manage
+                complexity, make confident methodological decisions, and
+                identify patterns within messy, human data while never losing
+                focus of the bigger picture.
+              </p>
+            </div>
+          </AnimationWrapper>
 
           {/*----------- WHAT'S NEXT -----------*/}
 
           <GradientHeading text="what's next?" colourVariant="lilac" />
 
-          <div className="max-w-prose space-y-3 my-5">
-            <p>
-              This case study represents the first half of my UX Master&apos;s
-              Major Project, focusing on discovery and definition. The next
-              phase - ideation, prototyping, and testing - will build on these
-              insights to develop a user-centred design solution for dementia
-              carers. This will be added to the portfolio upon completion.
-            </p>
-          </div>
+          <AnimationWrapper>
+            <div className="max-w-prose space-y-3 my-5">
+              <p>
+                This case study represents the first half of my UX Master&apos;s
+                Major Project, focusing on discovery and definition. The next
+                phase - ideation, prototyping, and testing - builds on these
+                insights to develop a user-centred design solution for dementia
+                carers. Click on the &quot;Next Case Study&quot; button below to
+                see the outcome of this final phase of the project.
+              </p>
+            </div>
+          </AnimationWrapper>
 
           <GradientHeading text="the end" colourVariant="lilac" />
 
-          <div className="flex justify-center items-center m-5">
-            <BackButton
-              text="Next Case Study"
-              href="/expenses"
-              forward={true}
-            />
-          </div>
+          <AnimationWrapper>
+            <div className="flex justify-center items-center m-5">
+              <BackButton
+                text="Next Case Study"
+                href="/memento"
+                forward={true}
+              />
+            </div>
+          </AnimationWrapper>
 
           <div className="px-4 lg:px-16 mt-5 mb-5 w-full">
-            <EditorBox extraStyles="w-full max-w-xl mx-auto">
-              <ContactForm />
-            </EditorBox>
+            <AnimationWrapper>
+              <EditorBox extraStyles="w-full max-w-xl mx-auto">
+                <ContactForm />
+              </EditorBox>
+            </AnimationWrapper>
           </div>
         </div>
       </div>

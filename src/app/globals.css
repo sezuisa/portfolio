@@ -41,6 +41,30 @@
   --color-smarti-mocha: #a47864;
   --color-smarti-cream: #efd0bc;
 
+  --color-purple-sunset: #572b7b;
+  --color-purple-night: #3f1363;
+  --color-purple-sunrise: #be9dd8;
+
+  --color-orange-sunset: #fe9f40;
+  --color-orange-night: #c56e17;
+  --color-orange-sunrise: #ffc387;
+
+  --color-mauve-sunset: #b373a2;
+  --color-mauve-night: #7c386a;
+  --color-mauve-sunrise: #e2b6d7;
+
+  --color-blue-sunset: #7a81b7;
+  --color-blue-night: #39438b;
+  --color-blue-sunrise: #c2c7f1;
+
+  --color-green-sunset: #5d7b64;
+  --color-green-night: #3d5342;
+  --color-green-sunrise: #b5cfb1;
+
+  --color-caramel-sunset: #895737;
+  --color-caramel-night: #4a2909;
+  --color-caramel-sunrise: #d09f6e;
+
   --spacing-background: calc(100% + 15vh);
 }
 

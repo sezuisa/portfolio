@@ -34,6 +34,10 @@ const gradientColours: { [key: string]: string[] } = {
     "from-pine from-10% via-mint via-30% to-smarti-orange",
     "border-pine",
   ],
+  purple: [
+    "from-purple-sunset from-10% via-purple-sunrise via-30% to-orange-sunset",
+    "border-purple-sunset",
+  ],
 };
 
 export default function GradientHeading({

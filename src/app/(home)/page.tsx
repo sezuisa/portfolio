@@ -14,6 +14,7 @@ import { useRef } from "react";
 import { Sarina } from "next/font/google";
 import Nav from "@/components/navbar";
 import ImageViewer from "@/components/imageviewer";
+import Button from "@/components/button";
 
 const sarina = Sarina({
   subsets: ["latin"],
@@ -42,7 +43,7 @@ export default function Home() {
 
         <div
           id="hero"
-          className="grow-1 flex flex-col justify-center overflow-hidden pt-30 lg:pt-40"
+          className="grow-1 flex flex-col justify-center overflow-hidden pt-25 lg:pt-40"
         >
           <div
             id="content"
@@ -75,9 +76,19 @@ export default function Home() {
                   as a designer.
                 </p>
               </div>
+              <div className="w-full flex flex-row justify-center mt-5">
+                <Button
+                  href="https://youtu.be/y_0fTAhkpqU"
+                  colourVariant="default"
+                  className="font-bold"
+                >
+                  Download my Resume
+                </Button>
+              </div>
             </EditorBox>
           </div>
-          <div className="flex flex-row flex-wrap gap-5 justify-center items-center mt-20 mb-10 space-y-10">
+
+          <div className="flex flex-row flex-wrap gap-x-5 gap-y-10 justify-center items-center mt-20 mb-10">
             <ImageViewer
               blobType={1}
               fillColor="#7b5a4e"
@@ -196,7 +207,13 @@ export default function Home() {
 
       <section className="bg-extra-dark-choco p-4 lg:px-16">
         <GradientHeading text="case studies" className="scroll-mt-25" />
-        <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-15">
+        <motion.div
+          className="w-full py-8 flex flex-row justify-center flex-wrap gap-15"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="flex flex-col justify-center items-center max-w-70 lg:max-w-110">
             <Link href="/carers" className="cursor-pointer">
               <ImageViewer
@@ -217,7 +234,7 @@ export default function Home() {
               </ImageViewer>
             </Link>
             <h3 className="mt-5">Caring for the Carer</h3>
-            <p>Major Project (2025)</p>
+            <p>Major Project - Part 1 (2025)</p>
             <div className="flex flex-row flex-wrap justify-center items-center gap-5 mt-5">
               <div className="z-1 text-center max-w-70 border-full-lilac border-2 rounded-3xl px-2 py-1">
                 <p>Sector: Adult Social Care</p>
@@ -230,6 +247,52 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="flex flex-col justify-center items-center max-w-70 lg:max-w-110">
+            <Link href="/memento" className="cursor-pointer">
+              <ImageViewer
+                blobType={4}
+                fillColor="#572B7B"
+                hoverEffect={true}
+                disableExpand={true}
+                className="w-70 h-70 lg:w-110 lg:h-110"
+              >
+                <Image
+                  src="/memento/mockups/mockup-2-journey-example.png"
+                  alt="Mockup of the Memento app"
+                  width={350}
+                  height={400}
+                  priority
+                  className="w-50 lg:w-78"
+                />
+              </ImageViewer>
+            </Link>
+            <h3 className="mt-5">Memento</h3>
+            <p>Major Project - Part 2 (2025)</p>
+            <div className="flex flex-row flex-wrap justify-center items-center gap-5 mt-5">
+              <div className="z-1 text-center max-w-70 border-purple-sunset border-2 rounded-3xl px-2 py-1">
+                <p>Sector: Adult Social Care</p>
+              </div>
+              <div className="z-1 text-center max-w-70 border-purple-sunset border-2 rounded-3xl px-2 py-1">
+                <p>Ideation</p>
+              </div>
+              <div className="z-1 text-center max-w-70 border-purple-sunset border-2 rounded-3xl px-2 py-1">
+                <p>Wireframing</p>
+              </div>
+              <div className="z-1 text-center max-w-70 border-purple-sunset border-2 rounded-3xl px-2 py-1">
+                <p>Prototyping</p>
+              </div>
+              <div className="z-1 text-center max-w-70 border-purple-sunset border-2 rounded-3xl px-2 py-1">
+                <p>Visual Design</p>
+              </div>
+              <div className="z-1 text-center max-w-70 border-purple-sunset border-2 rounded-3xl px-2 py-1">
+                <p>Agile Design</p>
+              </div>
+              <div className="z-1 text-center max-w-70 border-purple-sunset border-2 rounded-3xl px-2 py-1">
+                <p>Mobile App</p>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col justify-center items-center max-w-70 lg:max-w-110">
             <Link href="/expenses" className="cursor-pointer">
               <ImageViewer
@@ -341,7 +404,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
       <section className="bg-extra-dark-choco p-4 lg:px-16">
         <GradientHeading text="about me" className="scroll-mt-25" />
@@ -474,7 +537,13 @@ export default function Home() {
             </div>
           </ContentBlock>
 
-          <div className="flex flex-row flex-wrap justify-center gap-5">
+          <motion.div
+            className="flex flex-row flex-wrap justify-center gap-5"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <ImageViewer
               src="/aboutme/firefighting-2.jpg"
               blobType={5}
@@ -496,7 +565,7 @@ export default function Home() {
               caption="Group photo from a trip to Pembrokeshire with the Loughborough Students Mountaineering Club"
               className="w-65 h-65 lg:w-70 lg:h-70"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -519,11 +588,17 @@ export default function Home() {
             fill={false}
           />
         </div>
-        <div className="px-4 lg:px-16 -mt-5">
+        <motion.div
+          className="px-4 lg:px-16 -mt-5"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <EditorBox extraStyles="w-full max-w-xl mx-auto">
             <ContactForm />
           </EditorBox>
-        </div>
+        </motion.div>
       </section>
     </main>
   );

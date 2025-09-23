@@ -46,7 +46,7 @@ export const Nav = () => {
     <nav className="flex flex-col w-full items-center justify-between fixed z-30">
       <button
         onClick={handleClick}
-        className="flex flex-col justify-center items-center bg-cappuccino/40 backdrop-blur-xl rounded-xl border border-cappuccino/40 p-4 mt-10 z-30 shadow-2xl lg:hidden"
+        className="flex flex-col justify-center items-center bg-cappuccino/40 backdrop-blur-xl rounded-xl border border-cappuccino/40 p-4 mt-5 z-30 shadow-2xl lg:hidden"
       >
         <span
           className={`bg-light-choco block transition-all duration-300 ease-out 
@@ -106,7 +106,7 @@ export const Nav = () => {
         </div>
       )}
 
-      <div className="hidden lg:flex flex-row justify-around items-center bg-cappuccino/40 backdrop-blur-xl border border-cappuccino/40 rounded-full mt-10 shadow-2xl">
+      <div className="hidden lg:flex flex-row justify-around items-center bg-cappuccino/40 backdrop-blur-xl border border-cappuccino/40 rounded-full mt-2 shadow-2xl">
         {navList.map(({ icon, title }, index) => {
           return (
             <a

@@ -9,26 +9,25 @@ type ButtonProps = {
 };
 
 const gradientColours: { [key: string]: string } = {
-  default:
-    "hover:bg-linear-to-r hover:from-red-400 hover:to-amber-400 active:bg-linear-to-r active:from-red-500 active:to-amber-500 focus:bg-linear-to-r focus:from-red-500 focus:to-amber-500",
+  default: "",
   teal: "hover:bg-linear-to-r hover:from-mid-teal hover:via-light-teal hover:to-light-red active:bg-linear-to-r active:from-full-teal active:via-light-teal active:to-full-red focus:bg-linear-to-r focus:from-full-teal focus:via-light-teal focus:to-full-red",
   lilac: "",
   blue: "",
+  purple: "",
 };
 
 const backgroundColours: { [key: string]: string } = {
-  default: "bg-cappuccino",
+  default: "bg-linear-to-r from-red-400 to-amber-400",
   teal: "bg-linear-to-r from-full-teal via-light-teal to-full-red",
   lilac: "",
   blue: "bg-linear-to-r from-cent-blue via cent-blue-muted to-cent-red",
   green: "bg-linear-to-r from-pine via-mint to-smarti-orange",
+  purple:
+    "bg-linear-to-r from-purple-sunset via-purple-sunrise to-orange-sunset",
 };
 
 const textColours: { [key: string]: string[] } = {
-  default: [
-    "text-light-choco/50",
-    "group-hover/button:text-extra-dark-choco group-focus/button:text-extra-dark-choco",
-  ],
+  default: ["text-dark-choco", ""],
   teal: [
     "text-extra-dark-choco",
     "group-hover/button:text-extra-dark-choco/70 group-focus/button:text-extra-dark-choco/70",
@@ -36,6 +35,7 @@ const textColours: { [key: string]: string[] } = {
   lilac: ["", ""],
   blue: ["text-cream", ""],
   green: ["text-extra-dark-choco", "group-hover/button:text-extra-dark-choco"],
+  purple: ["text-cream", ""],
 };
 
 export default function Button({

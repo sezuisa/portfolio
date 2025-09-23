@@ -12,6 +12,7 @@ import ScreenGallery from "@/components/screengallery";
 import ContactForm from "@/components/contactform";
 import ImageViewer from "@/components/imageviewer";
 import ExpandableImage from "@/components/expandableimage";
+import AnimationWrapper from "@/components/animationwrapper";
 
 export const metadata: Metadata = {
   title: "Lausha - Sarah Hägele Portfolio",
@@ -42,141 +43,151 @@ export default function Lausha() {
 
           <GradientHeading text="overview" colourVariant="teal" />
 
-          <div className="flex flex-row flex-wrap justify-center items-center mb-10">
-            <Image
-              src="/lausha/mockups/mockup_home_3.png"
-              alt="Mockup of the Lausha App"
-              width={350}
-              height={400}
-              priority
-              className="-mb-20 lg:-mb-10 lg:-mr-20 z-0 w-90"
-            />
-            <div className="max-w-full lg:max-w-150 lg:max-h-300 z-1">
-              <EditorBox>
-                <h3 className="font-bold">In a nutshell</h3>
-                <div className="max-w-prose space-y-3">
-                  <p>
-                    Laundry isn&apos;t exactly something many people would
-                    consider as a particularly exciting topic. However, it is a
-                    very worthwhile one to look at when considering potential
-                    for improvements in both the overall experience of this
-                    &quot;unexciting&quot; chore - and also in resource use.
-                  </p>
-                  <p>
-                    Through primary research, I discovered that university
-                    students in shared housing often underfill laundry machines,
-                    leading to unnecessary water and energy waste. Lausha is a
-                    mobile app designed to encourage more sustainable laundry
-                    practices by helping students share loads, track impact, and
-                    stay motivated through behavioural nudges and gamification.
-                  </p>
-                </div>
-              </EditorBox>
+          <AnimationWrapper>
+            <div className="flex flex-row flex-wrap justify-center items-center mb-10">
+              <Image
+                src="/lausha/mockups/mockup_home_3.png"
+                alt="Mockup of the Lausha App"
+                width={350}
+                height={400}
+                priority
+                className="-mb-20 lg:-mb-10 lg:-mr-20 z-0 w-90"
+              />
+              <div className="max-w-full lg:max-w-150 lg:max-h-300 z-1">
+                <EditorBox>
+                  <h3 className="font-bold">In a nutshell</h3>
+                  <div className="max-w-prose space-y-3">
+                    <p>
+                      Laundry isn&apos;t exactly something many people would
+                      consider as a particularly exciting topic. However, it is
+                      a very worthwhile one to look at when considering
+                      potential for improvements in both the overall experience
+                      of this &quot;unexciting&quot; chore - and also in
+                      resource use.
+                    </p>
+                    <p>
+                      Through primary research, I discovered that university
+                      students in shared housing often underfill laundry
+                      machines, leading to unnecessary water and energy waste.
+                      Lausha is a mobile app designed to encourage more
+                      sustainable laundry practices by helping students share
+                      loads, track impact, and stay motivated through
+                      behavioural nudges and gamification.
+                    </p>
+                  </div>
+                </EditorBox>
+              </div>
             </div>
-          </div>
+          </AnimationWrapper>
 
-          <div className="w-full py-8 flex flex-row justify-center flex-wrap gap-5">
-            <div className="min-w-35 max-w-55 flex flex-col items-center gap-3">
-              <div className="relative flex justify-center items-center">
+          <AnimationWrapper>
+            <div className="flex flex-col lg:flex-row flex-wrap justify-center items-start py-8">
+              <div className="w-full lg:w-106 flex flex-row justify-center flex-wrap gap-3">
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <div className="relative flex justify-center items-center">
+                    <ImageViewer
+                      blobType={0}
+                      fillColor="#4B8482"
+                      disableExpand={true}
+                      className="w-25 h-25"
+                    >
+                      <Image
+                        src="/icons/schedule.png"
+                        alt="Icon displaying a calendar"
+                        width={90}
+                        height={90}
+                        priority
+                        className=""
+                      />
+                    </ImageViewer>
+                  </div>
+
+                  <p className="text-center font-bold">8 weeks</p>
+                </div>
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <ImageViewer
+                    blobType={1}
+                    fillColor="#ACDEDC"
+                    disableExpand={true}
+                    className="w-25 h-25"
+                  >
+                    <Image
+                      src="/icons/businesswoman.png"
+                      alt="Icon displaying a woman"
+                      width={90}
+                      height={90}
+                      priority
+                      className=""
+                    />
+                  </ImageViewer>
+                  <p className="text-center font-bold">Solo UX Designer</p>
+                </div>
+              </div>
+              <div className="max-w-80 lg:w-50 flex flex-col items-center gap-3 my-5 lg:my-0">
                 <ImageViewer
-                  blobType={0}
-                  fillColor="#4B8482"
+                  blobType={2}
+                  fillColor="#EBFCFB"
                   disableExpand={true}
                   className="w-25 h-25"
                 >
                   <Image
-                    src="/icons/schedule.png"
-                    alt="Icon displaying a calendar"
+                    src="/icons/methods.png"
+                    alt="Icon displaying half a lightbulb, where the other half is small gears and boxes"
                     width={90}
                     height={90}
                     priority
                     className=""
                   />
                 </ImageViewer>
+                <p className="text-center font-bold">
+                  Interviews, Observations, Autoethnography, Affinity Mapping,
+                  Ideation, Wireframing, User Testing
+                </p>
               </div>
-
-              <p className="text-center font-bold">8 weeks</p>
+              <div className="w-full lg:w-106 flex flex-row justify-center flex-wrap gap-3">
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <ImageViewer
+                    blobType={3}
+                    fillColor="#E87F64"
+                    disableExpand={true}
+                    className="w-25 h-25"
+                  >
+                    <Image
+                      src="/icons/toolkit.png"
+                      alt="Icon displaying a toolkit"
+                      width={90}
+                      height={90}
+                      priority
+                      className=""
+                    />
+                  </ImageViewer>
+                  <p className="text-center font-bold">
+                    Miro, Figma, Marvel, Pen & Paper, AEIOU
+                  </p>
+                </div>
+                <div className="w-35 lg:w-50 flex flex-col items-center gap-3">
+                  <ImageViewer
+                    blobType={4}
+                    fillColor="#EC6344"
+                    disableExpand={true}
+                    className="w-25 h-25"
+                  >
+                    <Image
+                      src="/icons/brief.png"
+                      alt="Icon displaying a clipboard with 'Brief' written on it"
+                      width={90}
+                      height={90}
+                      priority
+                      className=""
+                    />
+                  </ImageViewer>
+                  <p className="text-center font-bold">
+                    Individual Academic Project
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={1}
-                fillColor="#ACDEDC"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/businesswoman.png"
-                  alt="Icon displaying a woman"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">Solo UX Designer</p>
-            </div>
-            <div className="min-w-35 max-w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={2}
-                fillColor="#EBFCFB"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/methods.png"
-                  alt="Icon displaying half a lightbulb, where the other half is small gears and boxes"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">
-                Interviews, Observations, Autoethnography, Affinity Mapping,
-                Ideation, Wireframing, User Testing
-              </p>
-            </div>
-            <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={3}
-                fillColor="#E87F64"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/toolkit.png"
-                  alt="Icon displaying a toolkit"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">
-                Miro, Figma, Marvel, Pen & Paper, AEIOU
-              </p>
-            </div>
-            <div className="w-35 lg:w-55 flex flex-col items-center mx-2 lg:mx-4 gap-3">
-              <ImageViewer
-                blobType={4}
-                fillColor="#EC6344"
-                disableExpand={true}
-                className="w-25 h-25"
-              >
-                <Image
-                  src="/icons/brief.png"
-                  alt="Icon displaying a clipboard with 'Brief' written on it"
-                  width={90}
-                  height={90}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <p className="text-center font-bold">
-                Individual Academic Project
-              </p>
-            </div>
-          </div>
+          </AnimationWrapper>
 
           {/*----------- INTRODUCTION -----------*/}
 
@@ -370,10 +381,14 @@ export default function Lausha() {
 
           <GradientHeading text="define" colourVariant="teal" />
 
-          <BroadImage
-            src="/lausha/lausha-affinity-diagram.jpg"
-            alt="Affinity Diagram for the Lausha project"
-          />
+          <AnimationWrapper>
+            <ExpandableImage caption="Excerpt of Affinity Diagram">
+              <BroadImage
+                src="/lausha/lausha-affinity-diagram.jpg"
+                alt="Affinity Diagram for the Lausha project"
+              />
+            </ExpandableImage>
+          </AnimationWrapper>
 
           <TripleContentBlock>
             <ImageViewer
@@ -586,97 +601,101 @@ export default function Lausha() {
             />
           </ContentBlock>
 
-          <div className="grow-1 flex flex-row place-content-center mt-10">
-            <EditorBox extraStyles="max-w-full lg:max-w-200">
-              <h3 id="final-idea">The idea:</h3>
-              <p>
-                An app enables users to share laundry loads with other users to
-                achieve larger loads together. Before every wash, the user takes
-                a photo of the filled-up washing machine and is given a score
-                depending on how close they got to the optimal fill level of the
-                washing machine, encouraging the formation of sustainable
-                laundry habits. The score directly translates into points that
-                the user collects and that result in awards like a free wash or
-                a free coffee. All this makes the laundry process more social
-                and rewarding, improving the experience and with that also
-                increasing the willingness of students to pay more attention to
-                sustainability within their laundry process.
-              </p>
-            </EditorBox>
-          </div>
+          <AnimationWrapper>
+            <div className="grow-1 flex flex-row place-content-center mt-10">
+              <EditorBox extraStyles="max-w-full lg:max-w-200">
+                <h3 id="final-idea">The idea:</h3>
+                <p>
+                  An app enables users to share laundry loads with other users
+                  to achieve larger loads together. Before every wash, the user
+                  takes a photo of the filled-up washing machine and is given a
+                  score depending on how close they got to the optimal fill
+                  level of the washing machine, encouraging the formation of
+                  sustainable laundry habits. The score directly translates into
+                  points that the user collects and that result in awards like a
+                  free wash or a free coffee. All this makes the laundry process
+                  more social and rewarding, improving the experience and with
+                  that also increasing the willingness of students to pay more
+                  attention to sustainability within their laundry process.
+                </p>
+              </EditorBox>
+            </div>
+          </AnimationWrapper>
 
-          <div className="w-full flex flex-row flex-wrap gap-5 justify-around mt-15">
-            <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
-              <ImageViewer
-                blobType={1}
-                fillColor="#4B8482"
-                disableExpand={true}
-                className="w-35 h-35"
-              >
-                <Image
-                  src="/icons/game-controller.png"
-                  alt="Icon displaying a game controller"
-                  width={120}
-                  height={120}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <h4 className="font-bold">Gamification</h4>
-              <p className="text-center">
-                Points, Milestones & Rewards encourage users to aim for optimal
-                fill levels to get more points and to keep using the app to earn
-                rewards like free washes, free drinks, etc.
-              </p>
+          <AnimationWrapper>
+            <div className="w-full flex flex-row flex-wrap gap-5 justify-around mt-15">
+              <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
+                <ImageViewer
+                  blobType={1}
+                  fillColor="#4B8482"
+                  disableExpand={true}
+                  className="w-35 h-35"
+                >
+                  <Image
+                    src="/icons/game-controller.png"
+                    alt="Icon displaying a game controller"
+                    width={120}
+                    height={120}
+                    priority
+                    className=""
+                  />
+                </ImageViewer>
+                <h4 className="font-bold">Gamification</h4>
+                <p className="text-center">
+                  Points, Milestones & Rewards encourage users to aim for
+                  optimal fill levels to get more points and to keep using the
+                  app to earn rewards like free washes, free drinks, etc.
+                </p>
+              </div>
+              <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
+                <ImageViewer
+                  blobType={2}
+                  fillColor="#EBFCFB"
+                  disableExpand={true}
+                  className="w-35 h-35"
+                >
+                  <Image
+                    src="/icons/feedback.png"
+                    alt="Icon displaying a happy, neutral and sad emoji"
+                    width={120}
+                    height={120}
+                    priority
+                    className=""
+                  />
+                </ImageViewer>
+                <h4 className="font-bold">Feedback</h4>
+                <p className="text-center">
+                  Fill level scoring with higher scores for optimal fill levels
+                  and the use of corresponding positive and negative messaging
+                </p>
+              </div>
+              <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
+                <ImageViewer
+                  blobType={4}
+                  fillColor="#EC6344"
+                  disableExpand={true}
+                  className="w-35 h-35"
+                >
+                  <Image
+                    src="/icons/nudges.png"
+                    alt="Icon displaying a phone with a notification bell and a message bubble"
+                    width={120}
+                    height={120}
+                    priority
+                    className=""
+                  />
+                </ImageViewer>
+                <h4 className="font-bold">Behaviour Steering</h4>
+                <p className="text-center">
+                  Notifications & in-app messaging remind and encourage users to
+                  use the app and to make use of the community laundry sharing
+                  feature; Constraints & affordances in the app&apos;s design
+                  prevent misuse of features and make the experience simple and
+                  intuitive
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
-              <ImageViewer
-                blobType={2}
-                fillColor="#EBFCFB"
-                disableExpand={true}
-                className="w-35 h-35"
-              >
-                <Image
-                  src="/icons/feedback.png"
-                  alt="Icon displaying a happy, neutral and sad emoji"
-                  width={120}
-                  height={120}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <h4 className="font-bold">Feedback</h4>
-              <p className="text-center">
-                Fill level scoring with higher scores for optimal fill levels
-                and the use of corresponding positive and negative messaging
-              </p>
-            </div>
-            <div className="flex flex-col items-center gap-3 w-40 lg:w-70">
-              <ImageViewer
-                blobType={4}
-                fillColor="#EC6344"
-                disableExpand={true}
-                className="w-35 h-35"
-              >
-                <Image
-                  src="/icons/nudges.png"
-                  alt="Icon displaying a phone with a notification bell and a message bubble"
-                  width={120}
-                  height={120}
-                  priority
-                  className=""
-                />
-              </ImageViewer>
-              <h4 className="font-bold">Behaviour Steering</h4>
-              <p className="text-center">
-                Notifications & in-app messaging remind and encourage users to
-                use the app and to make use of the community laundry sharing
-                feature; Constraints & affordances in the app&apos;s design
-                prevent misuse of features and make the experience simple and
-                intuitive
-              </p>
-            </div>
-          </div>
+          </AnimationWrapper>
 
           <ContentBlock alignCenter={false}>
             <div className="maw-w-prose space-y-3">
@@ -860,12 +879,14 @@ export default function Lausha() {
             </ImageViewer>
           </ContentBlock>
 
-          <ExpandableImage caption="Participants during user testing interacting with the mid-fi prototype">
-            <BroadImage
-              src="/lausha/lausha_mid_fi_testing.png"
-              alt="Mid-Fidelity User Testing"
-            />
-          </ExpandableImage>
+          <AnimationWrapper>
+            <ExpandableImage caption="Participants during user testing interacting with the mid-fi prototype">
+              <BroadImage
+                src="/lausha/lausha_mid_fi_testing.png"
+                alt="Mid-Fidelity User Testing"
+              />
+            </ExpandableImage>
+          </AnimationWrapper>
 
           <ContentBlock>
             <div className="maw-w-prose space-y-3">
@@ -950,69 +971,73 @@ export default function Lausha() {
             </div>
           </ContentBlock>
 
-          <div className="flex flex-row flex-wrap-reverse justify-center items-center my-10">
-            <div className="max-w-full lg:max-w-150 lg:max-h-300 z-0">
-              <EditorBox extraStyles="lg:pr-10">
-                <h3 id="final-design">The Final Design</h3>
-                <p>
-                  Lausha is a simple 3-step process: find a laundry share
-                  partner, wash your clothes together, and earn rewards for
-                  achieving an optimal fill level. By encouraging collaboration
-                  and providing instant feedback on each load&apos;s efficiency,
-                  the app makes sustainable laundry habits easy, social, and
-                  rewarding.
-                </p>
-                <Button
-                  href="https://www.figma.com/proto/KMn8mSIB2KXc1G9OOFI3X7/Lausha-Prototype-1?page-id=0%3A1&node-id=1-2&viewport=245%2C139%2C0.19&t=u1X0NxB1xxm3LZNL-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1"
-                  colourVariant="teal"
-                  className="mt-3"
-                >
-                  Try Lausha&apos;s flows out for yourself
-                </Button>
-              </EditorBox>
+          <AnimationWrapper>
+            <div className="flex flex-row flex-wrap-reverse justify-center items-center my-10">
+              <div className="max-w-full lg:max-w-150 lg:max-h-300 z-0">
+                <EditorBox extraStyles="lg:pr-10">
+                  <h3 id="final-design">The Final Design</h3>
+                  <p>
+                    Lausha is a simple 3-step process: find a laundry share
+                    partner, wash your clothes together, and earn rewards for
+                    achieving an optimal fill level. By encouraging
+                    collaboration and providing instant feedback on each
+                    load&apos;s efficiency, the app makes sustainable laundry
+                    habits easy, social, and rewarding.
+                  </p>
+                  <Button
+                    href="https://www.figma.com/proto/KMn8mSIB2KXc1G9OOFI3X7/Lausha-Prototype-1?page-id=0%3A1&node-id=1-2&viewport=245%2C139%2C0.19&t=u1X0NxB1xxm3LZNL-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1"
+                    colourVariant="teal"
+                    className="mt-3"
+                  >
+                    Try Lausha&apos;s flows out for yourself
+                  </Button>
+                </EditorBox>
+              </div>
+              <Image
+                src="/lausha/mockups/mockup_home_1.png"
+                alt="Mockup of the Lausha App"
+                width={350}
+                height={400}
+                priority
+                className="-mb-5 lg:mb-0 lg:-ml-20 z-1 w-70"
+              />
             </div>
-            <Image
-              src="/lausha/mockups/mockup_home_1.png"
-              alt="Mockup of the Lausha App"
-              width={350}
-              height={400}
-              priority
-              className="-mb-10 lg:mb-0 lg:-ml-20 z-1 w-70"
-            />
-          </div>
+          </AnimationWrapper>
 
-          <div className="flex flex-wrap justify-center items-start gap-15 mb-10">
-            <div className="flex flex-col items-center lg:max-w-80">
-              <h4>Gamification</h4>
-              <ScreenGallery
-                galleryName="lausha/lausha-gamification"
-                backgroundColour="#4B8482"
-                buttonColour="full-red"
-                blobClassName="w-80 h-80"
-                captionClassName="mt-5"
-              />
+          <AnimationWrapper>
+            <div className="flex flex-wrap justify-center items-start gap-15 mb-10">
+              <div className="flex flex-col items-center lg:max-w-80">
+                <h4>Gamification</h4>
+                <ScreenGallery
+                  galleryName="lausha/lausha-gamification"
+                  backgroundColour="#4B8482"
+                  buttonColour="full-red"
+                  blobClassName="w-80 h-80"
+                  captionClassName="mt-5"
+                />
+              </div>
+              <div className="flex flex-col items-center lg:max-w-80">
+                <h4>Feedback</h4>
+                <ScreenGallery
+                  galleryName="lausha/lausha-feedback"
+                  backgroundColour="#4B8482"
+                  buttonColour="full-red"
+                  blobClassName="w-80 h-80"
+                  captionClassName="mt-5"
+                />
+              </div>
+              <div className="flex flex-col items-center lg:max-w-80">
+                <h4>Behaviour Steering</h4>
+                <ScreenGallery
+                  galleryName="lausha/lausha-behaviour-steering"
+                  backgroundColour="#4B8482"
+                  buttonColour="full-red"
+                  blobClassName="w-80 h-80"
+                  captionClassName="mt-5"
+                />
+              </div>
             </div>
-            <div className="flex flex-col items-center lg:max-w-80">
-              <h4>Feedback</h4>
-              <ScreenGallery
-                galleryName="lausha/lausha-feedback"
-                backgroundColour="#4B8482"
-                buttonColour="full-red"
-                blobClassName="w-80 h-80"
-                captionClassName="mt-5"
-              />
-            </div>
-            <div className="flex flex-col items-center lg:max-w-80">
-              <h4>Behaviour Steering</h4>
-              <ScreenGallery
-                galleryName="lausha/lausha-behaviour-steering"
-                backgroundColour="#4B8482"
-                buttonColour="full-red"
-                blobClassName="w-80 h-80"
-                captionClassName="mt-5"
-              />
-            </div>
-          </div>
+          </AnimationWrapper>
 
           {/*----------- REFLECTIONS -----------*/}
 
@@ -1112,34 +1137,44 @@ export default function Lausha() {
 
           <GradientHeading text="what's next?" colourVariant="teal" />
 
-          <div className="flex flex-row w-full justify-center my-10">
-            <div className="max-w-prose space-y-3">
-              <p>
-                While the project has concluded and was not intended for
-                real-world implementation, there are several features I would
-                explore further if development were to continue. Potential next
-                steps could include integrating an in-app payment system for
-                shared washes, implementing automatic user matching based on
-                schedules and preferences, and adding a historical score
-                overview to help users track their fill levels over time. This
-                data could also enable personalised behavioural nudges,
-                encouraging more consistent sustainable habits. These additions
-                would further enhance the app&apos;s functionality and deepen
-                its impact on user behaviour.
-              </p>
+          <AnimationWrapper>
+            <div className="flex flex-row w-full justify-center my-10">
+              <div className="max-w-prose space-y-3">
+                <p>
+                  While the project has concluded and was not intended for
+                  real-world implementation, there are several features I would
+                  explore further if development were to continue. Potential
+                  next steps could include integrating an in-app payment system
+                  for shared washes, implementing automatic user matching based
+                  on schedules and preferences, and adding a historical score
+                  overview to help users track their fill levels over time. This
+                  data could also enable personalised behavioural nudges,
+                  encouraging more consistent sustainable habits. These
+                  additions would further enhance the app&apos;s functionality
+                  and deepen its impact on user behaviour.
+                </p>
+              </div>
             </div>
-          </div>
+          </AnimationWrapper>
 
           <GradientHeading text="the end" colourVariant="teal" />
 
-          <div className="flex justify-center items-center m-5">
-            <BackButton text="Next Case Study" href="/carers" forward={true} />
-          </div>
+          <AnimationWrapper>
+            <div className="flex justify-center items-center m-5">
+              <BackButton
+                text="Next Case Study"
+                href="/carers"
+                forward={true}
+              />
+            </div>
+          </AnimationWrapper>
 
           <div className="px-4 lg:px-16 mt-5 mb-5 w-full">
-            <EditorBox extraStyles="w-full max-w-xl mx-auto">
-              <ContactForm />
-            </EditorBox>
+            <AnimationWrapper>
+              <EditorBox extraStyles="w-full max-w-xl mx-auto">
+                <ContactForm />
+              </EditorBox>
+            </AnimationWrapper>
           </div>
         </div>
       </div>

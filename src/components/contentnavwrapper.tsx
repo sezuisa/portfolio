@@ -9,6 +9,32 @@ const navLists: Record<
   string,
   { title: string; href: string; hierarchy: number }[]
 > = {
+  "/memento": [
+    { title: "Back to top", href: "#top", hierarchy: 0 },
+    { title: "Overview", href: "#overview", hierarchy: 0 },
+    { title: "Introduction", href: "#introduction", hierarchy: 0 },
+    { title: "The Challenge", href: "#challenge", hierarchy: 1 },
+    { title: "The Approach", href: "#approach", hierarchy: 1 },
+    { title: "Develop", href: "#develop", hierarchy: 0 },
+    { title: "How Might We?", href: "#hmw", hierarchy: 1 },
+    { title: "Ideation", href: "#ideation", hierarchy: 1 },
+    { title: "Concept Walkthroughs", href: "#walkthroughs", hierarchy: 1 },
+    { title: "UX Vision Pivot", href: "#pivot", hierarchy: 1 },
+    { title: "Low-Fidelity Prototyping", href: "#low-fi", hierarchy: 1 },
+    {
+      title: "Persona-Based Concept Evaluation",
+      href: "#persona-eval",
+      hierarchy: 1,
+    },
+    { title: "Deliver", href: "#deliver", hierarchy: 0 },
+    { title: "High-Fidelity Prototyping", href: "#high-fi", hierarchy: 1 },
+    { title: "Outcomes Evaluation", href: "#outcomes", hierarchy: 1 },
+    { title: "Design System", href: "#design-system", hierarchy: 1 },
+    { title: "The Final Design", href: "#final-design", hierarchy: 1 },
+    { title: "Reflections", href: "#reflections", hierarchy: 0 },
+    { title: "What's next?", href: "#what'snext?", hierarchy: 0 },
+    { title: "Contact", href: "#theend", hierarchy: 0 },
+  ],
   "/carers": [
     { title: "Back to top", href: "#top", hierarchy: 0 },
     { title: "Overview", href: "#overview", hierarchy: 0 },
