@@ -15,6 +15,7 @@ import { Sarina } from "next/font/google";
 import Nav from "@/components/navbar";
 import ImageViewer from "@/components/imageviewer";
 import Button from "@/components/button";
+import DropdownButton from "@/components/dropdownbutton";
 
 const sarina = Sarina({
   subsets: ["latin"],
@@ -77,13 +78,23 @@ export default function Home() {
                 </p>
               </div>
               <div className="w-full flex flex-row justify-center mt-5">
-                <Button
-                  href="https://youtu.be/y_0fTAhkpqU"
-                  colourVariant="default"
+                <DropdownButton
                   className="font-bold"
+                  options={[
+                    {
+                      label: "English",
+                      href: "/cv/CV_English_Sarah_Haegele_09_2025.pdf",
+                      download: true,
+                    },
+                    {
+                      label: "German",
+                      href: "/cv/CV_Deutsch_Sarah_Haegele_09_2025.pdf",
+                      download: true,
+                    },
+                  ]}
                 >
-                  Download my Resume
-                </Button>
+                  Download my CV
+                </DropdownButton>
               </div>
             </EditorBox>
           </div>

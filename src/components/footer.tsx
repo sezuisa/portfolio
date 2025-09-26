@@ -13,15 +13,21 @@ export default function Footer() {
         fill={false}
       />
 
-      <div className="flex flex-col lg:flex-row items-center lg:justify-evenly bg-dark-choco text-light-choco text-center">
+      <div className="w-full flex flex-col lg:flex-row items-center lg:justify-evenly bg-dark-choco text-light-choco text-center">
         <a
           className="m-4 hover:underline"
           href="https://github.com/sezuisa/portfolio"
           target="_blank"
         >
-          Portfolio v.0.1.0 [GitHub]
+          <p>Portfolio v.0.1.0 [GitHub]</p>
         </a>
-        <p className="m-4">&copy; 2025 Sarah Hägele</p>
+        <a
+          className="m-4 hover:underline"
+          href="www.linkedin.com/in/sarah-hägele-79237a249"
+          target="_blank"
+        >
+          <p>&copy; 2025 Sarah Hägele [LinkedIn]</p>
+        </a>
         <p className="m-4">Made with &#9829; with Next.js and TailwindCSS</p>
       </div>
     </div>
