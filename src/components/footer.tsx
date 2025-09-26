@@ -19,7 +19,7 @@ export default function Footer() {
           href="https://github.com/sezuisa/portfolio"
           target="_blank"
         >
-          <p>Portfolio v.0.1.0 [GitHub]</p>
+          <p>Portfolio v.1.0.0 [GitHub]</p>
         </a>
         <a
           className="m-4 hover:underline"
