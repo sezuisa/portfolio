@@ -1,6 +1,7 @@
 import React from "react";
 import footerWave from "../../public/waves_footer.svg";
 import Image from "next/image";
+import CurrentYear from "./currentyear";
 
 export default function Footer() {
   return (
@@ -23,10 +24,13 @@ export default function Footer() {
         </a>
         <a
           className="m-4 hover:underline"
-          href="www.linkedin.com/in/sarah-hägele-79237a249"
+          href="https://www.linkedin.com/in/sarah-h%C3%A4gele-79237a249"
           target="_blank"
         >
-          <p>&copy; 2025 Sarah Hägele [LinkedIn]</p>
+          <p>
+            &copy; <CurrentYear fallback={new Date().getFullYear()} /> Sarah
+            Hägele [LinkedIn]
+          </p>
         </a>
         <p className="m-4">Made with &#9829; with Next.js and TailwindCSS</p>
       </div>
