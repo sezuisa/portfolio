@@ -1177,14 +1177,12 @@ export default function Carers() {
               <p>
                 Despite smaller shortcomings, overall, creating Memento has
                 shown me how far I have come as a UX Designer - both in skills
-                and mindset. In past projects, I struggled repeatedly with my
-                logical, solution-oriented mindset as a former software
-                developer. I found it difficult and scary to keep an open mind
-                and embrace the &quot;tangled web&quot; of the design process,
-                often questioning myself in the process. However, this time
-                around, I felt a lot more confident making decisions, making
-                rough plans but staying spontaneous, and being more open to
-                different ideas.
+                and mindset. In past projects, my solution-oriented developer
+                mindset pulled me towards early answers, and embracing the
+                &quot;tangled web&quot; of the design process took deliberate
+                effort. This time around, I paired that structure with openness:
+                I felt a lot more confident making decisions, making rough plans
+                but staying spontaneous, and being more open to different ideas.
               </p>
               <p>
                 The prime example for this being my ideation process, where I

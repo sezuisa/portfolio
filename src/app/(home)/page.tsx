@@ -356,12 +356,24 @@ export default function Home() {
             />
             <div className="max-w-prose space-y-3">
               <p>
-                I&apos;m a UX and Product Designer with a background in Computer
-                Science and a passion for creating meaningful, human-centred
-                digital experiences. My journey into UX began with a lifelong
-                interest in digital design - from fiddling with HTML and
-                Photoshop as a teenager to noticing every beautifully crafted
-                (or frustratingly bad) interface I came across.
+                I&apos;m a UX Designer with a developer&apos;s background. Since
+                January 2026, I&apos;ve been designing a new cloud-based
+                platform for complex IT infrastructure management, which will
+                replace a decades-old established enterprise tool. I design for
+                experts and novices alike, work closely with developers on a
+                shared design system, and use AI-powered prototyping to explore
+                and compare design options quickly. My experience as a developer
+                shapes how I design: I understand technical constraints, speak
+                the same language as engineers, and enjoy turning complex
+                systems into interfaces people can actually understand.
+              </p>
+              <h4>How I got here</h4>
+              <p>
+                My passion for creating meaningful, human-centred digital
+                experiences goes back a long way. My journey into UX began with
+                a lifelong interest in digital design - from fiddling with HTML
+                and Photoshop as a teenager to noticing every beautifully
+                crafted (or frustratingly bad) interface I came across.
               </p>
             </div>
           </ContentBlock>
@@ -369,7 +381,7 @@ export default function Home() {
             <div className="max-w-prose space-y-3">
               <h4>Diving into Software</h4>
               <p>
-                My computer-affinity initially lead me to complete a
+                My computer-affinity initially led me to complete a
                 three-year-long Bachelor&apos;s degree in Computer Science and
                 work as a software developer at FNT Software for an additional
                 year, which gave me a deep understanding and appreciation of
@@ -408,13 +420,12 @@ export default function Home() {
             <div className="max-w-prose space-y-3">
               <h4>Searching for more</h4>
               <p>
-                Throughout these four years, I came to realise that I was
-                missing something fundamental, which wasn&apos;t logic or
-                structure - it was people. I found this missing piece within UX
-                Design. After successfully applying for a scholarship for a
-                Master&apos;s degree in UX and Service Design at Loughborogh
-                University, I left my home country of Germany to live and study
-                in the UK for a year.
+                Those four years showed me how good software gets built, and
+                that what I cared about most was the people using it. I found
+                the way to bring both together in UX Design. After successfully
+                applying for a scholarship for a Master&apos;s degree in UX and
+                Service Design at Loughborough University, I left my home
+                country of Germany to live and study in the UK for a year.
               </p>
               <p>
                 This year taught me an incredible amount - about UX and about
