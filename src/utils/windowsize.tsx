@@ -1,22 +1,26 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+const subscribe = (onChange: () => void) => {
+  window.addEventListener("resize", onChange);
+  // unsubscribe from the event on component unmount
+  return () => window.removeEventListener("resize", onChange);
+};
+
+// window is not available on the server, so both sizes are 0 there
+const getServerSize = () => 0;
 
 const useWindowSize = () => {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    // component is mounted and window is available
-    handleWindowResize();
-    window.addEventListener("resize", handleWindowResize);
-    // unsubscribe from the event on component unmount
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
+  const width = useSyncExternalStore(
+    subscribe,
+    () => window.innerWidth,
+    getServerSize,
+  );
+  const height = useSyncExternalStore(
+    subscribe,
+    () => window.innerHeight,
+    getServerSize,
+  );
 
   return [width, height];
 };

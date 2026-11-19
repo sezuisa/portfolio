@@ -1,7 +1,13 @@
 // ExpandableImage.tsx
 "use client";
 
-import { ReactNode, useEffect, useState, isValidElement } from "react";
+import {
+  ReactNode,
+  useEffect,
+  useState,
+  useSyncExternalStore,
+  isValidElement,
+} from "react";
 import { createPortal } from "react-dom";
 import { IoClose } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
@@ -16,6 +22,8 @@ type ExpandableImageProps = {
   className?: string;
 };
 
+const subscribeNoop = () => () => {};
+
 export default function ExpandableImage({
   children,
   src = "",
@@ -25,14 +33,16 @@ export default function ExpandableImage({
   className = "",
 }: ExpandableImageProps) {
   const [expanded, setExpanded] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  // false on the server and during hydration, true in the browser afterwards,
+  // so the portal to document.body is only rendered client-side
+  const isMounted = useSyncExternalStore(
+    subscribeNoop,
+    () => true,
+    () => false,
+  );
 
   let imageSrc = src;
   let imageAlt = alt;
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   if (!src && isValidElement(children)) {
     const props = (children as any).props || {};

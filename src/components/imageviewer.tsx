@@ -3,6 +3,7 @@
 import {
   ReactNode,
   useId,
+  useCallback,
   useEffect,
   useRef,
   useState,
@@ -57,14 +58,16 @@ export default function ImageViewer({
     }
   }
 
-  const animateToNext = () => {
+  // useCallback keeps this function stable between renders, so listing it as
+  // an effect dependency doesn't restart the hover animation on every render
+  const animateToNext = useCallback(() => {
     const nextIndex = (currentIndex.current + 1) % blobPaths.length;
     controls.start({
       d: blobPaths[nextIndex],
       transition: { duration: 1, ease: "easeInOut" },
     });
     currentIndex.current = nextIndex;
-  };
+  }, [controls]);
 
   useEffect(() => {
     if (hoverEffect) {
@@ -82,7 +85,7 @@ export default function ImageViewer({
       }
       return () => clearInterval(intervalRef.current!);
     }
-  }, [hovered]);
+  }, [hovered, hoverEffect, blobType, controls, animateToNext]);
 
   return (
     <ExpandableImage
