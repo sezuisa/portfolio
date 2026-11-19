@@ -1204,7 +1204,11 @@ export default function Carers() {
 
           {/*----------- WHAT'S NEXT -----------*/}
 
-          <GradientHeading text="what's next?" colourVariant="purple" />
+          <GradientHeading
+            text="what's next?"
+            anchor="whats-next"
+            colourVariant="purple"
+          />
 
           <AnimationWrapper>
             <div className="max-w-prose space-y-3 my-5">

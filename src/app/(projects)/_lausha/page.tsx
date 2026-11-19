@@ -1135,7 +1135,11 @@ export default function Lausha() {
 
           {/*----------- WHAT'S NEXT -----------*/}
 
-          <GradientHeading text="what's next?" colourVariant="teal" />
+          <GradientHeading
+            text="what's next?"
+            anchor="whats-next"
+            colourVariant="teal"
+          />
 
           <AnimationWrapper>
             <div className="flex flex-row w-full justify-center my-10">

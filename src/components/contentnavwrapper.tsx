@@ -32,7 +32,7 @@ const navLists: Record<
     { title: "Design System", href: "#design-system", hierarchy: 1 },
     { title: "The Final Design", href: "#final-design", hierarchy: 1 },
     { title: "Reflections", href: "#reflections", hierarchy: 0 },
-    { title: "What's next?", href: "#what'snext?", hierarchy: 0 },
+    { title: "What's next?", href: "#whats-next", hierarchy: 0 },
     { title: "Contact", href: "#theend", hierarchy: 0 },
   ],
   "/carers": [
@@ -60,7 +60,7 @@ const navLists: Record<
     { title: "User Needs emerge", href: "#user-needs", hierarchy: 1 },
     { title: "Defining the UX Vision", href: "#ux-vision", hierarchy: 1 },
     { title: "Reflections", href: "#reflections", hierarchy: 0 },
-    { title: "What's next?", href: "#what'snext?", hierarchy: 0 },
+    { title: "What's next?", href: "#whats-next", hierarchy: 0 },
     { title: "Contact", href: "#theend", hierarchy: 0 },
   ],
   "/expenses": [
@@ -114,7 +114,7 @@ const navLists: Record<
     { title: "Reflections", href: "#reflections", hierarchy: 0 },
     { title: "What I learned", href: "#learnings", hierarchy: 1 },
     { title: "A word on ethics", href: "#ethics", hierarchy: 1 },
-    { title: "What's next?", href: "#what'snext?", hierarchy: 0 },
+    { title: "What's next?", href: "#whats-next", hierarchy: 0 },
     { title: "Contact", href: "#theend", hierarchy: 0 },
   ],
   "/smarti": [
