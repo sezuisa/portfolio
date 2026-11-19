@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { pageMetadata } from "@/utils/metadata";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
 import ContentBlock from "@/components/contentblock";
@@ -14,11 +15,12 @@ import AnimationWrapper from "@/components/animationwrapper";
 import Link from "next/link";
 import { getNextCaseStudy } from "@/utils/casestudies";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Memento - Sarah Hägele Portfolio",
   description:
-    "Detail page about the UX design project 'Memento' by Sarah Hägele",
-};
+    "UX case study of Memento, an app that helps dementia carers capture meaningful moments, taken from ideation and storyboarding to a user-tested prototype.",
+  path: "/memento",
+});
 
 export const viewport: Viewport = {
   themeColor: "#322824",

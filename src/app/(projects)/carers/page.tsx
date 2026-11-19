@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { pageMetadata } from "@/utils/metadata";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
 import ContentBlock from "@/components/contentblock";
@@ -13,11 +14,12 @@ import ExpandableImage from "@/components/expandableimage";
 import AnimationWrapper from "@/components/animationwrapper";
 import { getNextCaseStudy } from "@/utils/casestudies";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Carers - Sarah Hägele Portfolio",
   description:
-    "Detail page about the UX design project for informal carers by Sarah Hägele",
-};
+    "UX research case study: exploring the everyday lives of informal dementia carers through interviews and participatory activities, leading to a clear UX vision.",
+  path: "/carers",
+});
 
 export const viewport: Viewport = {
   themeColor: "#322824",

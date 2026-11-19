@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { pageMetadata } from "@/utils/metadata";
 import "../globals.css";
 import Footer from "@/components/footer";
 import ScrollWrapper from "@/components/scrollwrapper";
@@ -9,11 +10,12 @@ const lexend = Lexend({
   weight: "300",
 });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Sarah Hägele Portfolio",
   description:
-    "Portfolio showing the work done by Sarah Hägele as a UX Designer.",
-};
+    "UX Designer with a developer's background, turning complex systems into clear interfaces. Case studies in user research, prototyping and design leadership.",
+  path: "/",
+});
 
 export const viewport: Viewport = {
   themeColor: "#4e3931",

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { pageMetadata } from "@/utils/metadata";
 import ProjectsHeader from "@/components/projectsheader";
 import BackButton from "@/components/backbutton";
 import ContentBlock from "@/components/contentblock";
@@ -16,11 +17,12 @@ import ExpandableImage from "@/components/expandableimage";
 import AnimationWrapper from "@/components/animationwrapper";
 import { getNextCaseStudy } from "@/utils/casestudies";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Centsible - Sarah Hägele Portfolio",
   description:
-    "Detail page about the UX design project 'Centsible' by Sarah Hägele",
-};
+    "UX case study: leading a team of six with client MHR to reimagine expense management as an AI- and chat-first app, from research to tested prototype.",
+  path: "/expenses",
+});
 
 export const viewport: Viewport = {
   themeColor: "#322824",
