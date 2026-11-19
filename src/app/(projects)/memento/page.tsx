@@ -12,6 +12,7 @@ import ImageCarousel from "@/components/imagecarousel";
 import SingleScreenDisplay from "@/components/singlescreendisplay";
 import AnimationWrapper from "@/components/animationwrapper";
 import Link from "next/link";
+import { getNextCaseStudy } from "@/utils/casestudies";
 
 export const metadata: Metadata = {
   title: "Memento - Sarah Hägele Portfolio",
@@ -1226,7 +1227,7 @@ export default function Carers() {
             <div className="flex justify-center items-center m-5">
               <BackButton
                 text="Next Case Study"
-                href="/expenses"
+                href={getNextCaseStudy("/memento")}
                 forward={true}
               />
             </div>

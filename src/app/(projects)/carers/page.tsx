@@ -11,6 +11,7 @@ import ContactForm from "@/components/contactform";
 import ImageViewer from "@/components/imageviewer";
 import ExpandableImage from "@/components/expandableimage";
 import AnimationWrapper from "@/components/animationwrapper";
+import { getNextCaseStudy } from "@/utils/casestudies";
 
 export const metadata: Metadata = {
   title: "Carers - Sarah Hägele Portfolio",
@@ -993,7 +994,7 @@ export default function Carers() {
             <div className="flex justify-center items-center m-5">
               <BackButton
                 text="Next Case Study"
-                href="/memento"
+                href={getNextCaseStudy("/carers")}
                 forward={true}
               />
             </div>
