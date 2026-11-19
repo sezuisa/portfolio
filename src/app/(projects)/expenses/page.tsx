@@ -57,7 +57,7 @@ export default function Expenses() {
             <div className="flex flex-row flex-wrap justify-center items-center mb-10">
               <Image
                 src="/centsible/mockups/centsible_overview_mockup.png"
-                alt="Illustration of a dementia carer"
+                alt="Mockup of the Centsible app"
                 width={350}
                 height={400}
                 priority
@@ -308,7 +308,7 @@ export default function Expenses() {
                   >
                     <Image
                       src="/icons/research.png"
-                      alt="Icon displaying a a magnifying glass with some documents"
+                      alt="Icon displaying a magnifying glass over some documents with a bar chart"
                       width={90}
                       height={90}
                       priority
@@ -336,7 +336,7 @@ export default function Expenses() {
                   >
                     <Image
                       src="/icons/pain.png"
-                      alt="Icon displaying a a magnifying glass with some documents"
+                      alt="Icon displaying a red button with lightning bolts, symbolising pain points"
                       width={90}
                       height={90}
                       priority
@@ -363,7 +363,7 @@ export default function Expenses() {
                   >
                     <Image
                       src="/icons/competition.png"
-                      alt="Icon displaying a a magnifying glass with some documents"
+                      alt="Icon displaying a winners' podium with three people, symbolising the competition"
                       width={90}
                       height={90}
                       priority
@@ -391,7 +391,7 @@ export default function Expenses() {
                   >
                     <Image
                       src="/icons/trend.png"
-                      alt="Icon displaying a a magnifying glass with some documents"
+                      alt="Icon displaying a rising bar chart with an upward arrow, symbolising trends"
                       width={90}
                       height={90}
                       priority
@@ -437,7 +437,7 @@ export default function Expenses() {
                   >
                     <Image
                       src="/icons/interview.png"
-                      alt="Icon displaying a a magnifying glass with some documents"
+                      alt="Icon displaying two microphones with speech bubbles, symbolising an interview"
                       width={90}
                       height={90}
                       priority
@@ -468,7 +468,7 @@ export default function Expenses() {
                   >
                     <Image
                       src="/icons/feedback_picker.png"
-                      alt="Icon displaying a a magnifying glass with some documents"
+                      alt="Icon displaying a hand choosing between happy, sad, and neutral faces on a feedback scale"
                       width={90}
                       height={90}
                       priority
@@ -942,11 +942,6 @@ export default function Expenses() {
 
           <AnimationWrapper>
             <div className="max-w-prose space-y-3 py-10">
-              <p>
-                Throughout this stage, we iterated collaboratively, integrating
-                team feedback and client input to ensure our solution remained
-                both innovative and grounded in user needs.
-              </p>
               <h4 className="font-bold">
                 At the core, each refinement was guided by our validated belief
                 in a concept that focused on an AI- and chat-first approach,

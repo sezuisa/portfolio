@@ -233,15 +233,14 @@ export default function Carers() {
             <div className="max-w-prose space-y-3">
               <h3 id="approach">The Approach</h3>
               <p>
-                As the project is currently still ongoing, this case study is
-                focused on its first phase, which follows the first half of the
-                Double Diamond process: Discover and Define. I used a
-                mixed-methods approach, combining extensive secondary research
-                with a diverse range of primary user research methods. My aim
-                was to build a deep understanding of the lived experiences of
-                informal carers more broadly at first and later on, I narrowed
-                this down to specifically dementia carers. With this
-                understanding of my target users, I could then synthesise
+                This case study focuses on the first phase of the project, which
+                follows the first half of the Double Diamond process: Discover
+                and Define. I used a mixed-methods approach, combining extensive
+                secondary research with a diverse range of primary user research
+                methods. My aim was to build a deep understanding of the lived
+                experiences of informal carers more broadly at first and later
+                on, I narrowed this down to specifically dementia carers. With
+                this understanding of my target users, I could then synthesise
                 actionable insights, culminating in a UX Vision Statement and
                 three Experience Design Principles that could form a good basis
                 for future design directions.
@@ -364,7 +363,7 @@ export default function Carers() {
                 activity, where we created personas based on archetype templates
                 I developed for this purpose. Throughout these interviews, I
                 started to see a focus emerge on dementia carers as especially
-                emotionally burdoned, so I focused on just the dementia carer
+                emotionally burdened, so I focused on just the dementia carer
                 archetype.
               </p>
             </div>
@@ -949,8 +948,8 @@ export default function Carers() {
               </p>
               <p>
                 Emotionally, this was one of the most human and impactful topics
-                I&apos;ve explored. I was especially struck by the concepts of
-                anticipatory grief and the that of lacking neighbourliness - as
+                I&apos;ve explored. I was especially struck by the concept of
+                anticipatory grief and that of lacking neighbourliness - as
                 someone raised in a small village where everyone knows everyone,
                 it was almost a given for me that people support and help each
                 other, so finding out my participants didn&apos;t experience

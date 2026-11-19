@@ -107,7 +107,7 @@ export default function Carers() {
                       overworked, and they feel unsupported and isolated.
                     </p>
                     <p>
-                      Leveraging insights from extensive research in&nbsp;
+                      Leveraging insights from extensive research in the&nbsp;
                       <Link href="/carers" className="cursor-pointer underline">
                         first half of my major project,
                       </Link>
@@ -303,7 +303,7 @@ export default function Carers() {
                 I followed an agile project approach, conducting a retrospective
                 at the start of each new week to reflect on the previous week
                 and to plan and prioritise the next steps for the project. This
-                allowed me to stay very flexible yet alway prepared and on top
+                allowed me to stay very flexible yet always prepared and on top
                 of everything, and combined with a &apos;9-5&apos; working
                 approach, I could balance my time on the project really well
                 with my private life.
@@ -591,7 +591,7 @@ export default function Carers() {
                   <p>
                     Bodystorming helped me to explore how my concept could
                     prompt carers at the optimal time to capture a moment, to
-                    avoid prompts feeling like disturbances. I found that that I
+                    avoid prompts feeling like disturbances. I found that I
                     could infer many receptive moments with simple phone data -
                     detecting that picking up the phone after a period of not
                     using it often meant the carer was having a small
@@ -667,9 +667,9 @@ export default function Carers() {
                     I created key user flows, an initial sitemap, and then
                     sketched wireframes on paper. After a carer participant
                     cancelled an in-person user testing session, I took that as
-                    an opportunity to set up a unmoderated online wireframe test
-                    with Maze, enabling both the original participant and an
-                    additional 3 peers to complete the test.
+                    an opportunity to set up an unmoderated online wireframe
+                    test with Maze, enabling both the original participant and
+                    an additional 3 peers to complete the test.
                   </p>
                   <p>
                     I could validate the intuitiveness of my basic user flows,
@@ -864,8 +864,8 @@ export default function Carers() {
             <ImageViewer
               blobType={3}
               src="/memento/persona-concept-evaluation.png"
-              alt="Photo showing the OneDesign team working on ideation activities"
-              caption="Team Ideation Session - completed 'Crazy 8' sheets"
+              alt="Screenshot showing the concept evaluated from the point of view of different personas"
+              caption="Evaluation of the concept from the point of view of different personas"
               className="w-70 h-70 lg:w-90 lg:h-90 xl:w-110 xl:h-110"
             />
           </ContentBlock>
@@ -896,8 +896,8 @@ export default function Carers() {
               <ImageViewer
                 blobType={0}
                 src="/memento/high-fi-user-testing.png"
-                alt="Photo collage of Sarah Hägele doing bodystorming"
-                caption="Acting out care scenarios during bodystorming"
+                alt="Image showing snippets from a user testing session together with screenshots from the Memento app"
+                caption="User testing with a novice user"
                 className="w-60 h-60 xl:w-80 xl:h-80"
               />
               <EditorBox extraStyles="max-w-full lg:max-w-110">
@@ -950,12 +950,11 @@ export default function Carers() {
             <div className="max-w-prose space-y-3">
               <h4 id="outcomes">Outcomes Evaluation</h4>
               <p>
-                After all these iterations, the final Memento seems like a
-                pretty good concept. However, one of my core beliefs as a
-                designer is that any design can only be considered good if it is
-                also ethically sound - and that includes considering not just
-                its desirable, but also undesirable outcomes and how to overcome
-                them.
+                After all these iterations, the final Memento concept held up
+                well. However, one of my core beliefs as a designer is that any
+                design can only be considered good if it is also ethically sound
+                - and that includes considering not just its desirable, but also
+                undesirable outcomes and how to overcome them.
               </p>
               <p>
                 This gave me further confidence in Memento, as I found that some
@@ -1190,10 +1189,10 @@ export default function Carers() {
               <p>
                 The prime example for this being my ideation process, where I
                 reminded myself to stay open-minded and consider divergent
-                ideas. Ultimately, this lead to me even discarding a concept I
-                had previously silently favoured for a new one that I recognised
-                to be better and more meaningful, and embracing a pivot in
-                project direction alongside this.
+                ideas. Ultimately, this led me to discard a concept I had
+                previously silently favoured for a new one that I recognised to
+                be better and more meaningful, and embracing a pivot in project
+                direction alongside this.
               </p>
               <h4>
                 I believe this project has been a milestone of me really coming
@@ -1218,9 +1217,9 @@ export default function Carers() {
                 take the concept further and realise it as an actual app. Given
                 my experience with software development, I am open to starting
                 an implementation of the app in the future - which I intend to
-                keep fully open source to allow for contributions of whoever
-                developer or designer wants to do their little part in creating
-                something that truly cares about the carers.
+                keep fully open source to allow for contributions from any
+                developer or designer who wants to do their little part in
+                creating something that truly cares about the carers.
               </p>
             </div>
           </AnimationWrapper>
