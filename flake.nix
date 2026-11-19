@@ -19,18 +19,8 @@
 
       dev-server = pkgs.writeShellApplication {
         name = "dev-server";
-        runtimeInputs = [ pkgs.nodejs_24 ];
-        text = "${pkgs.nodejs_24}/bin/npm run dev";
-      };
-
-      staticHtml = pkgs.buildNpmPackage {
-        name = "portfolio";
-        src = ./.;
-        npmDepsHash = "sha256-eiThjIWb/SaZK9vKtHPlE7AB0s4MKArUp5TFbI36Hqw=";
-        installPhase = ''
-          mkdir -p $out
-          mv build $out
-        '';
+        runtimeInputs = [ pkgs.nodejs_26 ];
+        text = "${pkgs.nodejs_26}/bin/npm run dev";
       };
     in
     {
@@ -39,14 +29,12 @@
 
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
-          nodejs_24
+          nodejs_26
         ];
       };
 
-
       packages.${system} = {
         default = dev-server;
-        html = staticHtml;
       };
     };
 }

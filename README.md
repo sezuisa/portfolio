@@ -1,32 +1,93 @@
-## Getting Started
+# Portfolio
 
-First, run the development server:
+My personal UX portfolio, built with Next.js and Tailwind CSS and exported as a
+static site.
 
-```bash
-# make sure to run 'npm ci' before in the dev shell
-nix run
+- Pages live in `src/app/` (`(home)/page.tsx` is the home page, case studies are
+  in `(projects)/`).
+- Images and other static files live in `public/`.
+- The order of the "Next Case Study" links is defined in
+  `src/utils/casestudies.ts`.
+- Folders prefixed with `_` (e.g. `(projects)/_smarti`) are excluded from
+  routing. Rename them back to publish them again.
 
-# format code
-nix fmt
+## Deployment
+
+Every push to `main` is built and deployed to GitHub Pages by
+`.github/workflows/nextjs.yml` (`npm ci` + `next build`, then `out/` is
+uploaded). Nix is **not** involved in deployment; the flake is only a local
+development convenience.
+
+## Development with Nix
+
+The flake provides a pinned Node.js 26 toolchain, a shortcut for the dev server,
+and a formatter. It is configured for Apple Silicon Macs (`aarch64-darwin`)
+only.
+
+### Prerequisites
+
+Nix with flakes enabled. If a `nix` command complains about the experimental
+features `nix-command` or `flakes`, either add this line to
+`~/.config/nix/nix.conf`:
+
+```
+experimental-features = nix-command flakes
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or pass `--extra-experimental-features "nix-command flakes"` to each command.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Command            | What it does                                                                     |
+| ------------------ | -------------------------------------------------------------------------------- |
+| `nix develop`      | Opens a shell with Node.js 26 (and npm) on the `PATH`. Leave it with `exit`.     |
+| `nix run`          | Starts the dev server (`npm run dev`) with Node.js 26, without entering a shell. |
+| `nix fmt`          | Formats `.nix`, `.md`, `.yml` and `.yaml` files (configured in `treefmt.nix`).   |
+| `nix flake check`  | Fails if any of those files are not formatted.                                   |
+| `nix flake update` | Updates the pinned inputs in `flake.lock` (e.g. to get a newer Node.js 26).      |
 
-## Learn More
+Note that `nix fmt` does **not** format the TypeScript code. Use
+`npm run format:fix` for that (see below).
 
-To learn more about Next.js, take a look at the following resources:
+### Typical workflow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# 1. Enter the dev shell
+nix develop
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# 2. Install dependencies (first time, and whenever package-lock.json changes)
+npm ci
 
-## Deploy on Vercel
+# 3. Start the dev server, then open http://localhost:3000
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 4. Before pushing: check that the production build works.
+#    The static site is written to out/.
+npm run build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# 5. Format the code
+npm run format:fix   # TypeScript, CSS, JSON, ...
+nix fmt              # Nix, Markdown, YAML
+```
+
+Instead of steps 1 and 3, you can also just run `nix run` once dependencies are
+installed.
+
+### npm scripts
+
+| Script               | What it does                                  |
+| -------------------- | --------------------------------------------- |
+| `npm run dev`        | Dev server with hot reload on port 3000.      |
+| `npm run build`      | Production build and static export to `out/`. |
+| `npm run lint`       | Runs ESLint.                                  |
+| `npm run format`     | Checks formatting with Prettier.              |
+| `npm run format:fix` | Fixes formatting with Prettier.               |
+
+### Troubleshooting
+
+- **Type errors mentioning `.next/dev/types` and pages that no longer exist**
+  (e.g. after renaming or moving a page): these are stale generated files.
+  Stop the dev server, delete `.next/dev/types` and build again.
+- **Wrong Node.js version**: check `node --version` inside `nix develop`. It
+  should be 26.x. Outside the dev shell, whichever Node is installed globally is
+  used instead.
